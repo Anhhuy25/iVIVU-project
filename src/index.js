@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import App from './App';
-import Project1 from './small projects/Project1';
-import { AppProvider } from './components/project 1/context';
+import Project2 from './small projects/Project2';
+import { AppProvider } from './components/project 2/context';
 import './components/project 1/index.css'
 
 ReactDOM.render(
   // <App />
   <AppProvider>
-    <Project1 />
+    <Project2 />
   </AppProvider>
   , document.getElementById('root')
 );

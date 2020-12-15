@@ -1,6 +1,6 @@
 import React from 'react';
-import { useGlobalContext } from './components/project 2/context';
-import Recipes from './components/project 2/Recipes';
+import { useGlobalContext } from '../components/project 2/context';
+import Recipes from '../components/project 2/Recipes';
 
 function Project2() {
   const { recipes, search, setSearch, searchData } = useGlobalContext();
