@@ -3,31 +3,31 @@ import './footer.css';
 
 const Support = () => {
   return (
-    <div>
+    <>
       <h3>Ho tro</h3>
       <ul>
-        <li>
-          <a href="/#">
-            <h4>Cach thuc mua hang</h4>
+        <li className="support-item">
+          <a href="/#" className="support-link">
+            Cach thuc mua hang
           </a>
         </li>
-        <li>
-          <a href="/#">
-            <h4>Chinh sach doi tra - hoan tien</h4>
+        <li className="support-item">
+          <a href="/#" className="support-link">
+            Chinh sach doi tra - hoan tien
           </a>
         </li>
-        <li>
-          <a href="/#">
-            <h4>Phuong thuc van chuyen</h4>
+        <li className="support-item">
+          <a href="/#" className="support-link">
+            Phuong thuc van chuyen
           </a>
         </li>
-        <li>
-          <a href="/#">
-            <h4>Phuong thuc thanh toan</h4>
+        <li className="support-item">
+          <a href="/#" className="support-link">
+            Phuong thuc thanh toan
           </a>
         </li>
       </ul>
-    </div>
+    </>
   );
 };
 

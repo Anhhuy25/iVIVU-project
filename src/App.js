@@ -1,10 +1,12 @@
 import React from 'react';
-import Footer from '../src/big projects/footer/Footer'
+import Footer from '../src/big projects/footer/Footer';
+import Header from '../src/big projects/header/Header';
 
 const App = () => {
   return (
     <div>
-      <Footer />
+      <div><Header /></div>
+      <div><Footer /></div>
     </div>
   );
 };

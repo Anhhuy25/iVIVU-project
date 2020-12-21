@@ -3,31 +3,31 @@ import './footer.css';
 
 const Services = () => {
   return (
-    <div>
+    <>
       <h3>Dich vu</h3>
       <ul>
-        <li>
-          <a href="/#">
-            <h4>Dieu khoan su dung</h4>
+        <li className="service-item">
+          <a href="/#" className="service-link">
+            Dieu khoan su dung
           </a>
         </li>
-        <li>
-          <a href="/#">
-            <h4>Chinh sach su dung</h4>
+        <li className="service-item">
+          <a href="/#" className="service-link">
+            Chinh sach su dung
           </a>
         </li>
-        <li>
-          <a href="/#">
-            <h4>Lien he</h4>
+        <li className="service-item">
+          <a href="/#" className="service-link">
+            Lien he
           </a>
         </li>
-        <li>
-          <a href="/#">
-            <h4>He thong nha sach</h4>
+        <li className="service-item">
+          <a href="/#" className="service-link">
+            He thong nha sach
           </a>
         </li>
       </ul>
-    </div>
+    </>
   );
 };
 

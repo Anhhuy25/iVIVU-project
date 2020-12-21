@@ -1,0 +1,129 @@
+.header-navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ebe9e9;
+  height: 40px;
+}
+
+/* left */
+
+.header-left {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.header-input {
+  height: 34px;
+  width: 250px;
+  margin: 3px 0px 3px 45px;
+}
+
+.header-btn {
+  margin: 3px 0 3px 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* right */
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-right-btn {
+  margin: 3px 45px 3px 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* .header-right-link:hover {
+  color: #f00;
+} */
+
+/* Login */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+  transition: all 0.3s linear;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.show-modal {
+  visibility: visible;
+  z-index: 10;
+}
+
+.modal-container {
+  background-color: white;
+  border-radius: 0.25rem;
+  width: 90vw;
+  height: 45vh;
+  max-width: 620px;
+  text-align: center;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+.modal-title {
+  margin-bottom: 0;
+}
+
+.close-modal-btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.modal-account-email {
+  margin: 20px;
+}
+
+.modal-password {
+  margin: 20px;
+}
+
+.modal-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 30px;
+}
+
+.login-btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: #055793;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.new-account-btn, .forget-password-btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.modal-check {
+  color: red;
+}
