@@ -7,14 +7,15 @@ import License from './License';
 import Socials from './Socials';
 import Government from './Government';
 import '../grid.css';
-import "../style.css";
+import './footer.css';
+import '../style.css';
 
 
 const footer = () => {
   return (
     <div className="footer">
       <div className="grid wide footer-item">
-        <div className="row">
+        <div className="row row-item">
           <div className="col l-3 m-6 c-12">
             <Services />
           </div>

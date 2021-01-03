@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { AppProvider } from './big projects/context';
-import App from './App';
+import Project3 from './small projects/Project3';
+import { AppProvider } from './components/project 3/context';
 
 ReactDOM.render(
   <AppProvider>
-    <App />
+    <Project3 />
   </AppProvider>
   , document.getElementById('root')
 );
