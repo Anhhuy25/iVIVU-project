@@ -82,7 +82,7 @@ const Navbar = () => {
                 <p>Tài khoản</p>
                 <i className="fas fa-angle-down"></i>
               </div>
-              {showFormLoReg && <div className={`form-log-reg`}><FormLo /></div>}
+              {showFormLoReg && <div className="form-log-reg"><FormLo /></div>}
               {showLogin && <div
                 className={`modal-overlay ${showLogin ? 'show-modal' : ''}`}><Login /></div>}
               {showRegis && <div

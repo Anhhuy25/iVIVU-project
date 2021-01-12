@@ -201,6 +201,20 @@
   }
 }
 
+@media (max-width: 496px) {
+  .footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (min-width: 497px) and (max-width:739px) {
+  .footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
 @media (min-width: 740px) and (max-width: 1023px) {
   .row-bottom {
     flex-direction: column-reverse;

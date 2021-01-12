@@ -254,13 +254,15 @@
   .form-log-reg {
     top: 65px;
     right: 180px;
-    left: 700px;
   }
 }
 
 @media (min-width: 740px) and (max-width: 1023px) {
   .navbar-contact {
     display: none;
+  }
+  .navbar-right {
+    margin-left: 36px;
   }
   .navbar-logo {
     width: 60px;
@@ -284,17 +286,7 @@
   }
   .form-log-reg {
     top: 45px;
-    right: 225px;
-    left: 400px;
-  }
-  .form {
-    padding: 10px 12px !important;
-  }
-  .form button {
-    padding: 6px;
-  }
-  .form p {
-    font-size: 15px;
+    right: 200px;
   }
 }
 
@@ -302,15 +294,18 @@
   .navbar-contact {
     display: none;
   }
+  .navbar-left {
+    margin-left: 16px;
+  }
   .navbar-left a {
-    margin-right: 18px;
+    margin-right: 12px;
     margin-left: 4px;
   }
   .navbar-logo {
     width: 60px;
   }
   .navbar-list a {
-    margin-right: 13px;
+    margin-right: 12px;
     font-size: 17px;
   }
   .navbar-account {
@@ -319,6 +314,7 @@
   }
   .navbar-account .fa-user-circle {
     font-size: 30px;
+    margin-right: 0px;
   }
   .navbar-nameaccount {
     display: none;
@@ -331,10 +327,16 @@
     right: 0;
   }
   .form-log-reg::before {
-    left: 198px;
+    left: 205px;
+  }
+  .form-paragraph {
+    font-size: 14px;
   }
   .subnavbar {
     top: 32px;
+  }
+  .footer-bottom-download {
+    width: 70px;
   }
 }
 
@@ -357,5 +359,18 @@
     color: #fff;
     margin-left: 8px;
     cursor: pointer;
+  }
+  .form-log-reg {
+    top: 65px;
+    right: 0;
+  }
+  .form-log-reg::before {
+    left: 220px;
+  }
+  .form-paragraph {
+    font-size: 14px;
+  }
+  .footer-bottom-download {
+    width: 70px;
   }
 }
