@@ -1,0 +1,335 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  background-color: #003C71;
+}
+
+.container-main {
+  display: flex;
+  justify-content: space-between;
+  margin-left: -4px;
+  margin-right: -4px;
+}
+
+.active {
+  color: #26BED6;
+  position: relative;
+}
+
+.active::after {
+  border-bottom: 3px solid #f4a738;
+  content: '';
+  position: absolute;
+  top: 39px;
+  left: -3px;
+  width: 110%;
+}
+
+/* Navbar-left */
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  width: 90px;
+}
+
+.navbar-left a {
+  margin-right: 28px;
+}
+
+.navbar-list {
+  display: flex;
+  list-style: none;
+}
+
+.navbar-list a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 28px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.navbar-list a li:hover, .navbar-dot:hover {
+  color: #23527c;
+  transition: all .1s ease-in-out;
+}
+
+.navbar-dot {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 28px;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Navbar-right */
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-account {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+  margin-right: 24px;
+  cursor: pointer;
+}
+
+.navbar-account .fa-user-circle {
+  font-size: 36px;
+  margin-right: 8px;
+}
+
+.navbar-nameaccount {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nameaccount .fa-angle-down {
+  margin-left: 8px;
+  font-size: 16px;
+}
+
+.navbar-time {
+  display: flex;
+  color: #fff;
+  position: relative;
+}
+
+.navbar-time:hover {
+  color: #26BED6;
+  cursor: pointer;
+}
+
+.navbar-phonenumber {
+  font-size: 30px;
+  font-weight: bold;
+  color: #F79321;
+}
+
+.navbar-phonenumber i {
+  margin-right: 4px;
+  font-size: 24px;
+}
+
+.navbar-clock {
+  margin-right: 4px;
+  font-size: 13px;
+}
+
+.navbar-clock i, .navbar-location i {
+  margin-right: 4px;
+}
+
+.navbar-location {
+  margin-left: 4px;
+  font-size: 13px;
+}
+
+.navbar-table {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  background-color: #fff;
+  width: 225px;
+  border-radius: 4px;
+}
+
+.table-item {
+  list-style: none;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+
+.table-item:last-child {
+  border-bottom: 1px solid #fff;
+}
+
+.table-item:hover {
+  background-color: #ececec;
+}
+
+.table-city {
+  color: #6c707e;
+}
+
+.table-phone {
+  color: #F79321;
+}
+
+.navbar-contact i {
+  margin-left: 4px;
+}
+
+/* SubNavbar */
+
+.subnavbar {
+  position: absolute;
+  top: 42px;
+  left: -10px;
+  width: 200px;
+}
+
+.subnavbar-list {
+  background-color: #003C71;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 4px 4px;
+}
+
+.subnavbar-list a {
+  margin-right: 0;
+  padding: 12px;
+}
+
+.subnavbar-list a:hover, .navbar-nameaccount:hover {
+  color: #23527c;
+  transition: all .1s ease-in-out;
+  cursor: pointer;
+}
+
+.navbar-nameaccount {
+  position: relative;
+}
+
+.form-log-reg {
+  position: absolute;
+  top: 65px;
+  right: 300px;
+  width: 250px;
+}
+
+.form-log-reg::before {
+  position: absolute;
+  top: -20px;
+  left: 120px;
+  content: '';
+  border-width: 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent #ffffff transparent;
+  cursor: pointer;
+}
+
+/* Responsive */
+
+@media (min-width: 1240px) {
+  .form-log-reg {
+    top: 65px;
+    right: 300px;
+    left: 780px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .navbar-account {
+    margin-right: 6px;
+  }
+  .navbar-clock {
+    margin-right: 0;
+  }
+  .navbar-location {
+    margin-left: 4px;
+  }
+  .form-log-reg {
+    top: 65px;
+    right: 180px;
+    left: 700px;
+  }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .navbar-contact {
+    display: none;
+  }
+  .navbar-logo {
+    width: 60px;
+  }
+  .navbar-list a {
+    margin-right: 13px;
+    font-size: 17px;
+  }
+  .navbar-account {
+    font-size: 17px;
+    margin-right: 24px;
+  }
+  .navbar-account .fa-user-circle {
+    font-size: 30px;
+  }
+  .active::after {
+    top: 30px;
+  }
+  .subnavbar {
+    top: 33px;
+  }
+  .form-log-reg {
+    top: 45px;
+    right: 225px;
+    left: 400px;
+  }
+  .form {
+    padding: 10px 12px !important;
+  }
+  .form button {
+    padding: 6px;
+  }
+  .form p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width:739px) {
+  .navbar-contact {
+    display: none;
+  }
+  .navbar-left a {
+    margin-right: 18px;
+    margin-left: 4px;
+  }
+  .navbar-logo {
+    width: 60px;
+  }
+  .navbar-list a {
+    margin-right: 13px;
+    font-size: 17px;
+  }
+  .navbar-account {
+    font-size: 17px;
+    margin-right: 24px;
+  }
+  .navbar-account .fa-user-circle {
+    font-size: 30px;
+  }
+  .navbar-nameaccount {
+    display: none;
+  }
+  .active::after {
+    top: 30px;
+  }
+  .form-log-reg {
+    top: 50px;
+    right: 0;
+  }
+  .form-log-reg::before {
+    left: 198px;
+  }
+  .subnavbar {
+    top: 32px;
+  }
+  .form-paragraph {
+    font-size: 14px;
+  }
+}

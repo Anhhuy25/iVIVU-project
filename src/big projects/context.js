@@ -1,62 +1,151 @@
-import React, { useContext, useState } from 'react';
-import data from './header/data';
+import React, { useContext, useState, useEffect } from 'react';
 
 
 
 
 const AppContext = React.createContext();
 
+const getLocalStorageHotel = () => {
+  let hotelAddClass = localStorage.getItem('hotelAddClass');
+
+  if (hotelAddClass) {
+    return JSON.parse(localStorage.getItem('hotelAddClass'));
+  } else {
+    return false;
+  }
+}
+
+const getLocalStorageTour = () => {
+  let tourAddClass = localStorage.getItem('tourAddClass');
+
+  if (tourAddClass) {
+    return JSON.parse(localStorage.getItem('tourAddClass'));
+  } else {
+    return false;
+  }
+}
+
+const getLocalStorageTicket = () => {
+  let ticketAddClass = localStorage.getItem('ticketAddClass');
+
+  if (ticketAddClass) {
+    return JSON.parse(localStorage.getItem('ticketAddClass'));
+  } else {
+    return false;
+  }
+}
+
+const getLocalStorageEat = () => {
+  let eatAddClass = localStorage.getItem('eatAddClass');
+
+  if (eatAddClass) {
+    return JSON.parse(localStorage.getItem('eatAddClass'));
+  } else {
+    return false;
+  }
+}
+
+const getLocalStorageTable = () => {
+  let tableArray = localStorage.getItem('tableArray');
+
+  if (tableArray) {
+    return JSON.parse(localStorage.getItem('tableArray'));
+  } else {
+    return [];
+  }
+}
 
 const AppProvider = ({ children }) => {
-  const [showModal, setShowModal] = useState(true);
+  // Navbar
+  const [hotelAddClass, setHotelAddClass] = useState(getLocalStorageHotel());
+  const [tourAddClass, setTourAddClass] = useState(getLocalStorageTour());
+  const [ticketAddClass, setTicketAddClass] = useState(getLocalStorageTicket());
+  const [eatAddClass, setEatAddClass] = useState(getLocalStorageEat());
 
-  // Header-Login
-  const [loadingLogin, setLoadingLogin] = useState(false);
-  const [accountLogin, setAccountLogin] = useState('');
-  const [passwordLogin, setPasswordLogin] = useState('');
-  const [checkAccLogin, setCheckAccLogin] = useState(true);
-  const [checkPassLogin, setCheckPassLogin] = useState(true);
+  // SubNavbar
+  const [showSubNavbar, setShowSubNavbar] = useState(false);
 
-  // Header-Register
-  const [loadingRegister, setLoadingRegister] = useState(false);
+  // Form Login-Register
+  const [showFormLoReg, setShowFormLoReg] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
+  const [showRegis, setShowRegis] = useState(false);
+
+  // Login 
   const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [passwordRegister, setPasswordRegister] = useState('');
   const [checkName, setCheckName] = useState(true);
-  const [checkEmail, setCheckEmail] = useState(true);
-  const [checkPassRegis, setCheckPassRegis] = useState(true);
+  const [password, setPassword] = useState('');
+  const [checkPassword, setCheckPassword] = useState(true);
+  const [checkLengthPassword, setCheckLengthPassword] = useState(true);
 
-  // Header-Navbar
-  const [showNavbar, setShowNavbar] = useState(false);
+  // Register
+  const [repassword, setRepassword] = useState('');
+  const [checkRePassword, setCheckRepassword] = useState(true);
+  const [checkPassRepass, setCheckPassRepass] = useState(true);
+  const [checkBox, setCheckBox] = useState(false);
+  const [showErrorMess, setShowErrorMess] = useState(true)
+  const [checkAfterAt, setCheckAfterAt] = useState(true); // check after @
 
-  // Header-Slider
-  const [images, setImages] = useState(data);
-  const [index, setIndex] = useState(0);
+  // Show Table Location-Phonenumber
+  const [showTableLP, setShowTableLP] = useState(false);
+  const [tableArray, setTableArray] = useState(getLocalStorageTable());
 
-  // Cart
-  const [amount, setAmount] = useState(0);
+  // Function add ClassName for Navbar
+  const hotel = () => {
+    setHotelAddClass(true)
+    setTourAddClass(false)
+    setTicketAddClass(false)
+    setEatAddClass(false)
+  }
+  const tour = () => {
+    setHotelAddClass(false)
+    setTourAddClass(true)
+    setTicketAddClass(false)
+    setEatAddClass(false)
+  }
+  const ticket = () => {
+    setHotelAddClass(false)
+    setTourAddClass(false)
+    setTicketAddClass(true)
+    setEatAddClass(false)
+  }
+  const eat = () => {
+    setHotelAddClass(false)
+    setTourAddClass(false)
+    setTicketAddClass(false)
+    setEatAddClass(true)
+  }
 
+  useEffect(() => {
+    localStorage.setItem('hotelAddClass', JSON.stringify(hotelAddClass));
+    localStorage.setItem('tourAddClass', JSON.stringify(tourAddClass));
+    localStorage.setItem('ticketAddClass', JSON.stringify(ticketAddClass));
+    localStorage.setItem('eatAddClass', JSON.stringify(eatAddClass));
+    localStorage.setItem('tableArray', JSON.stringify(tableArray));
+  }, [hotelAddClass, tourAddClass, ticketAddClass, eatAddClass, tableArray])
 
   return (
     <AppContext.Provider
       value={{
-        loadingLogin, setLoadingLogin,
-        showModal, setShowModal,
-        accountLogin, setAccountLogin,
-        passwordLogin, setPasswordLogin,
-        checkAccLogin, setCheckAccLogin,
-        checkPassLogin, setCheckPassLogin,
-        loadingRegister, setLoadingRegister,
+        showSubNavbar, setShowSubNavbar,
+        hotelAddClass, tourAddClass,
+        ticketAddClass, eatAddClass,
+        hotel, tour, ticket, eat,
+        showFormLoReg, setShowFormLoReg,
+        showLogin, setShowLogin,
         name, setName,
-        email, setEmail,
-        passwordRegister, setPasswordRegister,
         checkName, setCheckName,
-        checkEmail, setCheckEmail,
-        checkPassRegis, setCheckPassRegis,
-        showNavbar, setShowNavbar,
-        images, setImages,
-        index, setIndex,
-        amount, setAmount
+        password, setPassword,
+        checkPassword, setCheckPassword,
+        checkLengthPassword, setCheckLengthPassword,
+        showRegis, setShowRegis,
+        repassword, setRepassword,
+        checkRePassword, setCheckRepassword,
+        checkPassRepass, setCheckPassRepass,
+        checkBox, setCheckBox,
+        showErrorMess, setShowErrorMess,
+        checkAfterAt, setCheckAfterAt,
+        showTableLP, setShowTableLP,
+        tableArray, setTableArray
       }}
     >
       {children}

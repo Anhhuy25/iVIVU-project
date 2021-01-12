@@ -6,6 +6,7 @@ const AppContext = React.createContext();
 const getLocalStorage = () => {
   let cartItems = localStorage.getItem('cartItems');
 
+
   if (cartItems) {
     return JSON.parse(localStorage.getItem('cartItems'));
   } else {
@@ -13,9 +14,19 @@ const getLocalStorage = () => {
   }
 }
 
+const getLocalStorageNewList = () => {
+  let newList = localStorage.getItem('newList');
+
+  if (newList) {
+    return JSON.parse(localStorage.getItem('newList'));
+  } else {
+    return [];
+  }
+}
+
 const AppProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState(getLocalStorage());
-  const [newList, setNewList] = useState([]);
+  const [newList, setNewList] = useState(getLocalStorageNewList());
 
   const specificItem = (id) => {
     const clickItem = cartItems.filter(item => item.id === id);
@@ -23,11 +34,13 @@ const AppProvider = ({ children }) => {
   }
 
   const addItem = (item) => {
-    if (item.quantity === 1) {
-      console.log('hello');
+    const existItem = cartItems.find(x => x.id === item.id);
 
+    if (existItem) {
+      setCartItems(cartItems.map(y => y.id === item.id ? { ...existItem, quantity: existItem.quantity + 1 } : y))
+    } else {
+      setCartItems([...cartItems, { ...item, quantity: 1 }])
     }
-    setCartItems([...cartItems, item]);
   }
 
   const removeItem = (id) => {
@@ -67,7 +80,8 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
-  }, [cartItems])
+    localStorage.setItem('newList', JSON.stringify(newList));
+  }, [cartItems, newList])
 
   return (
     <AppContext.Provider

@@ -2,7 +2,7 @@ import React from 'react';
 import { useGlobalContext } from './context';
 
 const Item = () => {
-  const { newList } = useGlobalContext();
+  const { newList, addItem } = useGlobalContext();
 
   return (
     <div>
@@ -16,7 +16,7 @@ const Item = () => {
               <p>{item.name}</p>
               <p>{item.author}</p>
               <p>{item.price.toFixed(3)} d</p>
-              <button>Add to Cart</button>
+              <button onClick={() => addItem(item)}>Add to Cart</button>
             </div>
           </div>
         );
