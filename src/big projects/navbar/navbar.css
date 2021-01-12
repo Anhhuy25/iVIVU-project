@@ -233,14 +233,6 @@
 
 /* Responsive */
 
-@media (min-width: 1240px) {
-  .form-log-reg {
-    top: 65px;
-    right: 300px;
-    left: 780px;
-  }
-}
-
 @media (min-width: 1024px) and (max-width: 1239px) {
   .navbar-account {
     margin-right: 6px;

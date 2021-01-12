@@ -13,7 +13,6 @@ const FormLo = () => {
 
   const showRegisoffForm = () => {
     setShowRegis(true)
-    setShowFormLoReg(false)
   }
 
   return (
