@@ -26,6 +26,9 @@ const Navbar = () => {
     <div className="navbar">
       <div className="grid wide">
         <div className="container-main">
+          <div className="bars-icon">
+            <i className="fas fa-bars"></i>
+          </div>
           <div className="navbar-left m-8">
             <Link to="/">
               <img onClick={hotel} className="navbar-logo" src="https://res.ivivu.com/hotel/img/logo-newyear-2021.svg?v=2021" alt="ivivu" />
