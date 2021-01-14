@@ -1,6 +1,8 @@
 import React from 'react';
+import { useGlobalContext } from '../context';
 
 const FooterBottom = () => {
+  const { tableArray } = useGlobalContext();
   return (
     <div className="grid wide">
       <div className="row row-bottom">
@@ -48,16 +50,16 @@ const FooterBottom = () => {
           <div className="footer-bottom-contact">
             <p className="footer-bottom-contact-phonenumber">
               <i className="fas fa-phone-alt"></i>
-              1900 1870
+              {tableArray.map(item => item.phone)}
             </p>
             <div className="footer-bottom-contact-time">
               <p>
                 <i className="fas fa-clock"></i>
-                7h30 - 21h
-             </p>
+                {tableArray.map(item => item.time)}
+              </p>
               <p>
                 <i className="fas fa-map-marker-alt"></i>
-                iVIVU HCM
+                {tableArray.map(item => item.city)}
               </p>
               <i className="fas fa-angle-down"></i>
             </div>

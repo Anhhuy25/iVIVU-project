@@ -61,18 +61,23 @@ const Register = () => {
     if (repassword && repassword.length < 6 && !checkBox) {
       setShowErrorMess(true)
     }
-
   }
 
   const handleClick = () => {
     setShowErrorMess(true)
   }
-
   const handleCloseForm = () => {
     setShowRegis(false)
     setName('')
     setPassword('')
     setRepassword('')
+    setCheckName(true)
+    setCheckAfterAt(true)
+    setCheckPassword(true)
+    setCheckLengthPassword(true)
+    setCheckRepassword(true)
+    setCheckPassRepass(true)
+    setShowErrorMess(true)
   }
 
   // Function display none Error Message

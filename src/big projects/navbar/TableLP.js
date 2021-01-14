@@ -1,6 +1,6 @@
 import React from 'react';
 import { useGlobalContext } from '../context';
-import listLP from './listLP';
+import { listLP } from './listLP';
 import './navbar.css';
 
 

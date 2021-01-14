@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.search-info-background {
+  background: rgba(148, 151, 163, 0.2);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  object-fit: cover;
+  background-image: url(../img/movenpick-phu-quoc-t.png);
+  cursor: pointer;
+  height: 480px;
+  display: flex;
+  align-items: center;
+}
+
+.search-form {
+  z-index: 10;
+}

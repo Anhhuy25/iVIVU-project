@@ -4,11 +4,13 @@ import { useGlobalContext } from '../context';
 
 import './navbar.css';
 import '../grid.css';
+import '../login-register/loginregis.css';
 import SubNavbar from './SubNavbar';
 import FormLo from '../login-register/FormLo';
 import Login from '../login-register/Login';
 import Register from '../login-register/Register';
 import TableLP from './TableLP';
+import Sidebar from './Sidebar';
 
 const Navbar = () => {
   const {
@@ -19,16 +21,19 @@ const Navbar = () => {
     showFormLoReg, setShowFormLoReg,
     showLogin, showRegis,
     showTableLP, setShowTableLP,
-    tableArray
+    tableArray, showSidebar, setShowSidebar
   } = useGlobalContext();
 
   return (
     <div className="navbar">
       <div className="grid wide">
         <div className="container-main">
-          <div className="bars-icon">
+          <div className="bars-icon" onClick={() => setShowSidebar(!showSidebar)}>
             <i className="fas fa-bars"></i>
           </div>
+          {showSidebar && <div
+            className={`sidebar-overlay ${showSidebar ? 'show-sidebar' : ''}`}><Sidebar /></div>}
+
           <div className="navbar-left m-8">
             <Link to="/">
               <img onClick={hotel} className="navbar-logo" src="https://res.ivivu.com/hotel/img/logo-newyear-2021.svg?v=2021" alt="ivivu" />

@@ -89,6 +89,9 @@ const AppProvider = ({ children }) => {
   const [showTableLP, setShowTableLP] = useState(false);
   const [tableArray, setTableArray] = useState(getLocalStorageTable());
 
+  // Show Sidebar
+  const [showSidebar, setShowSidebar] = useState(false);
+
   // Function add ClassName for Navbar
   const hotel = () => {
     setHotelAddClass(true)
@@ -145,7 +148,8 @@ const AppProvider = ({ children }) => {
         showErrorMess, setShowErrorMess,
         checkAfterAt, setCheckAfterAt,
         showTableLP, setShowTableLP,
-        tableArray, setTableArray
+        tableArray, setTableArray,
+        showSidebar, setShowSidebar
       }}
     >
       {children}
