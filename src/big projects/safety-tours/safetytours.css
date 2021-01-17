@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.safety-tours {
+  margin-top: 36px;
+}
+
+.safety-tours-title {
+  margin-bottom: 8px;
+}
+
+.safety-tours-description {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.events-category-list {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 0;
+}
+
+.newyear, .positive, .overcome, .voucher {
+  margin-right: 12px;
+  width: 290px;
+  height: 360px;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.newyear-img {
+  background-image: url(../img/events/newyear.jpg);
+}
+
+.positive-img {
+  background-image: url(../img/events/tichcuc.png);
+}
+
+.overcome-img {
+  background-image: url(../img/events/vuotdich.png)
+}
+
+.voucher-img {
+  background-image: url(../img/events/hop_qua.png)
+}
+
+.newyear-link, .positive-link, .overcome-link, .voucher-link {
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #fff;
+  width: 288px;
+  height: 360px;
+  position: relative;
+}
+
+.topic-title {
+  position: absolute;
+  bottom: 60px;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 8px;
+  z-index: 2;
+}
+
+.topic-description {
+  position: absolute;
+  bottom: 12px;
+  font-size: 18px;
+  margin: 0 12px;
+  z-index: 2;
+}
+
+.topic-background {
+  position: absolute;
+  top: 270px;
+  width: 100%;
+  height: 90px;
+  border-radius: 4px;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Responsive */
+
+@media (max-width: 1113px) {
+  .events-category {
+    display: block;
+  }
+}
+
+@media (max-width: 1239px) and (min-width: 1024px) {
+  .newyear, .positive, .overcome, .voucher {
+    width: 260px;
+  }
+  .newyear-link, .positive-link, .overcome-link, .voucher-link {
+    width: 260px;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 740px) {
+  .newyear, .positive, .overcome, .voucher {
+    width: 260px;
+  }
+  .newyear-link, .positive-link, .overcome-link, .voucher-link {
+    width: 260px;
+  }
+  .topic-title {
+    font-size: 28px;
+    bottom: 58px;
+  }
+  .topic-description {
+    font-size: 18px;
+  }
+}
+
+@media (max-width:739px) and (min-width:497px) {
+  .newyear, .positive, .overcome, .voucher {
+    width: 200px;
+  }
+  .newyear-link, .positive-link, .overcome-link, .voucher-link {
+    width: 200px;
+  }
+  .topic-title {
+    font-size: 28px;
+    bottom: 50px;
+  }
+  .topic-description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 496px) {
+  .newyear, .positive, .overcome, .voucher {
+    width: 200px;
+  }
+  .newyear-link, .positive-link, .overcome-link, .voucher-link {
+    width: 200px;
+  }
+  .topic-title {
+    font-size: 28px;
+    bottom: 50px;
+  }
+  .topic-description {
+    font-size: 16px;
+  }
+  .events-category-list, .safety-tours-title, .safety-tours-description {
+    margin-left: 16px;
+  }
+}

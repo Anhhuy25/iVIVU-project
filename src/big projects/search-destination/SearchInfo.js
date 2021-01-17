@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom';
 import './searchinfo.css';
 
 // Date Picker
-import viVN from 'antd/lib/locale/vi_VN';
-import { DatePicker, ConfigProvider } from "antd";
+// import viVN from 'antd/lib/locale/vi_VN';
+// import "antd/dist/antd.css";
+// import { DatePicker, ConfigProvider } from "antd";
 
-const { RangePicker } = DatePicker;
+// const { RangePicker } = DatePicker;
 
 const SearchInfo = () => {
   return (
@@ -19,10 +20,14 @@ const SearchInfo = () => {
         <h2>Combo khách sạn - vé máy bay - đưa đón sân bay giá tốt nhất </h2>
 
         <div className="search-form">
-          <input type="text" name="" id="" />
-          <ConfigProvider locale={viVN}>
-            <RangePicker />
-          </ConfigProvider>
+          <div className="search-input">
+            <input type="text" name="" id="" />
+          </div>
+          {/* <div className="search-rangepicker">
+            <ConfigProvider locale={viVN}>
+              <RangePicker />
+            </ConfigProvider>
+          </div> */}
         </div>
 
       </div>
