@@ -24,7 +24,8 @@ import GiftVoucher from './big projects/safety-tours/events/GiftVoucher';
 import DiscountToday from './big projects/discount-today/DiscountToday';
 import VungTau from './big projects/discount-today/discount/VungTau';
 import NinhThuan from './big projects/discount-today/discount/NinhThuan';
-
+import NovotelPQ from './big projects/discount-today/discount/NovotelPQ';
+import ImperialVT from './big projects/discount-today/discount/ImperialVT';
 
 const App = () => {
   return (
@@ -53,12 +54,13 @@ const App = () => {
         <Route path="/voucher-du-lich" children={<GiftVoucher />}></Route>
 
         {/* Discount-Today */}
-        <Route path="/khach-san-phu-quoc/khu-nghi-duong-movenpick-waverly-phu-quoc" children={<PhuQuoc />}></Route>
         <Route path="/khach-san-vung-tau/khach-san-mercure-vung-tau" children={<VungTau />}></Route>
         <Route path="/khach-san-ninh-thuan/khu-nghi-duong-amanoi-villas-ninh-thuan" children={<NinhThuan />}></Route>
+        <Route path="/khach-san-phu-quoc/khu-nghi-duong-novotel-phu-quoc" children={<NovotelPQ />}></Route>
+        <Route path="/khach-san-vung-tau/khach-san-imperial-vung-tau" children={<ImperialVT />}></Route>
+        <Route path="/khach-san-phu-quoc/khu-nghi-duong-movenpick-waverly-phu-quoc" children={<PhuQuoc />}></Route>
 
         <Route path="/dieu-kien-dieu-khoan/"></Route>
-        <Route path="/khach-san-phu-quoc/khu-nghi-duong-movenpick-waverly-phu-quoc" children={<PhuQuoc />}></Route>
         <Router path="*">
           <ErrorPage />
         </Router>

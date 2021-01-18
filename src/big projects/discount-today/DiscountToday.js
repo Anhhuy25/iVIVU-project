@@ -1,14 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import { listImages } from './data';
+import data from './data';
 import './discounttoday.css';
 
 
-import phuquoc from '../img/discount/1.png';
-import vungtau from '../img/discount/2.png';
-import ninhthuan from '../img/discount/3.png';
-
 const DiscountToday = () => {
+  const [listImages, setListImages] = useState(data);
   const [index, setIndex] = React.useState(0);
 
   useEffect(() => {
@@ -30,32 +27,16 @@ const DiscountToday = () => {
     };
   }, [index]);
 
+
   return (
-    <div className="grid wide">
-      <div className="row">
-        <div className="col l-12 m-12 c-12">
-          <h1>Ưu đãi tốt nhất hôm nay</h1>
-          <p>Nhanh tay đặt ngay. Để mai sẽ lỡ</p>
-
-          <nav className="discount-today-category">
-            <div className="discount-today-list">
-              {/* <li>
-                <Link to="/khach-san-phu-quoc/khu-nghi-duong-movenpick-waverly-phu-quoc" className="discount-today-link">
-                  <img src={phuquoc} alt="phuquoc" className="phuquoc-img" />
-                </Link>
-              </li>
-
-              <li>
-                <Link to="/khach-san-vung-tau/khach-san-mercure-vung-tau" className="discount-today-link">
-                  <img src={vungtau} alt="vungtau" className="vungtau-img" />
-                </Link>
-              </li>
-
-              <li>
-                <Link to="/khach-san-ninh-thuan/khu-nghi-duong-amanoi-villas-ninh-thuan" className="discount-today-link">
-                  <img src={ninhthuan} alt="ninhthuan" className="ninhthuan-img" />
-                </Link>
-              </li> */}
+    <div className="discount-today">
+      <div className="grid wide">
+        <div className="row">
+          {/* Images Carousel */}
+          <div className="col l-12 m-0 c-0">
+            <h1 className="discount-today-title">Ưu đãi tốt nhất hôm nay</h1>
+            <p className="discount-today-description">Nhanh tay đặt ngay. Để mai sẽ lỡ</p>
+            <div className="discount-today-img-carousel">
               {listImages.map((img, imgIndex) => {
 
                 let position = 'nextSlide';
@@ -76,16 +57,38 @@ const DiscountToday = () => {
                 );
               })}
 
+              <div className="dot-icon">
+                <span className="dot" onClick={() => setIndex(0)}></span>
+                <span className="dot" onClick={() => setIndex(1)}></span>
+                <span className="dot" onClick={() => setIndex(2)}></span>
+              </div>
             </div>
-            <div className="dot-icon">
-              <span className="dot"></span>
-              <span className="dot"></span>
-              <span className="dot"></span>
-            </div>
-          </nav>
-          <img src={phuquoc} alt="" />
-          <img src={vungtau} alt="" />
-          <img src={ninhthuan} alt="" />
+          </div>
+
+          {/* Images Pull Left-Right */}
+          <div className="col l-0 m-12 c-0">
+            <h1 className="discount-today-title">Ưu đãi tốt nhất hôm nay</h1>
+            <p className="discount-today-description">Nhanh tay đặt ngay. Để mai sẽ lỡ</p>
+
+            <nav className="discount-today-category">
+              <ul className="discount-today-list">
+                <li className="phuquoc phuquoc-img">
+                  <Link to="/khach-san-phu-quoc/khu-nghi-duong-movenpick-waverly-phu-quoc" className="discount-today-link">
+                  </Link>
+                </li>
+
+                <li className="vungtau vungtau-img">
+                  <Link to="/khach-san-vung-tau/khach-san-mercure-vung-tau" className="discount-today-link">
+                  </Link>
+                </li>
+
+                <li className="ninhthuan ninhthuan-img">
+                  <Link to="/khach-san-ninh-thuan/khu-nghi-duong-amanoi-villas-ninh-thuan" className="discount-today-link">
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
     </div>

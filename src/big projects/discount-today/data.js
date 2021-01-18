@@ -3,7 +3,7 @@ import vungtau from '../img/discount/2.png';
 import ninhthuan from '../img/discount/3.png';
 
 
-export const listImages = [
+const listImages = [
   {
     id: 1,
     to: '/khach-san-phu-quoc/khu-nghi-duong-movenpick-waverly-phu-quoc',
@@ -20,3 +20,5 @@ export const listImages = [
     url: ninhthuan,
   },
 ]
+
+export default listImages;

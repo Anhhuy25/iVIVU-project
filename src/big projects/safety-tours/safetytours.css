@@ -139,6 +139,10 @@
   .topic-description {
     font-size: 16px;
   }
+  .safety-tours {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
 }
 
 @media (max-width: 496px) {
@@ -155,7 +159,14 @@
   .topic-description {
     font-size: 16px;
   }
-  .events-category-list, .safety-tours-title, .safety-tours-description {
+  .safety-tours {
     margin-left: 16px;
+    margin-right: 16px;
+  }
+  .safety-tours-title {
+    font-size: 28px;
+  }
+  .safety-tours-description {
+    font-size: 18px;
   }
 }

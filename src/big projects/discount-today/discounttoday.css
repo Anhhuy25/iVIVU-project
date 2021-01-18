@@ -4,13 +4,79 @@
   padding: 0;
 }
 
+.discount-today {
+  margin-top: 36px;
+}
+
+.discount-today-title {
+  margin-bottom: 8px;
+}
+
+.discount-today-description {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+/* Images Stand Pull Left-Right */
+
 .discount-today-list {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 0;
+}
+
+.movenpick-phuquoc, .mercure-vungtau, .amanoi-ninhthuan, .novotel-phuquoc, .imperial-vungtau {
+  margin-right: 12px;
+  width: 290px;
+  height: 380px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.discount-today-link-mobile {
+  display: block;
+  overflow: hidden;
+  width: 290px;
+  height: 380px;
+}
+
+.movenpick-phuquoc-img {
+  background-image: url(../img/discount/movenpick-phu-quoc-m-1140x250.png);
+}
+
+.novotel-phuquoc-img {
+  background-image: url(../img/discount/novotel-phu-quoc-m-1140x250.png);
+}
+
+.mercure-vungtau-img {
+  background-image: url(../img/discount/mercure-vt-m-1140x250.png);
+}
+
+.imperial-vungtau-img {
+  background-image: url(../img/discount/imperial-vt-m-1-1140x250.png);
+}
+
+.amanoi-ninhthuan-img {
+  background-image: url(../img/discount/m-amanoi-1-1140x250.png)
+}
+
+/* Images Carousel */
+
+.discount-today-img-carousel {
   width: 1200px;
   /* have to have a height */
   height: 260px;
   display: flex;
   overflow: hidden;
   list-style-type: none;
+  position: relative;
 }
 
 .discount-today-img {
@@ -20,22 +86,20 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.phuquoc-link, .vungtau-link, .ninhthuan-link {
-  /* display: block;
-  overflow: hidden;
-  width: 1200px;
-  height: 260px; */
-}
-
 .dot-icon {
   text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 560px;
+  right: 560px;
+  width: 80px;
 }
 
 .dot {
   cursor: pointer;
   height: 15px;
   width: 15px;
-  margin: 0 2px;
+  margin: 0 4px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -53,4 +117,94 @@ a.nextSlide {
 
 a.lastSlide {
   transform: translateX(-100%);
+}
+
+/* Images Pull Left-Right */
+
+.discount-today-list {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 0;
+}
+
+.phuquoc, .vungtau, .ninhthuan {
+  margin-right: 12px;
+  width: 600px;
+  height: 130px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.phuquoc-img {
+  background-image: url(../img/discount/1.png);
+}
+
+.vungtau-img {
+  background-image: url(../img/discount/2.png);
+}
+
+.ninhthuan-img {
+  background-image: url(../img/discount/3.png)
+}
+
+.discount-today-link {
+  display: block;
+  overflow: hidden;
+  width: 600px;
+  height: 130px;
+}
+
+@media (max-width: 1113px) {
+  .discount-today-category {
+    display: block;
+  }
+}
+
+@media (max-width:739px) and (min-width:497px) {
+  .discount-today {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .movenpick-phuquoc, .mercure-vungtau, .amanoi-ninhthuan, .novotel-phuquoc, .imperial-vungtau {
+    width: 250px;
+    height: 325px;
+  }
+  .discount-today-link-mobile {
+    width: 250px;
+    height: 325px;
+  }
+  .discount-today-category {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 496px) {
+  .discount-today {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .discount-today-category {
+    margin-bottom: 16px;
+  }
+  .discount-today-title {
+    font-size: 28px;
+  }
+  .discount-today-description {
+    font-size: 18px;
+  }
+  .movenpick-phuquoc, .mercure-vungtau, .amanoi-ninhthuan, .novotel-phuquoc, .imperial-vungtau {
+    width: 250px;
+    height: 325px;
+  }
+  .discount-today-link-mobile {
+    width: 250px;
+    height: 325px;
+  }
 }
