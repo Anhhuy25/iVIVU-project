@@ -1,11 +1,10 @@
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import data from './data';
+import { listImages } from './data';
 import './discounttoday.css';
 
 
 const DiscountToday = () => {
-  const [listImages, setListImages] = useState(data);
   const [index, setIndex] = React.useState(0);
 
   useEffect(() => {
@@ -17,6 +16,8 @@ const DiscountToday = () => {
       setIndex(0);
     }
   }, [index, listImages]);
+
+
 
   useEffect(() => {
     let slider = setInterval(() => {

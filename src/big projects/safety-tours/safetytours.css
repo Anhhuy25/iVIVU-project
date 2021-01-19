@@ -26,8 +26,20 @@
   margin: 0;
 }
 
-.newyear, .positive, .overcome, .voucher {
+.newyear, .positive, .overcome {
   margin-right: 12px;
+  width: 290px;
+  height: 360px;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.voucher {
   width: 290px;
   height: 360px;
   padding: 0;
@@ -61,7 +73,7 @@
   text-decoration: none;
   font-size: 1.4rem;
   color: #fff;
-  width: 288px;
+  width: 290px;
   height: 360px;
   position: relative;
 }

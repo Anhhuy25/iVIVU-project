@@ -87,7 +87,6 @@
 }
 
 .dot-icon {
-  text-align: center;
   position: absolute;
   bottom: 0;
   left: 560px;
@@ -159,6 +158,23 @@ a.lastSlide {
   overflow: hidden;
   width: 600px;
   height: 130px;
+}
+
+/* Responsive */
+
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .discount-today-img-carousel {
+    width: 984px;
+    height: 250px;
+  }
+  .discount-today-img {
+    width: 984px;
+    height: 250px;
+  }
+  .dot-icon {
+    left: 452px;
+    right: 452px;
+  }
 }
 
 @media (max-width: 1113px) {

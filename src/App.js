@@ -26,6 +26,21 @@ import VungTau from './big projects/discount-today/discount/VungTau';
 import NinhThuan from './big projects/discount-today/discount/NinhThuan';
 import NovotelPQ from './big projects/discount-today/discount/NovotelPQ';
 import ImperialVT from './big projects/discount-today/discount/ImperialVT';
+import DomesticTourism from './big projects/destination-tourism/domestic/DomesticTourism';
+import PhuQuocHotels from './big projects/destination-tourism/domestic/domestis-hotels/PhuQuocHotels';
+import NhaTrangHotel from './big projects/destination-tourism/domestic/domestis-hotels/NhaTrangHotel';
+import QuyNhonHotels from './big projects/destination-tourism/domestic/domestis-hotels/QuyNhonHotels';
+import VungTauHotels from './big projects/destination-tourism/domestic/domestis-hotels/VungTauHotels';
+import DaNangHotels from './big projects/destination-tourism/domestic/domestis-hotels/DaNangHotels';
+import DaLatHotels from './big projects/destination-tourism/domestic/domestis-hotels/DaLatHotels';
+import PhanThietHotels from './big projects/destination-tourism/domestic/domestis-hotels/PhanThietHotels';
+import SapaHotels from './big projects/destination-tourism/domestic/domestis-hotels/SapaHotels';
+import InternationalTourism from './big projects/destination-tourism/international/InternationalTourism';
+import MaldivesHotels from './big projects/destination-tourism/international/international-hotels/MaldivesHotels';
+import BaliHotels from './big projects/destination-tourism/international/international-hotels/BaliHotels';
+import SingaporeHotels from './big projects/destination-tourism/international/international-hotels/SingaporeHotels';
+import BangkokHotels from './big projects/destination-tourism/international/international-hotels/BangkokHotels';
+import SwitzerlandHotels from './big projects/destination-tourism/international/international-hotels/SwitzerlandHotels';
 
 const App = () => {
   return (
@@ -37,6 +52,8 @@ const App = () => {
           <SearchInfo />
           <SafetyTours />
           <DiscountToday />
+          <DomesticTourism />
+          <InternationalTourism />
         </Route>
         {/* Navbar */}
         <Route path="/du-lich/" children={<Tours />}></Route>
@@ -59,6 +76,21 @@ const App = () => {
         <Route path="/khach-san-phu-quoc/khu-nghi-duong-novotel-phu-quoc" children={<NovotelPQ />}></Route>
         <Route path="/khach-san-vung-tau/khach-san-imperial-vung-tau" children={<ImperialVT />}></Route>
         <Route path="/khach-san-phu-quoc/khu-nghi-duong-movenpick-waverly-phu-quoc" children={<PhuQuoc />}></Route>
+
+        {/* Destination-Tourism */}
+        <Route path="/khach-san-phu-quoc" children={<PhuQuocHotels />}></Route>
+        <Route path="/khach-san-nha-trang" children={<NhaTrangHotel />}></Route>
+        <Route path="/khach-san-quy-nhon" children={<QuyNhonHotels />} ></Route>
+        <Route path="/khach-san-vung-tau" children={<VungTauHotels />}></Route>
+        <Route path="/khach-san-da-nang" children={<DaNangHotels />}></Route>
+        <Route path="/khach-san-da-lat" children={<DaLatHotels />}></Route>
+        <Route path="/khach-san-phan-thiet" children={<PhanThietHotels />}></Route>
+        <Route path="/khach-san-sapa" children={<SapaHotels />}></Route>
+        <Route path="/khach-san-maldives-asia" children={<MaldivesHotels />}></Route>
+        <Route path="/khach-san-bali" children={<BaliHotels />}></Route>
+        <Route path="/khach-san-singapore" children={<SingaporeHotels />}></Route>
+        <Route path="/khach-san-bangkok" children={<BangkokHotels />}></Route>
+        <Route path="/khach-san-switzerland" children={<SwitzerlandHotels />}></Route>
 
         <Route path="/dieu-kien-dieu-khoan/"></Route>
         <Router path="*">
