@@ -1,0 +1,616 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.tourshome-container {
+  background-color: #ecf0f5;
+}
+
+.tourshome {
+  background-color: #e0e7ef;
+}
+
+.tourshome-description {
+  display: flex;
+  align-items: center;
+  color: #003c71;
+  height: 70px;
+}
+
+.tourshome-description i {
+  font-size: 40px;
+  margin-right: 4px;
+}
+
+.tourshome-description span {
+  font-size: 20px;
+}
+
+/* iVIVU  */
+
+.tourshome-topic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 22px;
+  position: relative;
+  color: #003c71;
+}
+
+.tourshome-topic::after {
+  content: '';
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  border-bottom: 2px solid #003c71;
+}
+
+.tourshome-topic-more span {
+  margin-right: 8px;
+  color: #003c71;
+  font-size: 12px;
+}
+
+.tourshome-topic-more i {
+  color: #003c71;
+  font-size: 12px;
+}
+
+/* Tourshome Content */
+
+.tourshome-content {
+  margin-top: 16px;
+  position: relative;
+}
+
+.tourshome-dis-img-loca {
+  position: relative;
+  top: 4px;
+}
+
+.tourshome-discount {
+  background-color: #f00;
+  padding: 4px;
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.tourshome-discount::after {
+  content: '';
+  position: absolute;
+  left: 1px;
+  bottom: -7px;
+  border-top: 7px solid #f00;
+  border-left: 10px solid transparent;
+  filter: brightness(60%);
+}
+
+.tourshome-img {
+  width: 100%;
+}
+
+.tourshome-location {
+  background-color: #00467ecc;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  padding: 4px 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.tourshome-location i {
+  color: #F79321;
+  margin-right: 6px;
+  font-size: 14px;
+}
+
+.tourshome-info {
+  background-color: #fff;
+}
+
+.tourshome-name {
+  color: #003c71;
+  font-size: 18px;
+  padding: 4px 12px;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.tourshome-time-transportion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.tourshome-time {
+  color: #000;
+  margin-left: 12px;
+}
+
+.tourshome-time span {
+  font-size: 14px;
+}
+
+.tourshome-time i {
+  margin-right: 4px;
+  font-size: 12px;
+}
+
+.tourshome-transportation i {
+  color: #000;
+  margin-right: 12px;
+  font-size: 12px;
+}
+
+.tourshome-rating {
+  display: flex;
+  align-items: center;
+  color: #f00;
+  margin-left: 8px;
+  position: absolute;
+  bottom: 97px;
+}
+
+.tourshome-rating span:first-child {
+  color: #fff;
+  background-color: #9fc43a;
+  padding: 4px;
+  font-weight: 600;
+  border-radius: 4px;
+  margin-right: 4px;
+  position: relative;
+}
+
+.tourshome-rating span:nth-child(2) {
+  color: #9fc43a;
+  font-weight: 600;
+  margin-right: 12px;
+}
+
+.col:first-child .tourshome-rating span:nth-child(2)::after {
+  content: '';
+  position: absolute;
+  left: 106px;
+  top: 6px;
+  height: 15px;
+  border-right: 2px solid #8d8b8b;
+}
+
+.col:nth-child(2) .tourshome-rating span:nth-child(2)::after {
+  content: '';
+  position: absolute;
+  left: 94px;
+  top: 6px;
+  height: 15px;
+  border-right: 2px solid #8d8b8b;
+}
+
+.tourshome-rating span:nth-child(3) {
+  color: #000;
+  font-size: 16px;
+}
+
+.col:first-child .tourshome-list {
+  color: #00c1de;
+  display: flex;
+  font-size: 14px;
+  list-style: none;
+  position: absolute;
+  bottom: 76px;
+}
+
+.col:first-child .tourshome-list li {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.col:first-child .tourshome-list li i {
+  font-size: 4px;
+  margin-right: 4px;
+}
+
+.col:nth-child(2) .tourshome-list {
+  color: #00c1de;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+  list-style: none;
+  position: absolute;
+  bottom: 55px;
+}
+
+.col:nth-child(2) .tourshome-list li:first-child, .col:nth-child(2) .tourshome-list li:nth-child(2) {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+  margin-bottom: 4px;
+  width: 45%;
+}
+
+.col:nth-child(2) .tourshome-list li:nth-child(3), .col:nth-child(2) .tourshome-list li:nth-child(4) {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+  width: 24%;
+}
+
+.col:nth-child(2) .tourshome-list li:nth-child(4) {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+  width: 16%;
+}
+
+.col:nth-child(2) .tourshome-list li:nth-child(5) {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+  width: 32%;
+}
+
+.col:nth-child(2) .tourshome-list li i {
+  font-size: 4px;
+  margin-right: 4px;
+}
+
+.col:nth-child(3) .tourshome-list, .col:nth-child(4) .tourshome-list {
+  color: #00c1de;
+  font-size: 14px;
+  list-style: none;
+  margin-left: 8px;
+  position: absolute;
+  bottom: 35px;
+}
+
+.col:nth-child(3) .tourshome-list li, .col:nth-child(4) .tourshome-list li {
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.col:nth-child(3) .tourshome-list li i, .col:nth-child(4) .tourshome-list li i {
+  font-size: 4px;
+  margin-right: 4px;
+}
+
+.tourshome-price {
+  color: #00c1de;
+  font-weight: 600;
+  margin-right: 8px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.tourshome-money {
+  font-size: 26px;
+  margin-right: 8px;
+}
+
+/* Responsive */
+
+@media (min-width: 1113px) {
+  .tourshome-info {
+    height: 190px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width:1239px) {
+  .tourshome-info {
+    height: 210px;
+  }
+  .tourshome-rating {
+    bottom: 130px;
+  }
+  .tourshome-time-transportion {
+    margin-top: 0;
+  }
+  .col:first-child .tourshome-list {
+    bottom: 100px;
+  }
+  .col:nth-child(2) .tourshome-list {
+    bottom: 80px;
+  }
+  .col:nth-child(3) .tourshome-list {
+    bottom: 40px;
+  }
+  .col:nth-child(2) .tourshome-list li:first-child {
+    width: 55%;
+  }
+  .col:nth-child(2) .tourshome-list li:nth-child(2) {
+    width: 30%;
+  }
+  .col:nth-child(2) .tourshome-list li:nth-child(3) {
+    width: 30%;
+  }
+  .col:nth-child(2) .tourshome-list li:nth-child(4) {
+    width: 20%;
+  }
+  .col:nth-child(2) .tourshome-list li:nth-child(5) {
+    width: 38%;
+  }
+  .col:nth-child(4) .tourshome-list {
+    bottom: 60px;
+  }
+}
+
+@media (min-width: 740px) and (max-width:1023px) {
+  .tourshome-info {
+    height: 210px;
+  }
+  .tourshome-rating {
+    bottom: 130px;
+  }
+  .tourshome-time-transportion {
+    margin-top: 0;
+  }
+  .col:first-child .tourshome-list {
+    bottom: 100px;
+  }
+  .col:nth-child(2) .tourshome-list {
+    bottom: 80px;
+  }
+  .col:nth-child(3) .tourshome-list {
+    bottom: 40px;
+  }
+  .col:nth-child(2) .tourshome-list li:first-child {
+    width: 55%;
+  }
+  .col:nth-child(2) .tourshome-list li:nth-child(2) {
+    width: 30%;
+  }
+  .col:nth-child(2) .tourshome-list li:nth-child(3) {
+    width: 30%;
+  }
+  .col:nth-child(2) .tourshome-list li:nth-child(4) {
+    width: 20%;
+  }
+  .col:nth-child(2) .tourshome-list li:nth-child(5) {
+    width: 38%;
+  }
+  .col:nth-child(4) .tourshome-time-transportion {
+    position: relative;
+    top: 20px;
+  }
+  .col:nth-child(4) .tourshome-list {
+    bottom: 40px;
+  }
+}
+
+@media (min-width:617px) and (max-width: 739px) {
+  .tourshome-topic {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .tourshome-dis-img-loca {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .tourshome-info {
+    height: 120px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .tourshome-rating {
+    bottom: 65px;
+  }
+  .tourshome-time-transportion {
+    margin-top: 0;
+  }
+  .col:first-child .tourshome-list {
+    bottom: 40px;
+  }
+  .col:nth-child(2) .tourshome-list {
+    bottom: 35px;
+    width: 100%;
+  }
+  .col:nth-child(2) .tourshome-list li:first-child {
+    width: 27%;
+    margin-bottom: 0;
+  }
+  .col:nth-child(2) .tourshome-list li:nth-child(2) {
+    width: 12%;
+    margin-bottom: 0;
+  }
+  .col:nth-child(2) .tourshome-list li:nth-child(3) {
+    width: 14%;
+  }
+  .col:nth-child(2) .tourshome-list li:nth-child(4) {
+    width: 9%;
+  }
+  .col:nth-child(2) .tourshome-list li:nth-child(5) {
+    width: 20%;
+  }
+  .col:nth-child(3) .tourshome-list {
+    bottom: 30px;
+    display: flex;
+    flex-wrap: wrap
+  }
+  .col:nth-child(3) .tourshome-list li:first-child {
+    width: 30%;
+  }
+  .col:nth-child(3) .tourshome-list li:nth-child(2) {
+    width: 50%;
+  }
+  .col:nth-child(3) .tourshome-list li:nth-child(3) {
+    width: 35%;
+  }
+  .col:nth-child(3) .tourshome-list li:nth-child(4) {
+    width: 50%;
+  }
+  .col:nth-child(4) .tourshome-list {
+    bottom: 30px;
+    display: flex;
+    flex-wrap: wrap
+  }
+  .col:nth-child(4) .tourshome-list li:first-child {
+    width: 20%;
+  }
+  .col:nth-child(4) .tourshome-list li:nth-child(2) {
+    width: 80%;
+  }
+  .col:nth-child(4) .tourshome-list li:nth-child(3) {
+    width: 25%;
+  }
+  .col:nth-child(4) .tourshome-list li:nth-child(4) {
+    width: 50%;
+  }
+}
+
+@media (min-width:497px) and (max-width:616px) {
+  .tourshome-topic {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .tourshome-dis-img-loca {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .tourshome-info {
+    height: 140px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .tourshome-rating {
+    bottom: 65px;
+  }
+  .tourshome-time-transportion {
+    margin-top: 0;
+  }
+  .col:first-child .tourshome-list {
+    bottom: 40px;
+  }
+  .col:nth-child(2) .tourshome-list {
+    bottom: 28px;
+    width: 100%;
+  }
+  .col:nth-child(2) .tourshome-list li:first-child {
+    width: 35%;
+    margin-bottom: 0;
+  }
+  .col:nth-child(2) .tourshome-list li:nth-child(2) {
+    width: 16%;
+    margin-bottom: 0;
+  }
+  .col:nth-child(2) .tourshome-list li:nth-child(3) {
+    width: 44%;
+  }
+  .col:nth-child(2) .tourshome-list li:nth-child(4) {
+    width: 15%;
+  }
+  .col:nth-child(2) .tourshome-list li:nth-child(5) {
+    width: 30%;
+    margin-top: 2px;
+  }
+  .col:nth-child(3) .tourshome-list {
+    bottom: 30px;
+    display: flex;
+    flex-wrap: wrap
+  }
+  .col:nth-child(3) .tourshome-list li:first-child {
+    width: 35%;
+  }
+  .col:nth-child(3) .tourshome-list li:nth-child(2) {
+    width: 52%;
+  }
+  .col:nth-child(3) .tourshome-list li:nth-child(3) {
+    width: 41%;
+  }
+  .col:nth-child(3) .tourshome-list li:nth-child(4) {
+    width: 50%;
+  }
+  .col:nth-child(4) .tourshome-list {
+    bottom: 50px;
+    display: flex;
+    flex-wrap: wrap
+  }
+  .col:nth-child(4) .tourshome-list li:first-child {
+    width: 22%;
+  }
+  .col:nth-child(4) .tourshome-list li:nth-child(2) {
+    width: 52%;
+  }
+  .col:nth-child(4) .tourshome-list li:nth-child(3) {
+    width: 28%;
+  }
+  .col:nth-child(4) .tourshome-list li:nth-child(4) {
+    width: 50%;
+  }
+}
+
+@media (max-width:496px) {
+  .tourshome-topic {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .tourshome-dis-img-loca {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .tourshome-info {
+    height: 140px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .tourshome-rating {
+    bottom: 65px;
+  }
+  .tourshome-time-transportion {
+    margin-top: 0;
+  }
+  .col:first-child .tourshome-list {
+    bottom: 40px;
+  }
+  .col:nth-child(2) .tourshome-list {
+    bottom: 28px;
+    width: 100%;
+  }
+  .col:nth-child(2) .tourshome-list li:first-child {
+    width: 45%;
+    margin-bottom: 0;
+  }
+  .col:nth-child(2) .tourshome-list li:nth-child(2) {
+    width: 30%;
+    margin-bottom: 0;
+  }
+  .col:nth-child(2) .tourshome-list li:nth-child(3) {
+    width: 25%;
+  }
+  .col:nth-child(2) .tourshome-list li:nth-child(4) {
+    width: 17%;
+  }
+  .col:nth-child(2) .tourshome-list li:nth-child(5) {
+    width: 40%;
+    margin-top: 2px;
+  }
+  .col:nth-child(3) .tourshome-info, .col:nth-child(4) .tourshome-info {
+    height: 175px;
+  }
+  .col:nth-child(3) .tourshome-list, .col:nth-child(4) .tourshome-list {
+    bottom: 30px;
+    display: flex;
+    flex-wrap: wrap
+  }
+  .col:nth-child(3) .tourshome-list li:first-child, .col:nth-child(4) .tourshome-list li:first-child {
+    width: 100%;
+  }
+  .col:nth-child(3) .tourshome-list li:nth-child(2), .col:nth-child(4) .tourshome-list li:nth-child(2) {
+    width: 100%;
+  }
+  .col:nth-child(3) .tourshome-list li:nth-child(3), .col:nth-child(4) .tourshome-list li:nth-child(3) {
+    width: 100%;
+  }
+  .col:nth-child(3) .tourshome-list li:nth-child(4), .col:nth-child(4) .tourshome-list li:nth-child(4) {
+    width: 100%;
+  }
+}

@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 
 // Components
-import Header from './big projects/header/Header';
 import ErrorPage from './big projects/ErrorPage';
 import Footer from './big projects/footer/Footer';
 import Navbar from './big projects/navbar/Navbar';
@@ -45,15 +44,15 @@ import SwitzerlandHotels from './big projects/destination-tourism/international/
 const App = () => {
   return (
     <Router>
-      <Navbar />
       <Switch>
         <Route exact path="/">
-          <Header />
+          <Navbar />
           <SearchInfo />
           <SafetyTours />
           <DiscountToday />
           <DomesticTourism />
           <InternationalTourism />
+          <Footer />
         </Route>
         {/* Navbar */}
         <Route path="/du-lich/" children={<Tours />}></Route>
@@ -97,7 +96,7 @@ const App = () => {
           <ErrorPage />
         </Router>
       </Switch>
-      <Footer />
+
     </Router>
   );
 };

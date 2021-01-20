@@ -61,3 +61,18 @@ export const sidebar = [
     name: 'Hỗ trợ',
   }
 ]
+
+export const navbarTours = [
+  {
+    id: 1,
+    city: 'Hồ Chí Minh',
+  },
+  {
+    id: 2,
+    city: 'Hà Nội',
+  },
+  {
+    id: 3,
+    city: 'Cần Thơ',
+  }
+]

@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* FooterTop */
+
+.footer-top-list {
+  list-style: none;
+  margin: 8px 0;
+}
+
+.footer-top-item {
+  margin: 8px 0;
+}
+
+.footer-top-title {
+  margin: 12px 0;
+}
+
+.footer-top-link {
+  text-decoration: none;
+  color: #818180;
+  font-size: 14px;
+}
+
+.img-member {
+  margin: 0 12px;
+}
+
+.fa-viber {
+  font-size: 40px;
+  color: #743c97;
+}
+
+.zalo-img {
+  width: 37px;
+}
+
+/* Footer Bottom */
+
+.footer-bottom-winner {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.footer-bottom-winner span {
+  width: 7%;
+  margin-right: 12px;
+}
+
+.img-winner {
+  width: 100%;
+}
+
+.footer-bottom-location p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.footer-bottom-location i {
+  margin-right: 8px;
+}
+
+.footer-bottom-like {
+  display: flex;
+  align-items: center;
+}
+
+.footer-bottom-paragraph, .footer-bottom-btn, .footer-bottom-email {
+  margin-right: 12px;
+  font-size: 15px;
+}
+
+.footer-bottom-btn {
+  background-color: #1877f2;
+  color: #fff;
+  padding: 4px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  width: 80px;
+}
+
+.footer-bottom-btn i {
+  margin-right: 4px;
+}
+
+.footer-bottom-email i {
+  margin-right: 8px;
+}
+
+.footer-bottom-social-icon {
+  display: flex;
+  margin: 16px 0;
+}
+
+.footer-bottom-social-icon a {
+  margin-right: 12px;
+}
+
+.footer-bottom-social-img {
+  width: 30px;
+}
+
+.footer-bottom-help {
+  margin: 24px 0;
+}
+
+.footer-bottom-contact-cs, .footer-bottom-contact-hotline, .footer-bottom-contact-clock {
+  color: #626161;
+  margin-bottom: 8px;
+}
+
+.footer-bottom-contact-cs i, .footer-bottom-contact-hotline i, .footer-bottom-contact-clock i {
+  margin-right: 8px;
+}
+
+@media (min-width: 740px) {
+  .center {
+    text-align: center;
+    margin: 8px 0;
+  }
+}
+
+@media (max-width: 739px) {
+  .disappear {
+    display: none;
+  }
+  .row-bottom {
+    flex-direction: column-reverse;
+    margin: 0 24p;
+  }
+  .footer-bottom-help, .footer-bottom-winner b {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 496px) {
+  .footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (min-width: 497px) and (max-width:739px) {
+  .footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .row-bottom {
+    flex-direction: column-reverse;
+  }
+  .footer-bottom-location {
+    width: 110%;
+  }
+  .footer-top-title {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .footer-bottom-contact-phonenumber {
+    width: 100%;
+  }
+  .row-bottom {
+    flex-direction: column-reverse;
+  }
+  .footer-bottom-location {
+    width: 110%;
+  }
+  .footer-top-title {
+    font-size: 18px;
+  }
+}

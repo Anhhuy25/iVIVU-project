@@ -55,6 +55,16 @@ const getLocalStorageTable = () => {
   }
 }
 
+const getLocalStorageNavbarTours = () => {
+  let navbarToursArray = localStorage.getItem('navbarToursArray');
+
+  if (navbarToursArray) {
+    return JSON.parse(localStorage.getItem('navbarToursArray'));
+  } else {
+    return [];
+  }
+}
+
 const AppProvider = ({ children }) => {
   // Navbar
   const [hotelAddClass, setHotelAddClass] = useState(getLocalStorageHotel());
@@ -92,6 +102,9 @@ const AppProvider = ({ children }) => {
   // Show Sidebar
   const [showSidebar, setShowSidebar] = useState(false);
 
+  // Navbar changed when click different Content
+  const [navbarToursArray, setNavbarToursArray] = useState(getLocalStorageNavbarTours());
+
   // Function add ClassName for Navbar
   const hotel = () => {
     setHotelAddClass(true)
@@ -124,7 +137,8 @@ const AppProvider = ({ children }) => {
     localStorage.setItem('ticketAddClass', JSON.stringify(ticketAddClass));
     localStorage.setItem('eatAddClass', JSON.stringify(eatAddClass));
     localStorage.setItem('tableArray', JSON.stringify(tableArray));
-  }, [hotelAddClass, tourAddClass, ticketAddClass, eatAddClass, tableArray])
+    localStorage.setItem('navbarToursArray', JSON.stringify(navbarToursArray));
+  }, [hotelAddClass, tourAddClass, ticketAddClass, eatAddClass, tableArray, navbarToursArray])
 
   return (
     <AppContext.Provider
@@ -149,7 +163,8 @@ const AppProvider = ({ children }) => {
         checkAfterAt, setCheckAfterAt,
         showTableLP, setShowTableLP,
         tableArray, setTableArray,
-        showSidebar, setShowSidebar
+        showSidebar, setShowSidebar,
+        navbarToursArray, setNavbarToursArray,
       }}
     >
       {children}
