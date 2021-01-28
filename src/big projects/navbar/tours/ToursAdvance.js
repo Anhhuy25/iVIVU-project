@@ -1,45 +1,47 @@
 import React from 'react';
-import { tetTanSuu } from './listTours';
+import { toursCaoCap } from './listTours';
 import { Link } from 'react-router-dom';
 
-import './tourshome.css';
 import '../../grid.css';
+import './toursadvance.css'
 
-const ToursHome = ({ clickToursHome }) => {
+
+const ToursAdvance = ({ clickToursAdvance }) => {
   return (
-    <div className="tourshome-container">
+    <div className="toursadvance-container">
       <div className="grid wide">
-        <div className="tourshome-topic">
-          <h1 className="tourshome-topic-title">iVIVU Tết Tân Sửu</h1>
-          <Link to="/ivivu-tet-tan-suu" className="tourshome-topic-more">
+        <div className="toursadvance-topic">
+          <h1 className="toursadvance-topic-title">Tour Cao Cấp</h1>
+          <Link to="/tour-cao-cap" className="toursadvance-topic-more">
             <span>XEM THÊM TOURS</span>
             <i className="fas fa-chevron-right"></i>
           </Link>
         </div>
+
         <div className="row">
-          {tetTanSuu.map(item => {
+          {toursCaoCap.map(item => {
             return (
               <div key={item.id} className="col l-4 m-6 c-12">
-                <div onClick={() => clickToursHome(item)} className="tourshome-content">
+                <div onClick={() => clickToursAdvance(item)} className="toursadvance-content">
                   <Link to={`/${item.to}`}>
-                    <div className="tourshome-dis-img-loca">
-                      {item.discount && <span className="tourshome-discount">{item.discount}</span>}
-                      <img src={item.img} alt={item.name} className="tourshome-img" />
-                      <span className="tourshome-location">
+                    <div className="toursadvance-dis-img-loca">
+                      {item.discount && <span className="toursadvance-discount">{item.discount}</span>}
+                      <img src={item.img} alt={item.name} className="toursadvance-img" />
+                      <span className="toursadvance-location">
                         <i className="fas fa-map-marker-alt"></i>
                         {item.location}
                       </span>
                     </div>
 
-                    <div className="tourshome-info">
-                      <h3 className="tourshome-name">{item.name}</h3>
+                    <div className="toursadvance-info">
+                      <h3 className="toursadvance-name">{item.name}</h3>
                       {item.time && (
-                        <div className="tourshome-time-transportion">
-                          <span className="tourshome-time">
+                        <div className="toursadvance-time-transportion">
+                          <span className="toursadvance-time">
                             <i className="fas fa-clock"></i>
                             <span>{item.time}</span>
                           </span>
-                          <span className="tourshome-transportation">
+                          <span className="toursadvance-transportation">
                             <i className="fas fa-plane"></i>
                             <i className="fas fa-bus"></i>
                           </span>
@@ -47,7 +49,7 @@ const ToursHome = ({ clickToursHome }) => {
                       )}
 
                       {item.rating && (
-                        <div className="tourshome-rating">
+                        <div className="toursadvance-rating">
                           {item.rating.map((rate, index) => {
                             return (
                               <span key={index}>{rate}</span>
@@ -56,7 +58,7 @@ const ToursHome = ({ clickToursHome }) => {
                         </div>
                       )}
 
-                      <ul className="tourshome-list">
+                      <ul className="toursadvance-list">
                         {item.description.map((descript, index) => {
                           return (
                             <li key={index}>
@@ -67,8 +69,8 @@ const ToursHome = ({ clickToursHome }) => {
                         })}
                       </ul>
 
-                      <div className="tourshome-price">
-                        <span className="tourshome-money">{item.price.toFixed(6)}</span>
+                      <div className="toursadvance-price">
+                        <span className="toursadvance-money">{item.price.toFixed(6)}</span>
                         <span>VND</span>
                       </div>
                     </div>
@@ -83,4 +85,4 @@ const ToursHome = ({ clickToursHome }) => {
   );
 };
 
-export default ToursHome;
+export default ToursAdvance;

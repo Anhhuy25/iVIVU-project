@@ -1,0 +1,485 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.tourtet-container {
+  background-color: #ecf0f5;
+}
+
+.tourtet-navbar {
+  display: flex;
+  list-style: none;
+  margin: 10px 0;
+}
+
+.tourtet-item {
+  font-size: 14px;
+}
+
+.tourtet-item+.tourtet-item:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+.tourtet-link {
+  color: #555863;
+}
+
+.tourtet-link i {
+  margin-right: 8px;
+  font-size: 12px;
+}
+
+.tourtet-choose {
+  color: #818180;
+}
+
+/* Tailor Tour */
+
+.tourtet-tailortour {
+  background-color: #feeec7;
+  padding: 12px;
+}
+
+.tailortour-title {
+  color: #003c71;
+  padding: 4px;
+}
+
+.tourtet-tailortour p {
+  padding: 4px;
+}
+
+.tailortour-title span {
+  color: #26bed6;
+}
+
+.tailortour-form {
+  background-color: #fef3d8;
+  padding: 4px;
+}
+
+.tailortour-name, .tailortour-phonenumber, .tailortour-email, .tailortour-experience, .tailortour-button {
+  padding: 8px;
+}
+
+.tailortour-input {
+  display: block;
+  height: 34px;
+  padding: 6px 12px;
+  width: 100%;
+  margin-top: 4px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;
+  background-color: transparent;
+}
+
+.tailortour-input:focus, .tailortour-textarea:focus {
+  border-color: #26bed6;
+}
+
+.tailortour-textarea {
+  display: block;
+  height: 54px;
+  padding: 6px 12px;
+  width: 100%;
+  margin-top: 4px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;
+  background-color: transparent;
+  resize: none;
+  font-size: 16px;
+}
+
+.tailortour-btn {
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f79321;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px;
+}
+
+.tailortour-avatar {
+  margin: 12px;
+  text-align: center;
+  font-size: 70px;
+}
+
+.tailortour-consultant {
+  text-align: center;
+  font-size: 20px;
+}
+
+.tailortour-consultant h3 {
+  color: #ec971f;
+  font-weight: bold;
+}
+
+.tailortour-qrcode {
+  text-align: center;
+}
+
+.tailortour-qrcode img {
+  width: 40%;
+}
+
+/* Info */
+
+/* SGHNSPHL5N4D */
+
+.tourtet-name {
+  color: #003c71;
+}
+
+.tourtet-rating {
+  margin-top: 12px;
+}
+
+.tourtet-rating span:first-child {
+  color: #fff;
+  background-color: #9fc43a;
+  padding: 4px;
+  font-weight: 600;
+  border-radius: 4px;
+  margin-right: 4px;
+}
+
+.tourtet-rating span:nth-child(2) {
+  color: #9fc43a;
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.tourtet-rating span:nth-child(3) {
+  color: #000;
+  font-size: 16px;
+}
+
+.tourtet-content {
+  margin-top: 16px;
+}
+
+.tourtet-img {
+  width: 100%;
+  margin-bottom: -5px;
+}
+
+.tourtet-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 12px;
+  background-color: #9497a31a;
+}
+
+.tourtet-info div span:nth-child(1), .tourtet-info div span:nth-child(2), .tourtet-info div span:nth-child(3) {
+  margin-right: 28px;
+  color: #50535d;
+}
+
+.tourtet-info div span:nth-child(1) i, .tourtet-info div span:nth-child(2) i, .tourtet-info div span:nth-child(3) i {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.tourtet-info span b {
+  color: #00c1de;
+}
+
+.tourtet-description {
+  background-color: #fff;
+}
+
+.tourtet-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 8px;
+}
+
+.tourtet-title h2, .tourtet-experiences h2, .tourtet-schedule h2 {
+  color: #003c71;
+}
+
+.tourtet-likeshare button {
+  border: none;
+  outline: none;
+  background-color: #1877f2;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.tourtet-journey p {
+  padding: 8px 12px;
+}
+
+.tourtet-experiences, .tourtet-schedule {
+  padding: 12px 8px;
+}
+
+.tourtet-experiences div, .tourtet-flighttime, .tourtet-firstday, .tourtet-secondday, .tourtet-thirdday, .tourtet-fourthday, .tourtet-fifthday {
+  padding: 8px;
+}
+
+.tourtet-experiences div p {
+  padding: 4px;
+}
+
+.tourtet-firstday h3, .tourtet-firstday p, .tourtet-firstday img, .tourtet-flighttime h3, .tourtet-flighttime p, .tourtet-secondday h3, .tourtet-secondday p, .tourtet-secondday img, .tourtet-thirdday h3, .tourtet-thirdday img, .tourtet-thirdday p, .tourtet-fourthday h3, .tourtet-fourthday img, .tourtet-fourthday p, .tourtet-fifthday h3, .tourtet-fifthday img, .tourtet-fifthday p, .tourtet-fifthday i {
+  padding: 4px;
+  width: 100%;
+}
+
+.tourtet-departureschedule {
+  padding: 12px 8px;
+}
+
+.tourtet-departureschedule h2 {
+  color: #003c71;
+}
+
+.tourtet-departureschedule-title, .tourtet-departureschedule-1403, .tourtet-departureschedule-1703, .tourtet-departureschedule-2403 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tourtet-departureschedule-table div span {
+  /* width: 100%; */
+  padding: 8px;
+}
+
+.tourtet-departureschedule-1403, .tourtet-departureschedule-2403 {
+  border: 1px solid #ddd;
+  background-color: #eeeaea;
+}
+
+.tourtet-departureschedule-1403minus, .tourtet-departureschedule-1703minus, .tourtet-departureschedule-2403minus {
+  background-color: #003c71;
+  border: 1px solid #003c71;
+  color: #fff;
+}
+
+.tourtet-plus1403, .tourtet-plus1703, .tourtet-plus2403 {
+  background-color: #003c71;
+  color: #fff;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.tourtet-minus1403, .tourtet-minus1703, .tourtet-minus2403 {
+  color: #fff;
+  cursor: pointer;
+}
+
+.tourtet-departureschedule-1703 {
+  border: 1px solid #ddd;
+}
+
+.fa-plus-circle {
+  margin-left: 8px;
+  cursor: pointer;
+  color: #003c71;
+}
+
+/* .fa-minus-circle {
+  margin-left: 8px;
+  cursor: pointer;
+  color: #003c71;
+} */
+
+.tourtet-departureschedule-table-adultchildren {
+  padding: 12px 8px;
+  border: 1px solid #ddd;
+}
+
+.tourtet-departureschedule-tableadult {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tourtet-departureschedule-tablechildren {
+  display: flex;
+  width: 54%;
+  justify-content: space-between;
+}
+
+.tourtet-departureschedule-adult {
+  margin-right: 12px;
+}
+
+.tourtet-departureschedule-children {
+  margin-right: 34px;
+}
+
+.tourtet-departureschedule-price {
+  margin-right: 10px;
+  color: #f79321;
+}
+
+.tourtet-departureschedule-pricechildren {
+  color: #f79321;
+}
+
+.tourtet-numberAdult button, .tourtet-numberChildren button {
+  outline: none;
+  border: 1px solid #ccc;
+  width: 30px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.numberadult, .numberchildren {
+  width: 30px;
+  font-size: 22px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  padding: 0 !important;
+}
+
+.tourtet-numberAdult, .tourtet-numberChildren {
+  display: flex;
+  align-items: center;
+}
+
+.tourtet-departureschedule-tablebtn {
+  color: #fff;
+  background-color: #f79321;
+  padding: 8px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 18px;
+  width: 140px;
+  cursor: pointer;
+}
+
+.tourtet-selectlist {
+  padding: 4px;
+  height: 30px;
+  margin-right: 12px;
+}
+
+.tourtet-listage-title {
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.tourtet-listage {
+  padding: 8px;
+}
+
+@media (min-width:740px)and (max-width:1023px) {
+  .tailortour-avatar {
+    font-size: 50px;
+  }
+  .tailortour-consultant {
+    font-size: 16px;
+  }
+  .tailortour-qrcode img {
+    width: 70%;
+  }
+  .fa-plus-circle, .fa-minus-circle {
+    margin-left: 0;
+  }
+  .tourtet-departureschedule-table div {
+    font-size: 16px;
+  }
+  .tourtet-departureschedule-title span:nth-child(1) {
+    width: 115%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .tourtet-departureschedule-title span:nth-child(2) {
+    width: 85%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .tourtet-departureschedule-title span:nth-child(3) {
+    width: 130%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .tourtet-departureschedule-title span:nth-child(4) {
+    width: 50%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .tourtet-departureschedule-1403 span:nth-child(1), .tourtet-departureschedule-1703 span:nth-child(1), .tourtet-departureschedule-2403 span:nth-child(1) {
+    width: 65%;
+    padding-left: 0;
+    padding-right: 0;
+    border-right: 1px solid #8d8b8b;
+    text-align: center;
+  }
+  .tourtet-departureschedule-1403 span:nth-child(2), .tourtet-departureschedule-1703 span:nth-child(2), .tourtet-departureschedule-2403 span:nth-child(2) {
+    width: 70%;
+    padding-left: 0;
+    padding-right: 0;
+    border-right: 1px solid #8d8b8b;
+    text-align: center;
+  }
+  .tourtet-departureschedule-1403 span:nth-child(3), .tourtet-departureschedule-1703 span:nth-child(3), .tourtet-departureschedule-2403 span:nth-child(3) {
+    width: 35%;
+    padding-left: 0;
+    padding-right: 0;
+    border-right: 1px solid #8d8b8b;
+    text-align: center;
+  }
+  .tourtet-departureschedule-1403 span:nth-child(4), .tourtet-departureschedule-1703 span:nth-child(4), .tourtet-departureschedule-2403 span:nth-child(4) {
+    width: 75%;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width:739px) {
+  .tourtet-departureschedule-title span:nth-child(2), .tourtet-departureschedule-title span:nth-child(3), .tourtet-departureschedule-1403 span:nth-child(2), .tourtet-departureschedule-1403 span:nth-child(3), .tourtet-departureschedule-1703 span:nth-child(2), .tourtet-departureschedule-1703 span:nth-child(3), .tourtet-departureschedule-2403 span:nth-child(2), .tourtet-departureschedule-2403 span:nth-child(3) {
+    display: none;
+  }
+  .fa-plus-circle, .fa-minus-circle {
+    margin-left: 0;
+  }
+  .tourtet-departureschedule-table div {
+    font-size: 16px;
+  }
+  .tourtet-departureschedule-title span:nth-child(1) {
+    width: 115%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .tourtet-departureschedule-title span:nth-child(4) {
+    width: 50%;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: right;
+  }
+  .tourtet-departureschedule-1403 span:nth-child(1), .tourtet-departureschedule-1703 span:nth-child(1), .tourtet-departureschedule-2403 span:nth-child(1) {
+    width: 65%;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
+  }
+  .tourtet-departureschedule-1403 span:nth-child(4), .tourtet-departureschedule-1703 span:nth-child(4), .tourtet-departureschedule-2403 span:nth-child(4) {
+    width: 75%;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: right;
+  }
+}

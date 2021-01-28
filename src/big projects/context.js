@@ -65,6 +65,26 @@ const getLocalStorageNavbarTours = () => {
   }
 }
 
+const getLocalStorageTourViewed = () => {
+  let tourViewed = localStorage.getItem('tourViewed');
+
+  if (tourViewed) {
+    return JSON.parse(localStorage.getItem('tourViewed'));
+  } else {
+    return [];
+  }
+}
+
+const getLocalStorageListAge = () => {
+  let listAge = localStorage.getItem('listAge');
+
+  if (listAge) {
+    return JSON.parse(localStorage.getItem('listAge'));
+  } else {
+    return [];
+  }
+}
+
 const AppProvider = ({ children }) => {
   // Navbar
   const [hotelAddClass, setHotelAddClass] = useState(getLocalStorageHotel());
@@ -105,6 +125,21 @@ const AppProvider = ({ children }) => {
   // Navbar changed when click different Content
   const [navbarToursArray, setNavbarToursArray] = useState(getLocalStorageNavbarTours());
 
+  // Tours Viewed
+  const [tourViewed, setTourViewed] = useState(getLocalStorageTourViewed());
+  // SGHNSPHL5N4D
+  const [showTableDay1403, setShowTable1403] = useState(false);
+  const [showTableDay1703, setShowTable1703] = useState(true);
+  const [showTableDay2403, setShowTable2403] = useState(true);
+  const [numberAdult, setNumberAdult] = useState(2);
+  const [numberChildren, setNumberChildren] = useState(0);
+  const [requireOrWatch, setRequireOrWatch] = useState('Yêu cầu đặt');
+  const [showPriceAndTotal, setShowPriceAndTotal] = useState(true);
+  const [showPriceChildren, setShowPriceChildren] = useState(false);
+  const [listAge, setListAge] = useState([]);
+  const [selectAge, setSelectAge] = useState('250.000');
+
+
   // Function add ClassName for Navbar
   const hotel = () => {
     setHotelAddClass(true)
@@ -138,7 +173,9 @@ const AppProvider = ({ children }) => {
     localStorage.setItem('eatAddClass', JSON.stringify(eatAddClass));
     localStorage.setItem('tableArray', JSON.stringify(tableArray));
     localStorage.setItem('navbarToursArray', JSON.stringify(navbarToursArray));
-  }, [hotelAddClass, tourAddClass, ticketAddClass, eatAddClass, tableArray, navbarToursArray])
+    localStorage.setItem('tourViewed', JSON.stringify(tourViewed));
+    localStorage.setItem('listAge', JSON.stringify(listAge))
+  }, [hotelAddClass, tourAddClass, ticketAddClass, eatAddClass, tableArray, navbarToursArray, tourViewed, listAge])
 
   return (
     <AppContext.Provider
@@ -165,6 +202,17 @@ const AppProvider = ({ children }) => {
         tableArray, setTableArray,
         showSidebar, setShowSidebar,
         navbarToursArray, setNavbarToursArray,
+        tourViewed, setTourViewed,
+        showTableDay1403, setShowTable1403,
+        showTableDay1703, setShowTable1703,
+        showTableDay2403, setShowTable2403,
+        numberAdult, setNumberAdult,
+        numberChildren, setNumberChildren,
+        requireOrWatch, setRequireOrWatch,
+        showPriceAndTotal, setShowPriceAndTotal,
+        showPriceChildren, setShowPriceChildren,
+        listAge, setListAge,
+        selectAge, setSelectAge,
       }}
     >
       {children}

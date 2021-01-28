@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.tourtet-container {
+  background-color: #ecf0f5;
+}
+
+.tourtet-navbar {
+  display: flex;
+  list-style: none;
+  margin: 10px 0;
+}
+
+.tourtet-item {
+  font-size: 14px;
+}
+
+.tourtet-item+.tourtet-item:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+.tourtet-link {
+  color: #555863;
+}
+
+.tourtet-link i {
+  margin-right: 8px;
+  font-size: 12px;
+}
+
+.tourtet-choose {
+  color: #818180;
+}
+
+/* Info */
+
+.tourtet-name {
+  color: #003c71;
+}

@@ -40,6 +40,9 @@ import BaliHotels from './big projects/destination-tourism/international/interna
 import SingaporeHotels from './big projects/destination-tourism/international/international-hotels/SingaporeHotels';
 import BangkokHotels from './big projects/destination-tourism/international/international-hotels/BangkokHotels';
 import SwitzerlandHotels from './big projects/destination-tourism/international/international-hotels/SwitzerlandHotels';
+import SGHNSPHL5N4D from './big projects/navbar/tours/toursinfo/tours-category/tet/SGHNSPHL5N4D';
+// import TourInfo from './big projects/navbar/tours/toursinfo/TourInfo';
+
 
 const App = () => {
   return (
@@ -55,13 +58,13 @@ const App = () => {
           <Footer />
         </Route>
         {/* Navbar */}
-        <Route path="/du-lich/" children={<Tours />}></Route>
-        <Route path="/ve-may-bay/" children={<PlaneTicket />}></Route>
-        <Route path="/an-uong/" children={<Eat />}></Route>
-        <Route path="/tai-khoan-dat-phong/" children={<AccountBooking />}></Route>
-        <Route path="/cam-nang-du-lich/" children={<Handbook />}></Route>
-        <Route path="/gioi-thieu/" children={<Introduce />}></Route>
-        <Route path="/ho-tro/" children={<Support />}></Route>
+        <Route path="/du-lich" children={<Tours />}></Route>
+        <Route path="/ve-may-bay" children={<PlaneTicket />}></Route>
+        <Route path="/an-uong" children={<Eat />}></Route>
+        <Route path="/tai-khoan-dat-phong" children={<AccountBooking />}></Route>
+        <Route path="/cam-nang-du-lich" children={<Handbook />}></Route>
+        <Route path="/gioi-thieu" children={<Introduce />}></Route>
+        <Route path="/ho-tro" children={<Support />}></Route>
 
         {/* Events */}
         <Route path="/chu-de/tet-tay" children={<NewYear />}></Route>
@@ -91,13 +94,18 @@ const App = () => {
         <Route path="/khach-san-bangkok" children={<BangkokHotels />}></Route>
         <Route path="/khach-san-switzerland" children={<SwitzerlandHotels />}></Route>
 
-        <Route path="/dieu-kien-dieu-khoan/"></Route>
-        <Router path="*">
-          <ErrorPage />
-        </Router>
-      </Switch>
+        {/* Tet Tan Suu */}
+        <Route path="/tour-mien-bac-5n4d-sai-gon-ha-noi-sapa-ha-long" children={<SGHNSPHL5N4D />}></Route>
+        <Route path="/tour-mien-trung-3n4d-kham-pha-quy-nhon-phu-yen-tau-lua-tet" ></Route>
+        {/* <Route path="/:url" children={<TourInfo />}></Route> */}
 
-    </Router>
+        <Route path="/dieu-kien-dieu-khoan/"></Route>
+        <Route path="*">
+          <ErrorPage />
+        </Route>
+      </Switch >
+
+    </Router >
   );
 };
 

@@ -48,7 +48,7 @@ const Navbar = () => {
                     Khách sạn
                     </li>
                 </Link>
-                <Link to="/du-lich/">
+                <Link to="/du-lich">
                   <li
                     onClick={tour}
                     className={`${tourAddClass ? 'active' : ''}`}
@@ -56,7 +56,7 @@ const Navbar = () => {
                     Tours
                     </li>
                 </Link>
-                <Link to="/ve-may-bay/">
+                <Link to="/ve-may-bay">
                   <li
                     onClick={ticket}
                     className={`${ticketAddClass ? 'active' : ''}`}
@@ -64,7 +64,7 @@ const Navbar = () => {
                     Vé máy bay
                     </li>
                 </Link>
-                <Link to="/an-uong/">
+                <Link to="/an-uong">
                   <li
                     onClick={eat}
                     className={`${eatAddClass ? 'active' : ''}`}

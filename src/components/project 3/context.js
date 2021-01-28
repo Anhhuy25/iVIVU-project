@@ -6,7 +6,6 @@ const AppContext = React.createContext();
 const getLocalStorage = () => {
   let cartItems = localStorage.getItem('cartItems');
 
-
   if (cartItems) {
     return JSON.parse(localStorage.getItem('cartItems'));
   } else {
@@ -35,7 +34,8 @@ const AppProvider = ({ children }) => {
 
   const addItem = (item) => {
     const existItem = cartItems.find(x => x.id === item.id);
-
+    console.log(cartItems.map(x => x.id));
+    console.log(existItem);
     if (existItem) {
       setCartItems(cartItems.map(y => y.id === item.id ? { ...existItem, quantity: existItem.quantity + 1 } : y))
     } else {

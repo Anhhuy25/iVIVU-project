@@ -2,15 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { AppProvider } from './big projects/context';
-// import Project6 from './small projects/Project6';
-// import { AppProvider } from './components/project 6/context';
+// import Project3 from './small projects/Project3';
+// import { AppProvider } from './components/project 3/context';
 
 ReactDOM.render(
   <AppProvider>
     <App />
   </AppProvider>
   // <AppProvider>
-  //   <Project6 />
+  //   <Project3 />
   // </AppProvider>
   , document.getElementById('root')
 );

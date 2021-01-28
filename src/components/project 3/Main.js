@@ -3,12 +3,11 @@ import { useGlobalContext } from './context';
 import data from './data';
 
 const Main = () => {
-  const listItems = data;
   const { addItem } = useGlobalContext();
 
   return (
     <div>
-      {listItems.map(item => {
+      {data.map(item => {
         const { id, name, author, price, image } = item;
         return (
           <div key={id}>
