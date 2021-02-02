@@ -166,7 +166,7 @@
 }
 
 .tourtet-content {
-  margin-top: 16px;
+  padding-top: 16px;
 }
 
 .tourtet-img {
@@ -177,6 +177,7 @@
 .tourtet-info {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 18px 12px;
   background-color: #9497a31a;
 }
@@ -293,12 +294,6 @@
   color: #003c71;
 }
 
-/* .fa-minus-circle {
-  margin-left: 8px;
-  cursor: pointer;
-  color: #003c71;
-} */
-
 .tourtet-departureschedule-table-adultchildren {
   padding: 12px 8px;
   border: 1px solid #ddd;
@@ -313,8 +308,9 @@
 
 .tourtet-departureschedule-tablechildren {
   display: flex;
-  width: 54%;
+  width: 50%;
   justify-content: space-between;
+  align-items: center;
 }
 
 .tourtet-departureschedule-adult {
@@ -373,6 +369,7 @@
   padding: 4px;
   height: 30px;
   margin-right: 12px;
+  margin-top: 8px;
 }
 
 .tourtet-listage-title {
@@ -384,7 +381,229 @@
   padding: 8px;
 }
 
-@media (min-width:740px)and (max-width:1023px) {
+.tourtet-total span:nth-child(1) {
+  color: #f79321;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 4px !important;
+}
+
+.tourtet-total span:nth-child(2) {
+  padding: 4px !important;
+  color: #f79321;
+}
+
+.tourtet-totalbtn-mobile {
+  display: none;
+}
+
+.tourtet-accompanyservices {
+  padding: 20px 8px;
+}
+
+.tourtet-expensepolicy, .tourtet-terms {
+  padding: 8px;
+}
+
+.tourtet-accompanyservices-list, .tourtet-expensepolicy-list, .tourtet-terms-list {
+  padding: 12px 8px 0 8px;
+}
+
+.tourtet-accompanyservices h2, .tourtet-expensepolicy h2, .tourtet-terms h2 {
+  color: #003c71;
+}
+
+.tourtet-accompanyservices-top {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tourtet-accompanyservices-top span i, .tourtet-accompanyservices-bottom span i {
+  margin-right: 12px;
+  color: #1976d2;
+}
+
+.tourtet-accompanyservices-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 56%;
+}
+
+.tourtet-expensepolicy-list p {
+  margin-bottom: 8px;
+}
+
+.tourtet-terms-list {
+  padding: 20px 8px 0 8px;
+}
+
+.tourtet-terms-list span {
+  padding: 12px;
+  cursor: pointer;
+  color: #003c71;
+  line-height: 45px;
+}
+
+.tourtet-terms-list span:hover {
+  background-color: #f0eded;
+  color: #000;
+}
+
+.tourtet-terms-active {
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-bottom: none !important;
+}
+
+.tourtet-firstterm, .tourtet-secondterm, .tourtet-thirdterm, .tourtet-fourthterm {
+  border-bottom: 1px solid #ccc;
+}
+
+.tourtet-firstterm-list, .tourtet-secondterm-list, .tourtet-thirdterm-list, .tourtet-fourthterm-list {
+  margin-top: 24px;
+  padding: 0 12px;
+}
+
+.tourtet-singleroom {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 56%;
+}
+
+.tourtet-singleroom span:nth-child(2) {
+  color: #f79321;
+}
+
+.tourtet-right {
+  position: sticky;
+  top: 0;
+}
+
+.tourtet-totalprice {
+  background-color: #fff;
+  margin-top: 16px;
+  padding: 12px;
+}
+
+.tourtet-totalprice p {
+  color: #003c71;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.tourtet-totalprice-adult, .tourtet-totalprice-children {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tourtet-totalprice-pickdaystart {
+  margin-bottom: 12px;
+}
+
+.tourtet-totalprice-adult {
+  margin-bottom: 12px;
+}
+
+.tourtet-totalprice-numberAdult, .tourtet-totalprice-numberChildren {
+  display: flex;
+}
+
+.tourtet-totalprice-adultprice, .tourtet-totalprice-childrenprice {
+  margin-right: 12px;
+  color: #f79321;
+  font-size: 18px;
+}
+
+.tourtet-totalprice-numberAdult button, .tourtet-totalprice-numberChildren button {
+  outline: none;
+  border: 1px solid #ccc;
+  width: 30px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.totalprice-numberadult, .totalprice-numberchildren {
+  width: 30px;
+  font-size: 22px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  padding: 0 !important;
+}
+
+.tourtet-totalprice-adultpricequantity, .tourtet-totalprice-childrenpricequantity {
+  display: flex;
+  align-items: center;
+}
+
+.tourtet-totalprice-singleroom {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tourtet-totalprice-singleroom span:nth-child(2) {
+  color: #f79321;
+  font-size: 18px;
+}
+
+.tourtet-totalprice-totalandbtn {
+  margin-top: 30px;
+}
+
+.tourtet-totalprice-totalandbtn p {
+  text-align: right;
+  color: #f79321;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.tourtet-totalprice-totalandbtn button {
+  color: #fff;
+  background-color: #f79321;
+  padding: 8px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 18px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.tourtet-bookmark {
+  background-color: #fff;
+  margin-top: 12px;
+}
+
+.tourtet-bookmark a {
+  display: block;
+  color: #000;
+  padding: 16px;
+}
+
+.tourtet-bookmark a:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+/* Responsive */
+
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .tourtet-accompanyservices-bottom {
+    width: 58%;
+  }
+}
+
+@media (min-width: 740px) and (max-width:1023px) {
   .tailortour-avatar {
     font-size: 50px;
   }
@@ -422,30 +641,27 @@
   }
   .tourtet-departureschedule-1403 span:nth-child(1), .tourtet-departureschedule-1703 span:nth-child(1), .tourtet-departureschedule-2403 span:nth-child(1) {
     width: 65%;
-    padding-left: 0;
+    padding-left: 4px;
     padding-right: 0;
-    border-right: 1px solid #8d8b8b;
-    text-align: center;
   }
   .tourtet-departureschedule-1403 span:nth-child(2), .tourtet-departureschedule-1703 span:nth-child(2), .tourtet-departureschedule-2403 span:nth-child(2) {
     width: 70%;
     padding-left: 0;
     padding-right: 0;
-    border-right: 1px solid #8d8b8b;
-    text-align: center;
   }
   .tourtet-departureschedule-1403 span:nth-child(3), .tourtet-departureschedule-1703 span:nth-child(3), .tourtet-departureschedule-2403 span:nth-child(3) {
     width: 35%;
     padding-left: 0;
     padding-right: 0;
-    border-right: 1px solid #8d8b8b;
-    text-align: center;
   }
   .tourtet-departureschedule-1403 span:nth-child(4), .tourtet-departureschedule-1703 span:nth-child(4), .tourtet-departureschedule-2403 span:nth-child(4) {
     width: 75%;
     padding-left: 0;
-    padding-right: 0;
-    text-align: center;
+    padding-right: 4px;
+    text-align: right;
+  }
+  .tourtet-accompanyservices-bottom {
+    width: 58%;
   }
 }
 
@@ -481,5 +697,80 @@
     padding-left: 0;
     padding-right: 0;
     text-align: right;
+  }
+  .tourtet-departureschedule {
+    padding: 12px;
+  }
+  .tourtet-departureschedule-table {
+    padding: 0 8px;
+  }
+  .tourtet-departureschedule-adult, .tourtet-departureschedule-children, .tourtet-departureschedule-price {
+    padding: 4px !important;
+    margin-right: 0;
+    font-size: 18px;
+  }
+  .tourtet-total, .tourtet-departureschedule-tablebtn {
+    display: none;
+  }
+  .tourtet-departureschedule-tablechildren {
+    width: 100%;
+  }
+  .tourtet-totalbtn-mobile {
+    display: block;
+    text-align: right;
+    margin-top: 8px;
+  }
+  .tourtet-totalbtn-mobile button {
+    color: #fff;
+    background-color: #f79321;
+    padding: 8px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 18px;
+    width: 140px;
+    cursor: pointer;
+    margin-top: 4px;
+  }
+  .tourtet-totalbtn-mobile p {
+    color: #f79321;
+    font-weight: bold;
+    font-size: 28px;
+  }
+  .tourtet-departureschedule-1403, .tourtet-departureschedule-1703, .tourtet-departureschedule-2403 {
+    padding: 0 8px;
+  }
+  .tourtet-singleroom {
+    width: 100%;
+  }
+  .tourtet-singleroom span {
+    font-size: 18px;
+    padding: 4px !important;
+  }
+  .tourtet-accompanyservices-bottom {
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .tourtet-info {
+    flex-direction: column;
+    padding: 8px;
+    font-size: 16px;
+  }
+  .tourtet-info div span:nth-child(1), .tourtet-info div span:nth-child(2), .tourtet-info div span:nth-child(3) {
+    margin-right: 8px;
+  }
+  .tourtet-info div span:nth-child(1) i, .tourtet-info div span:nth-child(2) i, .tourtet-info div span:nth-child(3) i {
+    margin-left: 0;
+  }
+  .tourtet-code {
+    margin-top: 8px;
+  }
+  .tourtet-navbar li:nth-child(3) {
+    display: none;
+  }
+  .tourtet-navbar, .tourtet-name, .tourtet-rating, .tourtet-img {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }

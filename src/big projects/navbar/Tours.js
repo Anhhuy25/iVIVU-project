@@ -1,4 +1,8 @@
 import React from 'react';
+import { useGlobalContext } from '../context';
+// import { tetTanSuu } from './tours/listTours';
+
+// Components
 import NavbarTours from './tours/NavbarTours';
 import FooterTop from './tours/FooterTop';
 import FooterBottom from './tours/FooterBottom';
@@ -8,7 +12,6 @@ import ToursAdvance from './tours/ToursAdvance';
 import PopularTourism from './tours/PopularTourism';
 import ToursViewed from './tours/ToursViewed';
 
-import { useGlobalContext } from '../context';
 
 const Tours = () => {
   const { tourViewed, setTourViewed } = useGlobalContext();
@@ -22,6 +25,11 @@ const Tours = () => {
       setTourViewed([...tourViewed, item])
     }
   }
+  // const handleClick = (id) => {
+  //   const tourFound = tetTanSuu.find(tour => tour.id === id);
+
+  //   setTourViewed([...tourViewed, tourFound])
+  // }
 
   const handleClose = (id) => {
     const tourClear = tourViewed.filter(tour => tour.id !== id);
@@ -38,7 +46,7 @@ const Tours = () => {
         <ToursAdvance clickToursAdvance={handleClick} />
         <PopularTourism />
       </div>
-      <div style={{ backgroundColor: '#f9f9f9' }}>
+      <div style={{ backgroundColor: '#f9f9f9', padding: '0 8px' }}>
         <FooterTop />
         <FooterBottom />
       </div>

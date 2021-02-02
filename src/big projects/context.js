@@ -1,8 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 
 
-
-
 const AppContext = React.createContext();
 
 const getLocalStorageHotel = () => {
@@ -75,16 +73,6 @@ const getLocalStorageTourViewed = () => {
   }
 }
 
-const getLocalStorageListAge = () => {
-  let listAge = localStorage.getItem('listAge');
-
-  if (listAge) {
-    return JSON.parse(localStorage.getItem('listAge'));
-  } else {
-    return [];
-  }
-}
-
 const AppProvider = ({ children }) => {
   // Navbar
   const [hotelAddClass, setHotelAddClass] = useState(getLocalStorageHotel());
@@ -128,7 +116,7 @@ const AppProvider = ({ children }) => {
   // Tours Viewed
   const [tourViewed, setTourViewed] = useState(getLocalStorageTourViewed());
   // SGHNSPHL5N4D
-  const [showTableDay1403, setShowTable1403] = useState(false);
+  const [showTableDay1403, setShowTable1403] = useState(true);
   const [showTableDay1703, setShowTable1703] = useState(true);
   const [showTableDay2403, setShowTable2403] = useState(true);
   const [numberAdult, setNumberAdult] = useState(2);
@@ -138,7 +126,11 @@ const AppProvider = ({ children }) => {
   const [showPriceChildren, setShowPriceChildren] = useState(false);
   const [listAge, setListAge] = useState([]);
   const [selectAge, setSelectAge] = useState('250.000');
-
+  const [firstTerm, setFirstTerm] = useState(true);
+  const [secondTerm, setSecondTerm] = useState(false);
+  const [thirdTerm, setThirdTerm] = useState(false);
+  const [fourthTerm, setFourthTerm] = useState(false);
+  const [showSingleRoom, setShowSingleRoom] = useState(false);
 
   // Function add ClassName for Navbar
   const hotel = () => {
@@ -174,8 +166,7 @@ const AppProvider = ({ children }) => {
     localStorage.setItem('tableArray', JSON.stringify(tableArray));
     localStorage.setItem('navbarToursArray', JSON.stringify(navbarToursArray));
     localStorage.setItem('tourViewed', JSON.stringify(tourViewed));
-    localStorage.setItem('listAge', JSON.stringify(listAge))
-  }, [hotelAddClass, tourAddClass, ticketAddClass, eatAddClass, tableArray, navbarToursArray, tourViewed, listAge])
+  }, [hotelAddClass, tourAddClass, ticketAddClass, eatAddClass, tableArray, navbarToursArray, tourViewed])
 
   return (
     <AppContext.Provider
@@ -184,35 +175,24 @@ const AppProvider = ({ children }) => {
         hotelAddClass, tourAddClass,
         ticketAddClass, eatAddClass,
         hotel, tour, ticket, eat,
-        showFormLoReg, setShowFormLoReg,
-        showLogin, setShowLogin,
-        name, setName,
-        checkName, setCheckName,
-        password, setPassword,
-        checkPassword, setCheckPassword,
-        checkLengthPassword, setCheckLengthPassword,
-        showRegis, setShowRegis,
-        repassword, setRepassword,
-        checkRePassword, setCheckRepassword,
-        checkPassRepass, setCheckPassRepass,
-        checkBox, setCheckBox,
-        showErrorMess, setShowErrorMess,
-        checkAfterAt, setCheckAfterAt,
-        showTableLP, setShowTableLP,
-        tableArray, setTableArray,
-        showSidebar, setShowSidebar,
-        navbarToursArray, setNavbarToursArray,
-        tourViewed, setTourViewed,
-        showTableDay1403, setShowTable1403,
-        showTableDay1703, setShowTable1703,
+        showFormLoReg, setShowFormLoReg, showLogin, setShowLogin,
+        name, setName, checkName, setCheckName, password, setPassword,
+        checkPassword, setCheckPassword, checkLengthPassword, setCheckLengthPassword,
+        showRegis, setShowRegis, repassword, setRepassword,
+        checkRePassword, setCheckRepassword, checkPassRepass, setCheckPassRepass,
+        checkBox, setCheckBox, showErrorMess, setShowErrorMess,
+        checkAfterAt, setCheckAfterAt, showTableLP, setShowTableLP,
+        tableArray, setTableArray, showSidebar, setShowSidebar,
+        navbarToursArray, setNavbarToursArray, tourViewed, setTourViewed,
+        showTableDay1403, setShowTable1403, showTableDay1703, setShowTable1703,
         showTableDay2403, setShowTable2403,
-        numberAdult, setNumberAdult,
-        numberChildren, setNumberChildren,
-        requireOrWatch, setRequireOrWatch,
-        showPriceAndTotal, setShowPriceAndTotal,
-        showPriceChildren, setShowPriceChildren,
-        listAge, setListAge,
-        selectAge, setSelectAge,
+        numberAdult, setNumberAdult, numberChildren, setNumberChildren,
+        requireOrWatch, setRequireOrWatch, showSingleRoom, setShowSingleRoom,
+        showPriceAndTotal, setShowPriceAndTotal, showPriceChildren, setShowPriceChildren,
+        listAge, setListAge, selectAge, setSelectAge,
+        firstTerm, setFirstTerm, secondTerm, setSecondTerm,
+        thirdTerm, setThirdTerm, fourthTerm, setFourthTerm,
+
       }}
     >
       {children}

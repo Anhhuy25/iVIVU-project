@@ -27,7 +27,7 @@ export const tetTanSuu = [
     to: 'tour-mien-bac-5n4d-sai-gon-ha-noi-sapa-ha-long',
     name: 'Tour Miền Bắc 5N4D: Sài Gòn - Hà Nội - SaPa - Hạ Long',
     location: 'Hạ Long, Hà Nội, Ninh Bình, Sapa',
-    price: 6.290,
+    price: 6490000,
     rating: ['9.0', 'Tuyệt vời', '| 2 đánh giá'],
     description: ['Khách sạn 3 sao', 'Bay Vietjet'],
   },
@@ -37,7 +37,7 @@ export const tetTanSuu = [
     to: 'tour-mien-trung-3n4d-kham-pha-quy-nhon-phu-yen-tau-lua-tet',
     name: 'Tour Miền Trung 3N4D: Khám Phá Quy Nhơn - Phú Yên ( Tàu Lửa) Tết',
     location: 'Phú Yên, Quy Nhơn',
-    price: 3.260,
+    price: 3260000,
     rating: ['7.0', 'Khá tốt', '| 2 đánh giá'],
     description: [
       'Cendeluxe tiêu chuẩn 5 sao', 'Đảo Kỳ Co',
@@ -50,7 +50,7 @@ export const tetTanSuu = [
     to: 'tour-mien-bac-4n3d-hcm-yen-bai-dien-bien-moc-chau-hoa-binh',
     name: 'Tour Miền Bắc 4N3D: HCM - Yên Bái - Điện Biên - Mộc Châu - Hòa Bình',
     location: 'Điện Biên, Mộc Châu, Yên Bái',
-    price: 5.988,
+    price: 5988000,
     time: '4 Ngày 3 Đêm',
     description: [
       'Khám Phá Mù Cang Chải',
@@ -64,7 +64,7 @@ export const tetTanSuu = [
     to: 'tour-mien-trung-4n3d-quy-nhon-phu-yen-vna',
     name: 'Tour Miền Trung 4N3D: Quy Nhơn - Phú Yên (VNA)',
     location: 'Phú Yên, Quy Nhơn',
-    price: 8.390,
+    price: 8390000,
     time: '4 Ngày 3 Đêm',
     description: [
       'Bay Cùng VNA',
@@ -78,7 +78,7 @@ export const tetTanSuu = [
     to: 'tour-hanh-huong-mien-tay-3n2d-du-xuan-chau-doc-tra-su-can-tho-tet',
     name: 'Tour Hành Hương Miền Tây 3N2D: Du Xuân Châu Đốc - Trà Sư - Cần Thơ (Tết)',
     location: 'Cần Thơ, Châu Đốc, Miền Tây',
-    price: 2.686,
+    price: 2686000,
     time: '3 Ngày 2 Đêm',
     description: [
       'Viếng Miếu Bà Chúa Xứ',
@@ -92,7 +92,7 @@ export const tetTanSuu = [
     to: 'tour-cao-cap-da-nang-3n2d-hcm-bao-tang-cham-hoi-an-ba-na-tet',
     name: 'Tour Cao Cấp Đà Nẵng 3N2D: HCM - Bảo Tàng Chăm - Hội An - Bà Nà (Tết)',
     location: 'Đà Nẵng, Hội An',
-    price: 5.990,
+    price: 5990000,
     time: '3 Ngày 2 Đêm',
     description: [
       'Trải Nghiệm Dịch Vụ 4 Sao',
@@ -106,7 +106,7 @@ export const tetTanSuu = [
     to: 'tour-mien-tay-4n3d-hcm-my-tho-can-tho-con-dao-tet-tan-suu',
     name: 'Tour Miền Tây 4N3D: HCM - Mỹ Tho - Cần Thơ - Côn Đảo Tết Tân Sửu',
     location: 'Cần Thơ, Côn Đảo, Mỹ Tho',
-    price: 5.990,
+    price: 5990000,
     time: '4 Ngày 3 Đêm',
     description: [
       'Khám Phá Côn Đảo',
@@ -120,7 +120,7 @@ export const tetTanSuu = [
     to: 'tour-cao-cap-phan-thiet-2n1d-danh-golf-cung-sealink-doi-cat-bay-tet',
     name: 'Tour Cao Cấp Phan Thiết 2N1D: Đánh Golf Cùng Sealink - Đồi Cát Bay (Tết)',
     location: 'Phan Thiết',
-    price: 2.186,
+    price: 2186000,
     time: '2 Ngày 1 Đêm',
     description: [
       'Sea Links Golf & Country Club',
@@ -133,7 +133,7 @@ export const tetTanSuu = [
     to: 'tour-mien-bac-5n4d-hcm-ha-giang-cao-bang-bac-kan-thai-nguyen',
     name: 'Tour Miền Bắc 5N4D: HCM - Hà Giang - Cao Bằng - Bắc Kạn - Thái Nguyên',
     location: 'Cao Bằng, Hà Giang, Tuyên Quang',
-    price: 6.588,
+    price: 6588000,
     time: '5 Ngày 4 Đêm',
     description: [
       'Trải Nghiệm Tour Đường Sông',

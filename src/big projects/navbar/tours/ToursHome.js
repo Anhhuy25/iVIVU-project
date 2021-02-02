@@ -68,7 +68,7 @@ const ToursHome = ({ clickToursHome }) => {
                       </ul>
 
                       <div className="tourshome-price">
-                        <span className="tourshome-money">{item.price.toFixed(6)}</span>
+                        <span className="tourshome-money">{item.price.toLocaleString()}</span>
                         <span>VND</span>
                       </div>
                     </div>
