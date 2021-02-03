@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useGlobalContext } from '../context';
 
@@ -23,6 +23,22 @@ const Navbar = () => {
     showTableLP, setShowTableLP,
     tableArray, showSidebar, setShowSidebar
   } = useGlobalContext();
+
+  // Prevent Scrollbar when Modal appear
+  useEffect(() => {
+    if (showRegis) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "unset";
+    }
+  }, [showRegis])
+  useEffect(() => {
+    if (showLogin) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "unset";
+    }
+  }, [showLogin])
 
   return (
     <div className="navbar">

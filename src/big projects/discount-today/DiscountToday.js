@@ -15,7 +15,7 @@ const DiscountToday = () => {
     if (index > lastIndex) {
       setIndex(0);
     }
-  }, [index, listImages]);
+  }, [index]);
 
 
 

@@ -73,6 +73,16 @@ const getLocalStorageTourViewed = () => {
   }
 }
 
+const getLocalStorageNavbarPlaneTicket = () => {
+  let navbarPlaneTicketArr = localStorage.getItem('navbarPlaneTicketArr');
+
+  if (navbarPlaneTicketArr) {
+    return JSON.parse(localStorage.getItem('navbarPlaneTicketArr'));
+  } else {
+    return [];
+  }
+}
+
 const AppProvider = ({ children }) => {
   // Navbar
   const [hotelAddClass, setHotelAddClass] = useState(getLocalStorageHotel());
@@ -112,6 +122,7 @@ const AppProvider = ({ children }) => {
 
   // Navbar changed when click different Content
   const [navbarToursArray, setNavbarToursArray] = useState(getLocalStorageNavbarTours());
+  const [navbarPlaneTicketArr, setNavbarPlaneTicketArr] = useState(getLocalStorageNavbarPlaneTicket())
 
   // Tours Viewed
   const [tourViewed, setTourViewed] = useState(getLocalStorageTourViewed());
@@ -131,6 +142,14 @@ const AppProvider = ({ children }) => {
   const [thirdTerm, setThirdTerm] = useState(false);
   const [fourthTerm, setFourthTerm] = useState(false);
   const [showSingleRoom, setShowSingleRoom] = useState(false);
+
+  // Plane Ticket
+  const [info1, setInfo1] = useState(true);
+  const [info2, setInfo2] = useState(false);
+  const [info3, setInfo3] = useState(false);
+  const [info4, setInfo4] = useState(false);
+  const [info5, setInfo5] = useState(false);
+  const [showNoteCarousel, setShowNoteCarousel] = useState(false);
 
   // Function add ClassName for Navbar
   const hotel = () => {
@@ -166,7 +185,8 @@ const AppProvider = ({ children }) => {
     localStorage.setItem('tableArray', JSON.stringify(tableArray));
     localStorage.setItem('navbarToursArray', JSON.stringify(navbarToursArray));
     localStorage.setItem('tourViewed', JSON.stringify(tourViewed));
-  }, [hotelAddClass, tourAddClass, ticketAddClass, eatAddClass, tableArray, navbarToursArray, tourViewed])
+    localStorage.setItem('navbarPlaneTicketArr', JSON.stringify(navbarPlaneTicketArr));
+  }, [hotelAddClass, tourAddClass, ticketAddClass, eatAddClass, tableArray, navbarToursArray, tourViewed, navbarPlaneTicketArr])
 
   return (
     <AppContext.Provider
@@ -192,7 +212,9 @@ const AppProvider = ({ children }) => {
         listAge, setListAge, selectAge, setSelectAge,
         firstTerm, setFirstTerm, secondTerm, setSecondTerm,
         thirdTerm, setThirdTerm, fourthTerm, setFourthTerm,
-
+        navbarPlaneTicketArr, setNavbarPlaneTicketArr,
+        info1, setInfo1, info2, setInfo2, info3, setInfo3, info4, setInfo4, info5, setInfo5,
+        showNoteCarousel, setShowNoteCarousel,
       }}
     >
       {children}

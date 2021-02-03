@@ -1,18 +1,20 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { useGlobalContext } from '../../context';
+import { Link } from 'react-router-dom';
 
-import './navbartours.css';
+// Components
+import './navbarplaneticket.css';
 import '../../grid.css';
 import '../../login-register/loginregis.css';
+import Sidebar from '../Sidebar';
 import SubNavbar from '../SubNavbar';
 import FormLo from '../../login-register/FormLo';
 import Login from '../../login-register/Login';
 import Register from '../../login-register/Register';
-import Sidebar from '../Sidebar';
-import NavbarToursTable from './NavbarToursTable';
+import NavbarPlaneticketTable from './NavbarPlaneticketTable';
 
-const NavbarTours = () => {
+
+const NavbarPlaneTicket = () => {
   const {
     hotelAddClass, tourAddClass,
     ticketAddClass, eatAddClass,
@@ -22,7 +24,7 @@ const NavbarTours = () => {
     showLogin, showRegis,
     showTableLP, setShowTableLP,
     showSidebar, setShowSidebar,
-    navbarToursArray
+    navbarPlaneTicketArr,
   } = useGlobalContext();
 
   // Prevent Scrollbar when Modal appear
@@ -114,20 +116,20 @@ const NavbarTours = () => {
             <div className="navbar-contact">
               <p className="navbar-phonenumber">
                 <i className="fas fa-phone-alt"></i>
-                <span>(028) 3933 8002</span>
+                <span>(028) 3933 8008</span>
               </p>
 
               <div className="navbar-time" onClick={() => setShowTableLP(!showTableLP)}>
                 <p className="navbar-clock">
                   <i className="fas fa-clock"></i>
-                  <span>8h30 - 18h</span>
+                  <span>7h30 - 21h</span>
                 </p>
                 <p className="navbar-location">
                   <i className="fas fa-map-marker-alt"></i>
-                  {navbarToursArray.length === 0 ? 'Hồ Chí Minh' : <span>{navbarToursArray.map(item => item.city)}</span>}
+                  {navbarPlaneTicketArr.length === 0 ? 'Hồ Chí Minh' : <span>{navbarPlaneTicketArr.map(item => item.city)}</span>}
                 </p>
                 <i className="fas fa-angle-down"></i>
-                {showTableLP && <NavbarToursTable />}
+                {showTableLP && <NavbarPlaneticketTable />}
               </div>
             </div>
           </div>
@@ -137,4 +139,4 @@ const NavbarTours = () => {
   );
 };
 
-export default NavbarTours;
+export default NavbarPlaneTicket;
