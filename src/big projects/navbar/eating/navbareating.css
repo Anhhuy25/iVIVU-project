@@ -1,0 +1,431 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  background-color: #003c71;
+  display: flex;
+  align-items: center;
+}
+
+.container-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: -4px;
+  margin-right: -4px;
+}
+
+.active {
+  color: #26bed6;
+  position: relative;
+}
+
+.active::after {
+  border-bottom: 3px solid #f4a738;
+  content: "";
+  position: absolute;
+  top: 39px;
+  left: -3px;
+  width: 110%;
+}
+
+.bars-icon {
+  display: none;
+}
+
+/* Sidebar */
+
+.sidebar {
+  background-color: #003c71;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  transition: 2s linear;
+  transform: translate(-100%);
+}
+
+.sidebar-slide {
+  transform: translate(0);
+}
+
+.sidebar-times {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 195px;
+  z-index: 5;
+  font-size: 30px;
+}
+
+.sidebar a li {
+  list-style: none;
+  padding: 12px;
+  font-size: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all 0.3s linear;
+}
+
+.show-sidebar {
+  visibility: visible;
+  z-index: 10;
+}
+
+/* Navbar-left */
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  width: 90px;
+}
+
+.navbar-left a {
+  margin-right: 28px;
+}
+
+.navbar-list {
+  display: flex;
+  list-style: none;
+}
+
+.navbar-list a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 28px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.navbar-list a li:hover,
+.navbar-dot:hover {
+  color: #23527c;
+  transition: all 0.1s ease-in-out;
+}
+
+.navbar-dot {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 28px;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Navbar-right */
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-account {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+  margin-right: 24px;
+  cursor: pointer;
+}
+
+.navbar-account .fa-user-circle {
+  font-size: 36px;
+  margin-right: 8px;
+}
+
+.navbar-nameaccount {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nameaccount .fa-angle-down {
+  margin-left: 8px;
+  font-size: 16px;
+}
+
+.navbar-shopping-cart {
+  font-size: 30px;
+  margin-right: 20px;
+  color: #fff;
+}
+
+.navbar-time {
+  display: flex;
+  color: #fff;
+  position: relative;
+}
+
+.navbar-time:hover {
+  color: #26bed6;
+  cursor: pointer;
+}
+
+.navbar-phonenumber {
+  font-size: 30px;
+  font-weight: bold;
+  color: #f79321;
+}
+
+.navbar-phonenumber i {
+  margin-right: 4px;
+  font-size: 24px;
+}
+
+.navbar-clock {
+  margin-right: 4px;
+  font-size: 13px;
+}
+
+.navbar-clock i,
+.navbar-location i {
+  margin-right: 4px;
+}
+
+.navbar-location {
+  margin-left: 4px;
+  font-size: 13px;
+}
+
+.navbar-table {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  background-color: #fff;
+  width: 225px;
+  border-radius: 4px;
+}
+
+.table-item {
+  list-style: none;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+
+.table-item:last-child {
+  border-bottom: 1px solid #fff;
+}
+
+.table-item:hover {
+  background-color: #ececec;
+}
+
+.table-city {
+  color: #6c707e;
+}
+
+.table-phone {
+  color: #f79321;
+}
+
+.navbar-contact i {
+  margin-left: 4px;
+}
+
+/* SubNavbar */
+
+.navbar-nameaccount:hover {
+  color: #23527c;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.navbar-nameaccount {
+  position: relative;
+}
+
+.form-log-reg {
+  position: absolute;
+  top: 65px;
+  right: 380px;
+  width: 250px;
+}
+
+.form-log-reg::before {
+  position: absolute;
+  top: -19px;
+  left: 120px;
+  content: "";
+  border-width: 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent #ffffff transparent;
+  cursor: pointer;
+}
+
+/* Responsive */
+
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .navbar-account {
+    margin-right: 6px;
+  }
+  .navbar-clock {
+    margin-right: 0;
+  }
+  .navbar-location {
+    margin-left: 4px;
+  }
+  .form-log-reg {
+    top: 65px;
+    right: 250px;
+  }
+  .navbar-phonenumber {
+    font-size: 23px;
+  }
+  .navbar-phonenumber i {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .navbar-contact {
+    display: none;
+  }
+  .navbar-right {
+    margin-left: 36px;
+  }
+  .navbar-logo {
+    width: 60px;
+  }
+  .navbar-list a {
+    margin-right: 13px;
+    font-size: 17px;
+  }
+  .navbar-account {
+    font-size: 17px;
+    margin-right: 24px;
+  }
+  .navbar-account .fa-user-circle {
+    font-size: 30px;
+  }
+  .active::after {
+    top: 30px;
+  }
+  .form-log-reg {
+    top: 45px;
+    right: 20px;
+  }
+  .navbar-nameaccount {
+    display: none;
+  }
+  .m-7 {
+    flex: 0 0 67%;
+    max-width: 67%;
+  }
+  .m-5 {
+    flex: 0 0 33% !important;
+    max-width: 33% !important;
+  }
+}
+
+@media (min-width: 497px) and (max-width: 739px) {
+  .navbar-contact {
+    display: none;
+  }
+  .navbar-left {
+    margin-left: 0;
+  }
+  .navbar-left a {
+    margin-right: 12px;
+    margin-left: 4px;
+  }
+  .navbar-logo {
+    width: 60px;
+  }
+  .navbar-list a {
+    margin-right: 8px;
+    font-size: 17px;
+  }
+  .navbar-account {
+    font-size: 17px;
+    margin-right: 12px;
+  }
+  .navbar-account .fa-user-circle {
+    font-size: 30px;
+    margin-right: 0px;
+  }
+  .navbar-nameaccount {
+    display: none;
+  }
+  .active::after {
+    top: 30px;
+  }
+  .form-log-reg {
+    top: 48px;
+    right: 4px;
+  }
+  .form-log-reg::before {
+    left: 205px;
+  }
+  .footer-bottom-download {
+    width: 70px;
+  }
+  .m-7 {
+    flex: 0 0 83%;
+    max-width: 83%;
+  }
+  .m-5 {
+    flex: 0 0 17% !important;
+    max-width: 17% !important;
+  }
+  .navbar-shopping-cart {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 496px) {
+  .navbar-left {
+    margin: 0 auto;
+  }
+  .navbar-left a {
+    margin-right: 0;
+  }
+  .navbar-nameaccount,
+  .navbar-contact,
+  .navbar-list {
+    display: none;
+  }
+  .navbar-account {
+    margin-right: 0;
+  }
+  .bars-icon {
+    display: block;
+    font-size: 28px;
+    color: #fff;
+    margin-left: 8px;
+    cursor: pointer;
+  }
+  .form-log-reg {
+    top: 65px;
+    right: 5px;
+    width: 230px;
+  }
+  .form-log-reg::before {
+    left: 200px;
+  }
+  .footer-bottom-download {
+    width: 70px;
+  }
+}

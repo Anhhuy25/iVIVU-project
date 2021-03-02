@@ -5,7 +5,7 @@
 }
 
 .navbar {
-  background-color: #003C71;
+  background-color: #003c71;
   display: flex;
   align-items: center;
 }
@@ -19,13 +19,13 @@
 }
 
 .active {
-  color: #26BED6;
+  color: #26bed6;
   position: relative;
 }
 
 .active::after {
   border-bottom: 3px solid #f4a738;
-  content: '';
+  content: "";
   position: absolute;
   top: 39px;
   left: -3px;
@@ -39,7 +39,7 @@
 /* Sidebar */
 
 .sidebar {
-  background-color: #003C71;
+  background-color: #003c71;
   position: fixed;
   top: 0;
   left: 0;
@@ -119,9 +119,10 @@
   cursor: pointer;
 }
 
-.navbar-list a li:hover, .navbar-dot:hover {
+.navbar-list a li:hover,
+.navbar-dot:hover {
   color: #23527c;
-  transition: all .1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .navbar-dot {
@@ -171,14 +172,14 @@
 }
 
 .navbar-time:hover {
-  color: #26BED6;
+  color: #26bed6;
   cursor: pointer;
 }
 
 .navbar-phonenumber {
   font-size: 30px;
   font-weight: bold;
-  color: #F79321;
+  color: #f79321;
 }
 
 .navbar-phonenumber i {
@@ -191,7 +192,8 @@
   font-size: 13px;
 }
 
-.navbar-clock i, .navbar-location i {
+.navbar-clock i,
+.navbar-location i {
   margin-right: 4px;
 }
 
@@ -230,7 +232,7 @@
 }
 
 .table-phone {
-  color: #F79321;
+  color: #f79321;
 }
 
 .navbar-contact i {
@@ -239,28 +241,9 @@
 
 /* SubNavbar */
 
-.subnavbar {
-  position: absolute;
-  top: 41px;
-  left: -10px;
-  width: 200px;
-}
-
-.subnavbar-list {
-  background-color: #003C71;
-  display: flex;
-  flex-direction: column;
-  border-radius: 0 0 4px 4px;
-}
-
-.subnavbar-list a {
-  margin-right: 0;
-  padding: 12px;
-}
-
-.subnavbar-list a:hover, .navbar-nameaccount:hover {
+.navbar-nameaccount:hover {
   color: #23527c;
-  transition: all .1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   cursor: pointer;
 }
 
@@ -279,7 +262,7 @@
   position: absolute;
   top: -19px;
   left: 120px;
-  content: '';
+  content: "";
   border-width: 10px 10px;
   border-style: solid;
   border-color: transparent transparent #ffffff transparent;
@@ -328,16 +311,13 @@
   .active::after {
     top: 30px;
   }
-  .subnavbar {
-    top: 32px;
-  }
   .form-log-reg {
     top: 45px;
     right: 20px;
   }
 }
 
-@media (min-width: 497px) and (max-width:739px) {
+@media (min-width: 497px) and (max-width: 739px) {
   .navbar-contact {
     display: none;
   }
@@ -376,9 +356,6 @@
   .form-log-reg::before {
     left: 205px;
   }
-  .subnavbar {
-    top: 32px;
-  }
   .footer-bottom-download {
     width: 70px;
   }
@@ -391,7 +368,9 @@
   .navbar-left a {
     margin-right: 0;
   }
-  .navbar-nameaccount, .navbar-contact, .navbar-list {
+  .navbar-nameaccount,
+  .navbar-contact,
+  .navbar-list {
     display: none;
   }
   .navbar-account {

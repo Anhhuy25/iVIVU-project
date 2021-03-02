@@ -3,6 +3,7 @@ import '../../grid.css';
 import './footertours.css';
 
 import zalo from '../../img/logo-zalo.jpg';
+import bocongthuong from '../../img/bocongthuong.png'
 
 const FooterTop = () => {
   return (
@@ -54,7 +55,7 @@ const FooterTop = () => {
           <h3 className="footer-top-title">Chứng nhận</h3>
           <div>
             <a href="#/" className="footer-top-link">
-              <img src="//cdn1.ivivu.com/bocongthuong.png" alt="bocongthuong" />
+              <img src={bocongthuong} alt="bocongthuong" />
             </a>
           </div>
         </nav>

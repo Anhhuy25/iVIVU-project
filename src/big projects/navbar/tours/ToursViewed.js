@@ -1,10 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import './tourshome.css';
-import '../../grid.css';
+import "./tourshome.css";
+import "../../grid.css";
 
 const ToursViewed = ({ tourViewed, close }) => {
-
   return (
     <div className="tourshome">
       <div className="grid wide">
@@ -12,19 +11,25 @@ const ToursViewed = ({ tourViewed, close }) => {
           <div className="col l-4 m-4 c-12 ">
             <div className="tourshome-description">
               <i className="fas fa-check-circle"></i>
-              <span>Tour chọn lọc <strong>chất lượng nhất</strong></span>
+              <span>
+                Tour chọn lọc <strong>chất lượng nhất</strong>
+              </span>
             </div>
           </div>
           <div className="col l-4 m-4 c-12">
             <div className="tourshome-description">
               <i className="fas fa-check-circle"></i>
-              <span>Bảo đảm <strong>giá tốt nhất</strong></span>
+              <span>
+                Bảo đảm <strong>giá tốt nhất</strong>
+              </span>
             </div>
           </div>
           <div className="col l-4 m-4 c-12">
             <div className="tourshome-description">
               <i className="fas fa-check-circle"></i>
-              <span>Đội ngũ tư vấn <strong>chi tiết và tận tình</strong></span>
+              <span>
+                Đội ngũ tư vấn <strong>chi tiết và tận tình</strong>
+              </span>
             </div>
           </div>
 
@@ -49,12 +54,14 @@ const ToursViewed = ({ tourViewed, close }) => {
 
                         {tour.rating && (
                           <div className="tourviewed-rating">
-                            {tour.rating.map((rate, index) => <span key={index}>{rate}</span>)}
+                            {tour.rating.map((rate, index) => (
+                              <span key={index}>{rate}</span>
+                            ))}
                           </div>
                         )}
 
                         <p className="tourviewed-price">
-                          <span className="tourviewed-money">{tour.price}</span>
+                          <span className="tourviewed-money">{tour.price.toLocaleString()}</span>
                           <span>VND</span>
                         </p>
                       </div>

@@ -1,6 +1,11 @@
 import React from 'react';
 import { useGlobalContext } from '../context';
 
+import imgqrcode from '../img/iVIVUcode.png';
+import chaticon from '../img/chat-icon-40x40.jpg'
+import appstore from '../img/tai-appstore.png';
+import chplay from '../img/tai-google-play.png';
+
 const FooterBottom = () => {
   const { tableArray } = useGlobalContext();
   return (
@@ -66,17 +71,17 @@ const FooterBottom = () => {
           </div>
 
           <div className="footer-bottom-chatbot">
-            <img src="https://cdn1.ivivu.com/app-icon/chat-icon-40x40.png" alt="messenger" />
+            <img src={chaticon} alt="messenger" />
             <p>Tư vấn với Olivia - chatbot của iVIVU</p>
           </div>
 
           <div className="footer-bottom-booking">
             <p><b>Đặt phòng dễ dàng hơn qua ứng dụng iVIVU</b></p>
             <div className="footer-bottom-download">
-              <img src="https://cdn1.ivivu.com/app-icon/iVIVUcode.png" alt="qr-code" />
+              <img src={imgqrcode} alt="qr-code" />
               <div className="footer-bottom-app">
-                <img src="https://cdn1.ivivu.com/app-icon/tai-appstore.png" alt="appstore" />
-                <img src="https://cdn1.ivivu.com/app-icon/tai-google-play.png" alt="google-play" />
+                <img src={appstore} alt="appstore" />
+                <img src={chplay} alt="google-play" />
               </div>
             </div>
           </div>

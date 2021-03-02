@@ -1,0 +1,383 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.eating-title {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 12px 0;
+}
+
+.eating-title span {
+  margin: 0 12px;
+  position: relative;
+}
+
+.eating-titlelunch::after {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  content: "";
+  width: 130px;
+  border-bottom: 3px solid #000;
+}
+
+.eating-titledinner::after {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  content: "";
+  width: 160px;
+  border-bottom: 3px solid #000;
+}
+
+.eating-title-nonactive {
+  color: #000;
+  font-size: 20px;
+}
+
+.eating-titleactive {
+  color: #26bed6;
+  font-size: 20px;
+}
+
+.eating-titleactive::after {
+  border-bottom: 3px solid #26bed6;
+}
+
+.eating-img {
+  width: 100%;
+}
+
+.eating-imgcontainer {
+  position: relative;
+  background-color: #f2f2f2;
+}
+
+.eating-imgdescription {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -249px;
+  margin-top: -43px;
+  text-align: center;
+}
+
+.eating-imgdescription h1 {
+  margin-bottom: 8px;
+}
+
+.eating-svgdescription {
+  background-color: #f2f2f2;
+  padding: 8px 0;
+}
+
+.eating-svgdescription-item {
+  display: flex;
+  align-items: center;
+}
+
+.eating-svg {
+  margin: 0 16px 0 0;
+  width: 28px;
+}
+
+/* Lunch Select */
+
+.meal-selectcalendar {
+  margin: 30px 0 8px 0;
+}
+
+.meal-select {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.meal-select span:nth-child(1) {
+  margin-right: 12px;
+}
+
+.meal-select-btn {
+  outline: none;
+  border: none;
+  background-color: #26bed6;
+  color: #fff;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 20px;
+  margin-left: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+  width: 130px;
+}
+
+.meal-select-cookbtn {
+  outline: none;
+  border: none;
+  background-color: #26bed6;
+  color: #fff;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 20px;
+  margin-left: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+  width: 140px;
+}
+
+.meal-select-pricebtn {
+  outline: none;
+  border: none;
+  background-color: #26bed6;
+  color: #fff;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 20px;
+  margin-left: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+  width: 165px;
+}
+
+.meal-select-btn .fa-sort-down,
+.meal-select-cookbtn .fa-sort-down,
+.meal-select-pricebtn .fa-sort-down {
+  margin-left: 6px;
+  margin-bottom: 8px;
+}
+
+.meal-select-btn .fa-times,
+.meal-select-cookbtn .fa-times,
+.meal-select-pricebtn .fa-times {
+  margin-left: 6px;
+  margin-bottom: 2px;
+  color: #26bed6;
+  background-color: #fff;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+}
+
+.meal-taste {
+  position: absolute;
+  top: 60px;
+  left: 180px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 8px;
+  z-index: 10;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+  width: 150px;
+}
+
+.meal-priceselect {
+  position: absolute;
+  top: 60px;
+  left: 490px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 8px;
+  z-index: 10;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+  width: 150px;
+}
+
+.meal-cook {
+  position: absolute;
+  top: 60px;
+  left: 340px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 8px;
+  z-index: 10;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+  width: 150px;
+}
+
+.meal-tastetitle,
+.meal-cooktitle,
+.meal-pricetitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.meal-tastetitle .fa-times,
+.meal-cooktitle .fa-times,
+.meal-pricetitle .fa-times {
+  cursor: pointer;
+}
+
+.meal-tastelist,
+.meal-cooklist,
+.meal-pricelist {
+  margin-top: 8px;
+}
+
+.meal-tasteitem,
+.meal-cookitem,
+.meal-priceitem {
+  margin-top: 8px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.meal-tasteitem input,
+.meal-cookitem input,
+.meal-priceitem input {
+  margin-right: 8px;
+}
+
+/* Lunch List */
+
+.meal-content {
+  margin: 24px 0;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.meal-imgdescription {
+  position: relative;
+}
+
+.meal-img {
+  width: 100%;
+}
+
+.meal-description {
+  background-color: #f00;
+  padding: 4px;
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.meal-description::after {
+  content: "";
+  position: absolute;
+  left: 1px;
+  bottom: -7px;
+  border-top: 7px solid #f00;
+  border-left: 10px solid transparent;
+  filter: brightness(60%);
+}
+
+.meal-chefimg {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+
+.meal-info {
+  background-color: #fff;
+}
+
+.meal-name {
+  color: #003c71;
+  font-size: 18px;
+  padding: 4px 12px;
+}
+
+.meal-rating {
+  padding: 4px 12px;
+}
+
+.meal-rating span:nth-child(1) {
+  color: #fff;
+  background-color: #9fc43a;
+  padding: 4px;
+  font-weight: 600;
+  border-radius: 4px;
+  margin-right: 4px;
+}
+
+.meal-rating span:nth-child(2) {
+  color: #9fc43a;
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.meal-rating span:nth-child(3) {
+  color: #000;
+  font-size: 16px;
+}
+
+.meal-chefinfo {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+}
+
+.meal-chefimg {
+  margin-right: 8px;
+}
+
+.meal-nominated {
+  color: #828282;
+  font-size: 15px;
+}
+
+.meal-namerestaurant {
+  font-size: 13px;
+  margin-left: 8px;
+}
+
+.meal-namerestaurant p:nth-child(1) {
+  margin-bottom: 4px;
+  color: #000;
+}
+
+.meal-namerestaurant p:nth-child(2) {
+  margin-top: 4px;
+  color: #828282;
+}
+
+.meal-price {
+  text-align: right;
+  padding: 8px 12px 12px 0;
+}
+
+.meal-price p:nth-child(1) {
+  color: #000;
+}
+
+.meal-money {
+  color: #00c1de;
+  font-weight: bold;
+  font-size: 24px;
+  margin-top: 4px;
+}
+
+.meal-money span {
+  color: #00c1de;
+  font-weight: bold;
+  font-size: 16px !important;
+}
+
+/* Responsive */
+
+@media (max-width: 739px) {
+  .eating-svgdescription {
+    display: none;
+  }
+  .meal-content {
+    margin: 24px 16px;
+  }
+}

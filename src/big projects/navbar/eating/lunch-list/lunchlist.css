@@ -1,0 +1,717 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Breadcrumbs */
+
+.lunchlist-navbar {
+  display: flex;
+  list-style: none;
+  margin: 10px 0;
+}
+
+.lunchlist-item {
+  font-size: 14px;
+}
+
+.lunchlist-item + .lunchlist-item:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+.lunchlist-link {
+  color: #40a6f2;
+}
+
+.lunchlist-choose {
+  color: #818180;
+}
+
+/* Meal No1 */
+
+.lunchlist-name {
+  color: #003c71;
+}
+
+.lunchlist-ratingprice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.lunchlist-rating span:first-child {
+  color: #fff;
+  background-color: #9fc43a;
+  padding: 4px;
+  font-weight: 600;
+  border-radius: 4px;
+  margin-right: 4px;
+}
+
+.lunchlist-rating span:nth-child(2) {
+  color: #9fc43a;
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.lunchlist-rating span:nth-child(3) {
+  color: #000;
+  font-size: 16px;
+}
+
+.lunchlist-ratingprice p:nth-child(2) span:nth-child(1) {
+  color: #ec971f;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.lunchlist-imgdesc {
+  position: relative;
+  margin-top: 24px;
+}
+
+.lunchlist-imgdesc span {
+  background-color: #f00;
+  padding: 4px;
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.lunchlist-imgdesc span::after {
+  content: "";
+  position: absolute;
+  left: 1px;
+  bottom: -7px;
+  border-top: 7px solid #f00;
+  border-left: 10px solid transparent;
+  filter: brightness(60%);
+}
+
+.lunchlist-introduce {
+  margin-top: 24px;
+}
+
+.lunchlist-img {
+  width: 100%;
+}
+
+.chef-img {
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+}
+
+.lunchlist-whychoose h3,
+.lunchlist-designed h3,
+.lunchlist-delivery h3 {
+  color: #003c71;
+  margin-bottom: 8px;
+}
+
+.lunchlist-whychoose p:nth-child(2) {
+  font-size: 15px;
+  margin-bottom: 36px;
+  line-height: 20px;
+}
+
+.lunchlist-whychoose p:nth-child(3),
+.lunchlist-whychoose p:nth-child(4) {
+  font-size: 15px;
+  margin-bottom: 12px;
+  line-height: 20px;
+}
+
+.lunchlist-chefinfo {
+  text-align: center;
+}
+
+.lunchlist-chefinfo p:nth-child(2) {
+  margin: 4px 0;
+  color: #000;
+  font-size: 12px;
+}
+
+.lunchlist-chefinfo p:nth-child(3) {
+  margin: 4px 0;
+  color: #828282;
+  font-size: 14px;
+}
+
+.lunclist-chefdesc {
+  font-size: 15px;
+  margin-bottom: 12px;
+  line-height: 20px;
+}
+
+.menuweek {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuweek h3 {
+  color: #003c71;
+}
+
+.menuweek h3 span {
+  font-size: 30px;
+}
+
+.menuweek button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: #003c71;
+  background-color: #fff;
+}
+
+.lunchlist-menudetail {
+  background-color: #ecebeb;
+  text-align: center;
+  padding: 8px;
+  margin: 16px 0;
+}
+
+.lunchlist-menudetail h5 {
+  height: 28px;
+  font-size: 15px;
+}
+
+.lunchlist-submeal1,
+.lunchlist-submeal2 {
+  font-size: 15px;
+  padding: 0px 10px;
+}
+
+.lunchlist-ricedesert {
+  font-size: 15px;
+}
+
+.lunchlist-dayinweek {
+  background: #26bed6;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  margin: 5px;
+  position: relative;
+}
+
+.lunchlist-dayinweek span {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+}
+
+.lunchlist-pickdayform {
+  background: #fff;
+  border-radius: 0.25rem;
+  width: 370px;
+  height: 430px;
+  max-width: 500px;
+  padding: 8px 12px;
+}
+
+.lunchlist-pickdayform .fa-times {
+  display: flex;
+  justify-content: flex-end;
+  margin: 8px;
+  cursor: pointer;
+}
+
+.lunchlist-pickdayform div {
+  display: flex;
+  margin: 12px 0;
+  align-items: center;
+}
+
+.lunchlist-pickdayform div label {
+  font-size: 15px;
+  margin-left: 8px;
+}
+
+.lunchlist-pickdayform div label p:nth-child(2) {
+  font-size: 14px;
+  color: #888;
+}
+
+.lunchlist-pickdayform div input {
+  outline: none;
+  padding: 8px 12px;
+  margin-top: 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.lunchlist-pickdayformtotal {
+  margin: 30px 0 8px !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lunchlist-pickdayformtotal p:nth-child(2) span:nth-child(1) {
+  color: #ec971f;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.lunchlist-pickdayformbtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lunchlist-pickdayformbtn button:nth-child(1) {
+  border-radius: 4px;
+  padding: 6px 12px;
+  color: #ec971f;
+  background-color: #fff;
+  border: 1px solid #ec971f;
+  flex-basis: 49%;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+}
+
+.lunchlist-pickdayformbtn button:nth-child(2) {
+  border-radius: 4px;
+  padding: 6px 12px;
+  color: #fff;
+  background-color: #ec971f;
+  border: 1px solid #ec971f;
+  flex-basis: 49%;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+}
+
+.lunchlist-delivery p {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.lunchlist-delivery p:nth-child(6) {
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: #26bed6;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+}
+
+.lunchlist-delivery p .fa-angle-right {
+  margin-left: 4px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  animation: fadeIn linear 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-modal {
+  visibility: visible;
+  z-index: 10;
+}
+
+.lunchlist-sendrequire {
+  background: #fff;
+  border-radius: 0.25rem;
+  width: 400px;
+  height: 420px;
+  max-width: 620px;
+  padding: 12px;
+}
+
+.lunchlist-sendrequire .fa-times {
+  display: flex;
+  justify-content: flex-end;
+  margin: 8px;
+  cursor: pointer;
+}
+
+.lunchlist-sendrequire div {
+  display: flex;
+  flex-direction: column;
+  margin: 12px 0;
+}
+
+.lunchlist-sendrequire div label {
+  font-size: 15px;
+}
+
+.lunchlist-sendrequire div input {
+  outline: none;
+  padding: 8px 12px;
+  margin-top: 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.lunchlist-sendrequire button {
+  border-radius: 4px;
+  padding: 6px 12px;
+  color: #fff;
+  background-color: #ec971f;
+  border: 1px solid #ec971f;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 12px 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.lunchlist-pricetable {
+  margin-top: 24px;
+}
+
+.lunchlist-firsttable {
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #f8f3f3;
+}
+
+.lunchlist-secondtable,
+.lunchlist-thirdtable {
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #f8f3f3;
+  padding: 12px;
+  margin-top: 8px;
+}
+
+.lunchlist-pricetable h4 {
+  color: #003c71;
+  padding: 12px;
+  background-color: #feeec7;
+}
+
+.lunchlist-quantity {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+}
+
+.lunchlist-quantity button {
+  outline: none;
+  border: 1px solid #ccc;
+  width: 30px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.lunchlist-quantitypart {
+  width: 40px;
+  font-size: 22px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+.lunchlist-part {
+  margin-left: 12px;
+}
+
+.lunchlist-tools {
+  padding: 0px 12px;
+}
+
+.lunchlist-morerice,
+.lunchlist-spoonchopstick,
+.lunchlist-blackcoffee,
+.lunchlist-lemontea,
+.lunchlist-milkcoffee,
+.lunchlist-totalprice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.lunchlist-morerice div:nth-child(1),
+.lunchlist-spoonchopstick div:nth-child(1),
+.lunchlist-blackcoffee div:nth-child(1),
+.lunchlist-lemontea div:nth-child(1),
+.lunchlist-milkcoffee div:nth-child(1) {
+  display: flex;
+  align-items: center;
+}
+
+.lunchlist-morerice div:nth-child(1) label,
+.lunchlist-spoonchopstick div:nth-child(1) label,
+.lunchlist-blackcoffee div:nth-child(1) label,
+.lunchlist-lemontea div:nth-child(1) label,
+.lunchlist-milkcoffee div:nth-child(1) label {
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.lunchlist-morerice div:nth-child(2) span:nth-child(1),
+.lunchlist-spoonchopstick div:nth-child(2) span:nth-child(1),
+.lunchlist-blackcoffee div:nth-child(2) span:nth-child(1),
+.lunchlist-lemontea div:nth-child(2) span:nth-child(1),
+.lunchlist-milkcoffee div:nth-child(2) span:nth-child(1) {
+  color: #ec971f;
+}
+
+.lunchlist-total {
+  color: #ec971f;
+  font-size: 32px;
+}
+
+.lunchlist-btnaddorder {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lunchlist-btnaddorder button {
+  background-color: #ec971f;
+  color: #fff;
+  margin-top: 16px;
+  padding: 12px;
+  cursor: pointer;
+  outline: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 4px;
+  border: 1px solid #ec971f;
+}
+
+.lunchlist-btnadd {
+  margin-right: 4px;
+  flex-basis: 55%;
+}
+
+.lunchlist-btnorder {
+  margin-left: 4px;
+  flex-basis: 40%;
+}
+
+/* Meal Cart */
+.mealcart {
+  padding: 0 12px;
+}
+
+.mealcart-container,
+.mealcart-orderprocess {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+  margin: 24px 0;
+}
+
+.mealcart-container h3 {
+  padding: 24px 0 4px 12px;
+  color: #003c71;
+}
+
+.mealcart-detail {
+  display: flex;
+  align-items: center;
+
+  padding: 8px 12px;
+}
+
+.mealcart-img {
+  width: 20%;
+  margin-right: 20px;
+}
+
+.mealcart-name {
+  margin-right: 30px;
+  width: 190px;
+}
+
+.mealcart-remainpart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 30px;
+}
+
+.mealcart-price {
+  margin: 0 12px;
+}
+
+.mealcart-pricenum {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.mealcart-quantity {
+  display: flex;
+  margin: 0 24px;
+}
+
+.mealcart-quantity button {
+  outline: none;
+  border: 1px solid #ccc;
+  width: 30px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.mealcart-quantitynum {
+  width: 40px;
+  font-size: 22px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+.mealcart-removebtn {
+  color: #003c71;
+  cursor: pointer;
+  margin: 0 24px;
+}
+
+.mealcart-total {
+  padding: 24px 12px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mealcart-totalprice {
+  color: #ec971f;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.mealcart-orderbtn {
+  border-radius: 4px;
+  padding: 6px 12px;
+  margin: 12px;
+  color: #fff;
+  background-color: #ec971f;
+  border: 1px solid #ec971f;
+  width: 258px;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+}
+
+.mealcart-delivery {
+  background-color: #f0efef;
+}
+
+.mealcart-delivery p:nth-child(1),
+.mealcart-delivery p:nth-child(2),
+.mealcart-delivery p:nth-child(3) {
+  padding: 12px;
+}
+
+.mealcart-delivery p:nth-child(4) {
+  padding: 12px;
+  color: #26bed6;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+}
+
+/* Responsive */
+@media (min-width: 1240px) {
+  .mealcart-orderbtnmobile {
+    display: none;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .lunchlist-menudetail h5 {
+    height: 45px;
+  }
+  .mealcart-orderbtn {
+    width: 100%;
+    margin: 0;
+  }
+  .mealcart-total p:nth-child(1),
+  .mealcart-total p:nth-child(2) {
+    flex-basis: 45%;
+  }
+  .mealcart-orderbtnmobile {
+    display: none;
+  }
+}
+@media (min-width: 740px) and (max-width: 1023px) {
+  .m-2-4 {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  .lunchlist-menudetail h5 {
+    height: 45px;
+  }
+  .lunchlist-submeal2 {
+    padding: 0;
+  }
+  .mealcart-orderbtnmobile {
+    display: none;
+  }
+}
+@media (max-width: 739px) {
+  .lunchlist-container {
+    padding: 0 12px;
+  }
+  .lunchlist-menudetail {
+    display: flex;
+    align-items: center;
+  }
+  .mealcart-container,
+  .mealcart-orderprocess {
+    margin: 12px;
+  }
+  .mealcart-detail {
+    flex-direction: column;
+  }
+  .mealcart-orderbtn {
+    display: none;
+  }
+  .mealcart-total {
+    padding: 12px;
+  }
+  .mealcart-orderbtnmobile {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 1px 0px 5px rgb(0 0 0 / 20%);
+    z-index: 100;
+  }
+  .mealcart-orderbtnmobile button {
+    border-radius: 4px;
+    padding: 6px 12px;
+    margin: 12px 0;
+    color: #fff;
+    background-color: #ec971f;
+    border: 1px solid #ec971f;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    display: block;
+    position: sticky;
+    bottom: 0;
+  }
+}

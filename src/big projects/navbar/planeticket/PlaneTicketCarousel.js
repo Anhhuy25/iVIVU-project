@@ -8,7 +8,7 @@ import './planeticket.css';
 const PlaneTicketCarousel = () => {
   const [bannerIndex, setBannerIndex] = useState(0);
   const { showNoteCarousel, setShowNoteCarousel } = useGlobalContext();
-  let id = listBannerTicket.map(item => item.id);
+  // let id = listBannerTicket.map(item => item.id);
 
 
   useEffect(() => {
