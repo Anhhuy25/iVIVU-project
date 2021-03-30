@@ -10,19 +10,18 @@ import FooterBottom from "../../../FooterBottom";
 import TailorTour from "./TailorTour";
 import "./tet.css";
 
-import hinh1 from "../../../../../img/tourslist/tetTanSuu/specificDestination/QNPY3N4D/mui-dien-750x390.jpg";
-import hinh2 from "../../../../../img/tourslist/tetTanSuu/specificDestination/QNPY3N4D/ivivu-eo-gio-13.jpg";
-import hinh3 from "../../../../../img/tourslist/tetTanSuu/specificDestination/QNPY3N4D/ivivu-bien-ky-co.jpg";
-import hinh4 from "../../../../../img/tourslist/tetTanSuu/specificDestination/QNPY3N4D/ivivu-khu-du-lich-ghenh-rang.jpg";
-import hinh5 from "../../../../../img/tourslist/tetTanSuu/specificDestination/QNPY3N4D/ivivu-nha-tho-mang-lang.jpg";
-import hinh6 from "../../../../../img/tourslist/tetTanSuu/specificDestination/QNPY3N4D/ivivu-ghenh-da-dia-16.jpg";
-import hinh7 from "../../../../../img/tourslist/tetTanSuu/specificDestination/QNPY3N4D/ivivu-bai-xep.jpg";
-import hinh8 from "../../../../../img/tourslist/tetTanSuu/specificDestination/QNPY3N4D/ivivu-mui-dien-dai-lanh.gif";
-import hinh9 from "../../../../../img/tourslist/tetTanSuu/specificDestination/QNPY3N4D/ivivu-thap-nhan.jpg";
+import hinh1 from "../../../../../img/tourslist/tetTanSuu/specificDestination/PTGolf/ivivu-lang-chai-mui-ne-bia-750x390.jpg";
+import hinh2 from "../../../../../img/tourslist/tetTanSuu/specificDestination/PTGolf/ivivu-sealink-city.gif";
+import hinh3 from "../../../../../img/tourslist/tetTanSuu/specificDestination/PTGolf/ivivu-sealink-golf.gif";
+import hinh4 from "../../../../../img/tourslist/tetTanSuu/specificDestination/PTGolf/ivivu-nhac-nuoc-fishermen-show.gif";
+import hinh5 from "../../../../../img/tourslist/tetTanSuu/specificDestination/PTGolf/ivivu-doi-cat-bay.gif";
+import hinh6 from "../../../../../img/tourslist/tetTanSuu/specificDestination/PTGolf/ivivu-trung-tam-bun-khoang.gif";
 
-const QNPY3N4D = () => {
-  const QNtoPY3N4D = tetTanSuu.find(tour => tour.to === "tour-mien-trung-3n4d-kham-pha-quy-nhon-phu-yen-tau-lua-tet");
-  const { to, name, price, rating } = QNtoPY3N4D;
+const PTGolf = () => {
+  const PTPlayGolf = tetTanSuu.find(
+    tour => tour.to === "tour-cao-cap-phan-thiet-2n1d-danh-golf-cung-sealink-doi-cat-bay-tet",
+  );
+  const { to, name, price } = PTPlayGolf;
 
   const {
     showTableDay0403,
@@ -198,7 +197,7 @@ const QNPY3N4D = () => {
   // Handle Total Price
   let total;
   if (numberAdult === 1 && numberChildren === 0) {
-    total = price + 1000000;
+    total = price + 800000;
   } else {
     if (parseFloat(selectAge) < 100) {
       total = price * numberAdult + parseFloat(selectAge) * 1000000 * numberChildren;
@@ -232,7 +231,6 @@ const QNPY3N4D = () => {
     setThirdTerm(false);
     setFourthTerm(true);
   };
-
   return (
     <>
       <NavbarTours />
@@ -250,7 +248,7 @@ const QNPY3N4D = () => {
                 </li>
                 <li className="tourtet-item">
                   <Link className="tourtet-link" to="/phu-yen">
-                    <span>Phú Yên</span>
+                    <span>Phan Thiết</span>
                   </Link>
                 </li>
                 <li className="tourtet-item">
@@ -264,17 +262,12 @@ const QNPY3N4D = () => {
             {/* Name and Rating */}
             <div className="col l-12 m-12 c-12">
               <h1 className="tourtet-name">{name}</h1>
-              <p className="tourtet-rating">
-                {rating.map((desc, index) => (
-                  <span key={index}>{desc}</span>
-                ))}
-              </p>
             </div>
 
             {/* Infomation */}
             <div className="col l-8 m-12 c-12">
               <div className="tourtet-content">
-                <img src={hinh1} alt="Quy Nhơn - Phú Yên" className="tourtet-img" />
+                <img src={hinh1} alt="Phan Thiết" className="tourtet-img" />
                 <div className="tourtet-info">
                   <div>
                     <span>
@@ -282,61 +275,55 @@ const QNPY3N4D = () => {
                       Hồ Chí Minh
                     </span>
                     <span>
-                      <i className="fas fa-clock"></i>3 Ngày 4 Đêm
+                      <i className="fas fa-clock"></i>2 Ngày 1 Đêm
                     </span>
                     <span>
                       Phương tiện:
-                      <i className="fas fa-plane"></i>
                       <i className="fas fa-bus"></i>
                     </span>
                   </div>
                   <span className="tourtet-code">
-                    Mã Tour: <b>TO1188</b>
+                    Mã Tour: <b>TO1444</b>
                   </span>
                 </div>
                 <div className="tourtet-description">
                   <div className="tourtet-journey">
                     <div className="tourtet-title">
-                      <h2>Về với vùng đất Nam Trung Bộ, Nơi có Xứ Nẫu Thân Thương</h2>
+                      <h2>Du Xuân Trải Nghiệm Sang Trọng</h2>
                       <div className="tourtet-likeshare">
                         <button>Thích</button>
                         <button>Chia sẻ</button>
                       </div>
                     </div>
                     <p>
-                      Đến Quy Nhơn trải nghiệm những hành trình hấp dẫn như Kỳ Co nước trong xanh màu ngọc bích được
-                      mệnh danh là “Maldives của Việt Nam”; Trung Lương – “Jeju Việt Nam” với hàng dương rì rào, những
-                      eo núi uốn lượn, bãi biển cát trắng; Eo Gió vừa lãng mạn vừa hùng vĩ để ngắm hoàng hôn; Hòn Khô
-                      nước trong vắt. Phú Yên vùng đất 'Tôi thấy hoa vàng trên cỏ xanh' trở thành điểm nổi bật cho
-                      chuyến du lịch hè đáng nhớ cho du khách mọi miền. Không chỉ mang nét duyên của thành phố ôm trọn
-                      hai ngọn núi, Phú Yên còn mê đắm lòng người ở những đầm nước trong vắt, những bãi biển bao la,
-                      ghềnh Đá Đĩa kỳ thú. Cùng iVIVU khám phá ngay hôm nay!
-                    </p>
-                    <p className="tourtet-bookgroup">
-                      <b>
-                        <i>Đặt đoàn riêng liên hệ 028 3933 8002 hoặc hotline 0906 355 542 để có giá tốt.</i>
-                      </b>
+                      Du lịch Phan Thiết từ trước đến nay luôn nổi tiếng với những bãi biển xanh trong và những đồi cát
+                      trải dài tít tắp. Nếu đang tìm kiếm một chuyến nghỉ ngơi ngắn ngày đến một thành phố biển xinh đẹp
+                      thì Phan Thiết là sự lựa chọn không thể tuyệt vời hơn. Một trong những điểm nhấn của sân Sea Links
+                      là khu vực tập golf. Đây là một trong những sân tập tốt nhất Việt Nam với 22 vị trí tập đánh xa và
+                      sân tập đánh ngắn, tập gạt có tầm nhìn bao quát vịnh Mũi Né. Sân golf Sea Links là một công trình
+                      độc đáo với tầm nhìn hướng ra cảnh biển mênh mông, bao quanh là quần thể Sea Links City với những
+                      tiện nghi đẳng cấp 5 sao tạo cảm giác thanh bình về một thiên đường golf và nghỉ dưỡng. Cùng iVIVU
+                      khám phá ngay hôm nay!
                     </p>
                   </div>
 
                   <div className="tourtet-experiences">
                     <h2>Những trải nghiệm thú vị trong chương trình</h2>
                     <div>
-                      <p>Xứ Nẫu vùng đất đầy Nắng và Gió nổi bật lên bởi:</p>
                       <p>
-                        - <strong>Bãi tắm Kỳ Co</strong> – Một bãi tắm còn hoang sơ, trong sạch.
+                        Phan Thiết - thiên đường nghỉ dưỡng trong chuyến hành trình sẽ cho quý khách mang cảm giác hưởng
+                        thụ, giải lao ngắn ngày trong 1 năm lao động mệt mỏi:
                       </p>
                       <p>
-                        - <strong>Eo Gió</strong> phóng tầm mắt ra xa, quý khách chiêm ngưỡng bao quát cả vùng biển bao
-                        la rộng lớn, đắm say lòng người.
+                        - <strong>Sea Links Golf & Country Club</strong>: là nơi hội tụ tất cả những yếu tố của một sân
+                        links đúng nghĩa với tiêu chuẩn quốc tế.
                       </p>
                       <p>
-                        - <strong>Gành Đá Dĩa</strong>, ngắm những khối đá xô lệch bởi bàn tay tạo hóa trầm mặc ngàn năm
-                        nghe sóng vỗ.
+                        - Thưởng thức hải sản tại biển <strong>Mũi Né</strong>.
                       </p>
                       <p>
-                        - <strong>Mũi Điện Đại Lãnh </strong>– là nơi Cực Đông của Tổ Quốc, nơi đón ánh mặt trời đầu
-                        tiên.
+                        - <strong>Đồi Cát Bay</strong> tại đây đoàn có thể tham gia trò chơi cảm giác mạnh trên đồi cát
+                        bằng cách đi máng trượt.
                       </p>
                     </div>
                   </div>
@@ -344,93 +331,79 @@ const QNPY3N4D = () => {
                   <div className="tourtet-schedule">
                     <h2 id="1">Chương trình tour</h2>
                     <div className="tourtet-firstday">
-                      <h3>ĐÊM 1: TPHCM – QUY NHƠN BÌNH ĐỊNH</h3>
+                      <h3>ĐIỂM ĐÓN:</h3>
+                      <p>- 5h00 sáng: Nhà Văn Hóa Thanh Niên (4 Phạm Ngọc Thạch, Quận 1).</p>
+                      <p>- 5h15 sáng: Ngã 4 Hàng Xanh.</p>
+                      <p>- 5h30 sáng: Ngã 4 Thủ Đức.</p>
+                      <h3>NGÀY 01: TP.HCM - PHAN THIẾT – SEA LINKS CITY (ĂN SÁNG, TRƯA, TỐI)</h3>
                       <p>
-                        Tối: Hướng dẫn viên đón khách tại
-                        <strong> Ga Sài Gòn </strong>đón chuyến
-                        <strong> tàu SE4, SQN2, SQN4, SE2 </strong>khởi hành đi
-                        <strong> Diêu Trì hoặc Quy Nhơn </strong>. Quý khách ăn tối tự túc trước khi lên tàu, nghỉ đêm
-                        trên xe lửa. (Ký hiệu tàu có thể thay đổi tuỳ thuộc vào thời gian quý khách đặt tour).
+                        Sáng: Xe và Hướng dẫn viên đón quý khách tại điểm hẹn. Chào mừng các thành viên của đoàn đã tham
+                        gia tour, cùng lời chúc tết đầu xuân. Đến với địa phận tỉnh Đồng Nai, quý khách dừng chân dùng
+                        điểm tâm.
                       </p>
-                      <h3>NGÀY 01: QUY NHƠN – HÀN MẶC TỬ - KDL GHỀNH RÁNG (ĂN TRƯA, TỐI)</h3>
                       <p>
-                        Sáng: Qúy khách ăn sáng tự túc ngay trên Tàu, Tàu đến
-                        <b> Ga Diêu Trì</b> hoặc <b> Ga Quy Nhơn</b>, Xe và HDV đón đoàn khởi hành Tham quan:{" "}
-                        <b>Eo Gió </b> – một ghềnh đá quanh năm lộng gió. Đứng trên
-                        <b>Eo Gió</b>), phóng tầm mắt ra xa, quý khách chiêm ngưỡng bao quát cả vùng biển bao la rộng
-                        lớn, đắm say lòng người.
+                        Đoàn dọc theo quốc lộ 1A, HDV sẽ cùng Quý khách tìm hiểu đôi nét về văn hóa của từng vùng miền,
+                        địa phương của đất nước.
                       </p>
-                      <img src={hinh2} alt="Eo Gió." />
                       <p>
-                        Sau đó Quý khách lên thuyền qua <b>Bãi tắm Kỳ Co</b> – Một bãi tắm còn hoang sơ, trong sạch. Tại
-                        đây, quý khách có thể tận mắt chứng kiến một cảnh đẹp thiên nhiên tuyệt đẹp, làm say đắm biết
-                        bao lòng người. Với màu nước trong xanh, bãi cát trắng dài và mịn, những cơn sóng biển êm ái
-                        chính là điểm đến lý tưởng thu hút nhiều du khách trong thời gian gần đây. Ngoài tắm biển và vui
-                        đùa, quý khách còn có những trò chơi mạo hiểm khi leo lên ghềnh đá và nhảy xuống biển, một cảm
-                        giác thật sảng khoái và thú vị.
+                        10h00: Đến với <b>Bình Thuận</b>, Quý khách di chuyển bằng xe điện tham quan:
                       </p>
-                      <img src={hinh3} alt="Bãi Tắm Kỳ Co." />
                       <p>
-                        12h00: Quý khách dùng bữa trưa với các món hải sản tươi sống do người dân làng chài vừa mới đánh
-                        bắt được, sau đó thuyền đưa quý khách về lại đất liền, khởi hành về khách sạn nghĩ ngơi.
+                        -<b> Sea Links City</b>: là khu phức hợp nghỉ dưỡng sang trọng với tổng thể kiến trúc sang
+                        trọng, hòa quyện với thiên nhiên thơ mộng. Sea Links City sở hữu vị trí lý tưởng với thiết kế
+                        mở, sang trọng, tọa lạc trên ngọn đồi cao với mênh mông gợn sóng cỏ xanh và là nơi duy nhất có
+                        tầm nhìn bao quát vịnh Mũi Né.
                       </p>
-                      <p>14h00: Quý khách về lại khách sạn nghĩ ngơi, tự do tắm biển hoặc tham quan.</p>
+                      <img src={hinh2} alt="Sealink City." />
                       <p>
-                        Buổi chiều: Đoàn đến khu du lịch <b>Ghềnh Ráng</b> viếng nơi an nghĩ của nhà thơ Hàn Mạc Tử,
-                        tham quan bãi tắm
-                        <b>Hoàng Hậu, Bãi Trứng, Đá Hòn Chồng.</b>
+                        -<b> Sea Links Golf & Country Club</b>: là nơi hội tụ tất cả những yếu tố của một sân links đúng
+                        nghĩa với tiêu chuẩn quốc tế. Có chiều cao 60m so với mực nước biển, Sea Links là sân golf thử
+                        thách nhất châu Á với 18 lỗ golf đều nhìn ra hướng biển cùng nét đẹp tự nhiên của đồi cát với
+                        đường cong uốn lượn, gồ ghề và bao bọc bởi những hố cát thử thách. Quý khách sẽ được hướng dẫn
+                        và trải nghiệm đánh golf tại đây.
                       </p>
-                      <img src={hinh4} alt="KDL Ghềnh Ráng." />
-                      <p>Dùng cơm tại nhà hàng, tự do khám phá Thành Phố Quy Nhơn về đêm.</p>
+                      <img src={hinh3} alt="Sea Links Golf & Country Club." />
+                      <p>
+                        Trưa: Đoàn dùng bữa trưa tại nhà hàng. Xe đưa Quý khách tiếp tục lộ trình đến thiên đường resort
+                        <b>Mũi Né</b>. Đoàn nhận phòng nghỉ ngơi.
+                      </p>
+                      <p>Chiều: Quý khách tự do tắm biển, hồ bơi tại resort.</p>
+                      <p>Tối: Đoàn dùng bữa tối với các món đặc sản hấp dẫn tại nhà hàng.</p>
+                      <p>
+                        Với vị trí gần Tp.HCM, các chương trình tour đi Biển Mũi Né đa phần là tour nghỉ dưỡng. Thưởng
+                        thức hải sản tươi sống. Nơi đây đâu đâu cũng là nhà hàng, quán hải sản phục vụ du khách như: khu
+                        vực hải sản giá rẽ bình dân tại Hòn Rơm, Bờ kè Mũi Né hoặc Bờ kè Hàm Tiến...
+                      </p>
+                      <p>
+                        Hoặc quý khách có thể thay đổi không khí bằng cách tham gia chương trình xem
+                        <b>Nhạc Nước- Fishermen Show Đặc Sắc</b>, mới lạ, hấp dẫn (chi phí tham khảo 200,000/vé).
+                      </p>
+                      <img src={hinh4} alt="Nhạc Nước- Fishermen Show Đặc Sắc." />
                     </div>
                     <div className="tourtet-secondday">
-                      <h3>NGÀY 02: GÀNH ĐÁ DĨA – NHÀ THỜ MẰNG LĂNG – HOA VÀNG CÓ XANH (ĂN SÁNG, TRƯA, TỐI)</h3>
+                      <h3>NGÀY 02: PHAN THIẾT – MŨI NÉ – TPHCM (ĂN SÁNG, TRƯA)</h3>
                       <p>
-                        Buổi sáng: Đoàn làm thủ tục trả phòng, dùng điểm tâm sáng sau đó khởi hành về{" "}
-                        <b> Thành Phố Tuy Hoà</b>. Đoàn dừng chân tham quan nhà thờ
-                        <b>Mằng Lăng</b> – nơi lưu giữ cuốn kinh thánh bằng chữ quốc ngữ cổ nhất Việt Nam. Đoàn tham
-                        quan, chụp hình lưu niệm tại
-                        <b>Gành Đá Dĩa</b> – thắng cảnh độc nhất vô nhị tại Việt Nam.
+                        Sáng: Quý khách dậy sớm, khởi hành đến <b>Đồi Cát Bay</b>, tại đây đoàn có thể tham gia trò chơi
+                        cảm giác mạnh trên đồi cát bằng cách đi máng trượt, và thưởng thức <b>Dừa Ba Nhát</b> - đặc sản
+                        địa phương và ngắm nhìn cảnh <b>Làng Chài</b> nhộn nhịp tấp nập ghe, thuyền đánh bắt cá cập bờ.
                       </p>
-                      <img src={hinh5} alt="Nhà Thờ Mằng Lăng." />
+                      <img src={hinh5} alt="Đồi Cát Bay." />
                       <p>
-                        Chỉ cần một lần đến gành Đá Dĩa, ngắm những khối đá xô lệch bởi bàn tay tạo hóa trầm mặc ngàn
-                        năm nghe sóng vỗ, du khách sẽ hiểu tại sao người ta nói Phú Yên sở hữu những báu vật thiên nhiên
-                        không nơi nào có được…, chiêm ngưỡng thắng cảnh cấp Quốc Gia <b>Đầm Ô Loan</b>.
-                      </p>
-                      <img src={hinh6} alt="Ghềnh Đá Dĩa." />
-                      <p>
-                        Trưa: quý khách dùng cơm trưa tại nhà hàng, sau đó đoàn về
-                        <b>Khách Sạn Cendeluxe tiêu chuẩn 5 sao nhận phòng nghĩ ngơi.</b>
+                        07h00: Về lại resort. Quý khách dùng điểm tâm sáng Buffet, nghỉ ngơi tắm biển tự do. Quý khách
+                        có thể thư giản tại:
                       </p>
                       <p>
-                        Buổi chiều: Xe đưa quý khách tham quan và tự do tắm biển tại Bãi Xếp - là một trong những phim
-                        trường “ Tôi Thấy Hoa Vàng Trên Cỏ Xanh”.
+                        - <b>Trung Tâm Bùn Khoáng Mũi Né</b> : Quý khách trải nghiệm tắm bùn và ngâm khoáng nóng trong
+                        bồn hương hoa và massage bằng thác nước Jaccuzi tạo nên cảm giác vô cùng thoải mái và thích thú
+                        khi Quý khách sử dụng dịch vụ tắm bùn (chi phí tự túc: 200.000 – 800.000đ/khách).
                       </p>
-                      <img src={hinh7} alt="Bãi Xếp." />
+                      <img src={hinh6} alt="Trung Tâm Bùn Khoáng Mũi Né." />
                       <p>
-                        Tối: Quý khách dùng buổi tối với các món Hải Đặc Sản tại Khu Bờ Kè Hải Sản Tuy Hoà như: Tam Sung
-                        Sung, Sò Huyết Ô Loan, Tôm nướng, Cá Nướng, Mực Hấp, Cơm chiên muối ớt, cơm chiên dương châu,
-                        Lẩu Hải Sản…. Quý khách nghĩ đêm tại Tuy Hoà.
+                        Trưa: Quý khách làm thủ tục trả phòng, khởi hành dùng bữa trưa tại nhà hàng. Đoàn khởi hành về
+                        lại TP.HCM, trên đường về Quý khách dừng chân mua sắm đặc sản địa phương làm quà tặng cho người
+                        thân.
                       </p>
-                    </div>
-                    <div className="tourtet-thirdday">
-                      <h3>NGÀY 03: MŨI ĐIỆN “CỰC ĐÔNG TỔ QUỐC” – THÁP NHẠN – TP HCM (ĂN SÁNG, TRƯA)</h3>
-                      <p>
-                        Sáng: Đoàn dùng điểm tâm buffet tại khách sạn, Đoàn khởi hành chinh phục Mũi Điện Đại Lãnh – là
-                        nơi Cực Đông của Tổ Quốc, nơi đón ánh mặt trời đầu tiên, quý khách sẽ ngắm tầm nhìn ra vùng biển
-                        khơi xa và tạo cho mình những bức ảnh thật đẹp tại điểm tham quan này, sau đó xe đưa quý khách
-                        về lại khách sạn nhận phòng nghỉ ngơi.
-                      </p>
-                      <img src={hinh8} alt="Mũi Điện Đại Lãnh." />
-                      <p>
-                        12h00: Quý khách làm thủ tục trả phòng, dùng cơm trưa tại nhà hàng, Đoàn khởi hành viếng chùa
-                        Bảo Lâm, Đoàn chinh phục núi Nhạn, tháp Nhạn, ngắm cảnh hoàng hôn trên đỉnh núi và toàn cảnh
-                        thành phố Tuy Hoà, mua sắm đặc sản về làm quà cho người thân……sau đó đoàn khởi hành ra Ga Tuy
-                        Hòa đón chuyến tàu SQN1, SE9, SE21 về Thành Phố Hồ Chí Minh (Qúy khách ăn tối tự túc trên Tàu) .
-                        Sáng hôm sau Đoàn về đến HCM, HDV thay mặt công ty du lịch chào tạm biệt và hẹn gặp lại.
-                      </p>
-                      <img src={hinh9} alt="Tháp Nhạn." />
+                      <p>Chiều: Về đến TP.HCM, chia tay và hẹn gặp lại Quý khách.</p>
                       <i>
                         Thứ tự tham quan có thể thay đổi nhưng vẫn bảo đảm đầy đủ điểm tham quan có trong chương trình.
                       </i>
@@ -456,13 +429,13 @@ const QNPY3N4D = () => {
                             !showTableDay0403 && "tourtet-departureschedule-1403minus"
                           }`}
                         >
-                          <span>T5, 04/03/2021</span>
-                          <span>T2, 08/03/2021</span>
+                          <span>T7, 06/03/2021</span>
+                          <span>CN, 07/03/2021</span>
                           <span>Liên hệ</span>
                           <span>
                             {showTableDay0403 ? (
                               <>
-                                3.260.000 VND
+                                2.186.000 VND
                                 <i onClick={handleClickPlus0403} className="fas fa-plus-circle"></i>
                               </>
                             ) : (
@@ -514,7 +487,7 @@ const QNPY3N4D = () => {
                             {showSingleRoom && (
                               <div className="tourtet-singleroom">
                                 <span>Phụ thu phòng đơn</span>
-                                <span>1.000.000 VND</span>
+                                <span>800.000 VND</span>
                               </div>
                             )}
                             <div className={`${listAge.length > 0 && "tourtet-listage"}`}>
@@ -533,13 +506,13 @@ const QNPY3N4D = () => {
                             !showTableDay1103 && "tourtet-departureschedule-1703minus"
                           }`}
                         >
-                          <span>T5, 11/03/2021</span>
-                          <span>T2, 15/03/2021</span>
+                          <span>T7, 13/03/2021</span>
+                          <span>CN, 14/03/2021</span>
                           <span>Liên hệ</span>
                           <span>
                             {showTableDay1103 ? (
                               <>
-                                3.260.000 VND
+                                2.186.000 VND
                                 <i onClick={handleClickPlus1103} className="fas fa-plus-circle"></i>
                               </>
                             ) : (
@@ -610,13 +583,13 @@ const QNPY3N4D = () => {
                             !showTableDay1803 && "tourtet-departureschedule-2403minus"
                           }`}
                         >
-                          <span>T5, 18/03/2021</span>
-                          <span>T2, 22/03/2021</span>
+                          <span>T7, 20/03/2021</span>
+                          <span>CN, 21/03/2021</span>
                           <span>Liên hệ</span>
                           <span>
                             {showTableDay1803 ? (
                               <>
-                                3.260.000 VND
+                                2.186.000 VND
                                 <i onClick={handleClickPlus1803} className="fas fa-plus-circle"></i>
                               </>
                             ) : (
@@ -668,7 +641,7 @@ const QNPY3N4D = () => {
                             {showSingleRoom && (
                               <div className="tourtet-singleroom">
                                 <span>Phụ thu phòng đơn</span>
-                                <span>1.000.000 VND</span>
+                                <span>800.000 VND</span>
                               </div>
                             )}
                             <div className={`${listAge.length > 0 && "tourtet-listage"}`}>
@@ -718,22 +691,16 @@ const QNPY3N4D = () => {
                     <div className="tourtet-expensepolicy">
                       <h2>Chính sách phụ thu</h2>
                       <div className="tourtet-expensepolicy-list">
-                        <p>- Phụ thu Phòng đơn : 1.000.000đ/ Khách/ 2 đêm ( Nếu khách ở 1 mình )/ ngày thường.</p>
+                        <p>- Phụ thu phòng đơn: 800.000 vnđ/khách/tour.</p>
                         <p>
-                          - Phụ thu giường nằm khoang 4 : 900.000đ/ khách/ khứ hồi ( ngày thườn) ,1.400.000đ/ khách/ khứ
-                          hồi ( ngày lễ, tết )
+                          - Dưới 05 tuổi: Miễn phí (chi phí phát sinh trên tour gia đình tự chi trả). Hai người lớn chỉ
+                          được kèm theo 01 trẻ, từ trẻ thứ hai tính 50% giá tour.
                         </p>
-                        <p>- Phụ thu tết âm lịch: 2.690.000 vnđ/khách/tour</p>
-                        <p>- Trẻ em nho 5 tuổi: miễn phí, gia đình tự lo</p>
                         <p>
-                          - Trẻ từ 5 dưới 09 tuổi: mua 75% giá vé người lớn, tiêu chuẩn như người lớn, ngủ chung với bố
-                          mẹ
+                          - Từ 05 – dưới 11 tuổi: 50% giá tour người lớn, ngủ ghép với gia đình. Hai người lớn chỉ được
+                          kèm theo 01 trẻ, từ trẻ thứ hai tính giá như người lớn.
                         </p>
-                        <p>- Trẻ em từ 10 tuổi trở lên mua vé như người lớn</p>
-                        <p>
-                          - Qui định trẻ em đi kèm: mỗi cặp vợ chồng chỉ được 1 trẻ em miễn phí, trẻ thứ 2 phải mua 75%
-                          vé như người lớn
-                        </p>
+                        <p>- Trẻ em từ 11 tuổi trở lên mua vé như người lớn</p>
                       </div>
                     </div>
 
@@ -768,71 +735,47 @@ const QNPY3N4D = () => {
                           <div className="tourtet-firstterm-list">
                             <div>
                               <u>Vận chuyển:</u>
-                              <p>- Xe tham quan (đời mới, máy lạnh) đón – tiễn theo chương trình.</p>
-                              <p>- Vé xe lửa ngồi mềm máy lạnh: Sài Gòn – Diêu Trì/Quy Nhơn, Tuy Hòa – Sài Gòn.</p>
-                              <p>- Vé Tàu Tham quan Đảo Kỳ Co.</p>
+                              <p>- Xe du lịch 29, 35, 45ch đời mới máy lạnh, ghế bật tham quan.</p>
                             </div>
                             <div>
                               <u>Lưu trú:</u>
-                              <p>- Quy Nhơn: tiêu chuẩn 2 sao.</p>
-                              <p>- Phú Yên: tiêu chuẩn 5 sao.</p>
+                              <p>- Resort 4 sao: Tiêu chuẩn 2, 3 khách/ phòng. Tiện nghi: máy lạnh, tivi, vệ sinh...</p>
                             </div>
                             <div>
                               <u>Khác:</u>
-                              <p>- HDV phục vụ quý khách ăn nghĩ suốt tuyến.</p>
-                              <p>- Phí tham quan theo chương trình.</p>
-                              <p>- Ăn uống theo chương trình.</p>
-                              <p>- Quà tặng: Nón, khăn lạnh, nước suối.</p>
-                              <p>- Bảo hiểm DL : mức bồi thường tối đa 10.000.000 đồng/ trường hợp.</p>
+                              <p>
+                                - Ăn uống: 02 bữa Ăn sáng: Tô + ly và buffet tại Resort, 03 bữa trưa + tối: nhà hàng địa
+                                phương tiêu chuẩn, hợp vệ sinh.
+                              </p>
+                              <p>- Đoàn có HDV tiếng Việt thuyết minh và phục vụ Đoàn tham quan suốt tuyến.</p>
+                              <p>- Tham quan: bao gồm phí vào cổng tại các điểm tham quan theo chương trình.</p>
+                              <p>- Quà tặng: Khăn ướt và nước đóng chai.</p>
+                              <p>- Bảo hiểm theo quy định của Bảo hiểm du lịch 100.000.000vnđ/vụ.</p>
                             </div>
                           </div>
                         )}
                         {secondTerm && (
                           <div className="tourtet-secondterm-list">
-                            <p>
-                              - Chi phí cá nhân: điện thoại, giặc ủi, ăn uống – tham quan – vận chuyển ngoài chương
-                              trình.
-                            </p>
-                            <p>- Phu thu Phòng đơn : 1.000.000đ/Khách/ 2 đêm ( Nếu khách ở 1 mình)/ ngày thường.</p>
-                            <p>
-                              - Phụ thu giường nằm khoang 4: 900.000đ/khách/khứ hồi, 1.400.000đ/khách/khứ hồi (TẾT ÂL).
-                            </p>
-                            <p>
-                              - Thuế VAT (Nếu quý khách có nhu cầu xuất hoá đơn GTGT thì phụ thu 10% trên tổng tiền
-                              tour).
-                            </p>
+                            <p>- Tiền TIP cho HDV + Tài xế.</p>
+                            <p>- Thuế VAT, Chi phí cá nhân ngoài chương trình: giặt ủi, điện thoại, minibar...</p>
+                            <p>- Chi phí tắm bùn khoáng, chi phí xem nhạc nước.</p>
+                            <p>- Chi phí chênh lệch vé tham quan theo chiều cao của trẻ em tại các khu du lịch.</p>
                           </div>
                         )}
                         {thirdTerm && (
                           <div className="tourtet-thirdterm-list">
                             <b>Chính sách hủy:</b>
-                            <p>
-                              - Đặt vé trước ngày khởi hành ít nhất 10 ngày (nếu đợt khởi hành không đủ số lượng qui
-                              định, quý khách được dời vào ngày khởi hành kế tiếp).
-                            </p>
-                            <p>- Huỷ tour trước 7 ngày khởi hành mất 50% giá vé.</p>
-                            <p>- Huỷ tour truoc 5 ngày khởi hành mất 70% giá vé.</p>
-                            <p>- Huỷ tour trước 3 ngày khởi hành mất 100% giá vé.</p>
-                            <p>Điều kiện hủy tour (ngày lễ tết):</p>
-                            <p>- Các ngày lễ tết việc dời ngày và hủy tour mất 100% giá tour.</p>
+                            <p>Nếu hủy tour, Quý khách thanh toán các khoản lệ phí hủy tour sau:</p>
+                            <p>- Hủy tour sau khi đăng kí: 30% giá tour.</p>
+                            <p>- Trước ngày đi 20 Ngày: 50% giá tour.</p>
+                            <p>- Trước ngày đi 10-19 ngày: 75% giá tour.</p>
+                            <p>- Trước ngày đi 0-10 Ngày: 100% giá tour.</p>
+                            <p>Ngày Lễ tết hoàn hủy mất phí 100%.</p>
                           </div>
                         )}
                         {fourthTerm && (
                           <div className="tourtet-fourthterm-list">
-                            <p>- Lưu ý : không nhận du khách quốc tế.</p>
-                            <p>
-                              - Thứ tự các điểm tham quan theo chương trình HDV có thể thay đổi tùy theo thời tiết và
-                              các vấn đề khách quan khác mà vẫn đảm bảo đầy đủ các điểm tham quan.
-                            </p>
-                            <p>
-                              - Do đặc điểm địa hình, tại Sapa quý khách chủ yếu đi bộ để tham quan, vì thế quý khách
-                              vui lòng lựa chọn trang phục phù hợp.
-                            </p>
-                            <p>
-                              - Tour mang tính chất là tour ghép lẻ,vì vậy Tour sẽ thực hiện nếu có đủ lượng
-                              khách.Trường hợp,không đủ khách để khởi hành Công Ty sẽ hoàn 100% tiền lại cho khách và
-                              không đền bù chi phí thiệt hại phát sinh nếu có. Mong quý khách lưu ý !
-                            </p>
+                            <p>- Quy định của Resort/ khách sạn: giờ nhận phòng: 14h00 – 15h00. Giờ trả phòng 12h00.</p>
                             <p>
                               - Trong trường hợp khách hàng dẫn theo trẻ em dưới 15 tuổi (không phải con ruột) đi cùng
                               trong chương trình, phải mang theo Giấy Ủy Quyền của cha mẹ, có xác nhận của chính quyền
@@ -841,7 +784,7 @@ const QNPY3N4D = () => {
                             <p>- Trẻ em phải đi cùng cha mẹ khi đi phải mang theo giấy khai sinh hoặc hộ chiếu.</p>
                             <p>
                               - Du khách có mặt tại điểm đón trước 30 phút. Du khách đến trễ khi xe đã khởi hành hoặc
-                              hủy tour không báo trước vui lòng chịu phí như ‘hủy vé ngay ngày khởi hành.
+                              hủy tour không báo trước vui lòng chịu phí như ‘hủy vé ngay ngày khởi hành’.
                             </p>
                             <p>
                               - Du khách mang theo giấy CMND hoặc Hộ chiếu (Bản chính), nên mang theo hành lý gọn nhẹ,
@@ -849,6 +792,10 @@ const QNPY3N4D = () => {
                             </p>
                             <p>- Du khách tự quản lý tiền bạc tư trang trong qua trình tham quan du lịch.</p>
                             <p>- Khi đăng ký, quý khách vui lòng cung cấp đầy đủ Họ tên và năm sinh.</p>
+                            <p>
+                              - Đối với du khách là Việt kiều, Quốc tế nhập cảnh Việt Nam bằng visa rời, vui lòng mang
+                              theo tờ khai hải quan và visa khi đi tour.
+                            </p>
                           </div>
                         )}
                       </div>
@@ -892,7 +839,7 @@ const QNPY3N4D = () => {
                   {showSingleRoom && (
                     <div className="tourtet-totalprice-singleroom">
                       <span>Phụ thu phòng đơn</span>
-                      <span>1.000.000 VND</span>
+                      <span>800.000 VND</span>
                     </div>
                   )}
                   <div className={`${listAge.length > 0 && "tourtet-listage"}`}>
@@ -928,4 +875,4 @@ const QNPY3N4D = () => {
   );
 };
 
-export default QNPY3N4D;
+export default PTGolf;

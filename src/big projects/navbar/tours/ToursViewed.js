@@ -61,7 +61,7 @@ const ToursViewed = ({ tourViewed, close }) => {
                         )}
 
                         <p className="tourviewed-price">
-                          <span className="tourviewed-money">{tour.price.toLocaleString()}</span>
+                          {/* <span className="tourviewed-money">{tour.price.toLocaleString()}</span> */}
                           <span>VND</span>
                         </p>
                       </div>

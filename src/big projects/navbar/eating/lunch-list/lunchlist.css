@@ -488,9 +488,12 @@
   justify-content: space-between;
 }
 
-.lunchlist-btnaddorder button {
+.lunchlist-btnadd {
   background-color: #ec971f;
   color: #fff;
+  border: 1px solid #ec971f;
+  margin-right: 4px;
+  flex-basis: 55%;
   margin-top: 16px;
   padding: 12px;
   cursor: pointer;
@@ -498,17 +501,45 @@
   font-size: 18px;
   font-weight: bold;
   border-radius: 4px;
-  border: 1px solid #ec971f;
-}
-
-.lunchlist-btnadd {
-  margin-right: 4px;
-  flex-basis: 55%;
 }
 
 .lunchlist-btnorder {
+  background-color: #ec971f;
+  color: #fff;
+  border: 1px solid #ec971f;
   margin-left: 4px;
   flex-basis: 40%;
+  margin-top: 16px;
+  padding: 12px;
+  cursor: pointer;
+  outline: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.btnadd-ban {
+  cursor: no-drop;
+  margin-right: 4px;
+  flex-basis: 55%;
+  outline: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-top: 16px;
+  padding: 12px;
+}
+
+.btnorder-ban {
+  cursor: no-drop;
+  margin-left: 4px;
+  flex-basis: 40%;
+  outline: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-top: 16px;
+  padding: 12px;
 }
 
 /* Meal Cart */

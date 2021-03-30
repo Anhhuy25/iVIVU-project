@@ -47,6 +47,10 @@ import MealNo5 from "./big projects/navbar/eating/lunch-list/MealNo5";
 import MealNo6 from "./big projects/navbar/eating/lunch-list/MealNo6";
 import MealNo7 from "./big projects/navbar/eating/lunch-list/MealNo7";
 import QNPY3N4D from "./big projects/navbar/tours/toursinfo/tours-category/tet/QNPY3N4D";
+import HCMYBDBMCHB4N3D from "./big projects/navbar/tours/toursinfo/tours-category/tet/HCMYBDBMCHB4N3D";
+import HCMBTCHABN3N2D from "./big projects/navbar/tours/toursinfo/tours-category/tet/HCMBTCHABN3N2D";
+import PTGolf from "./big projects/navbar/tours/toursinfo/tours-category/tet/PTGolf";
+import HCMHGCBBKTN from "./big projects/navbar/tours/toursinfo/tours-category/tet/HCMHGCBBKTN";
 
 const App = () => {
   return (
@@ -69,33 +73,15 @@ const App = () => {
         {/* Events */}
         <Route path="/chu-de/tet-tay" children={<NewYear />}></Route>
         <Route path="/chu-de/khach-san-tich-cuc" children={<Active />}></Route>
-        <Route
-          path="/chu-de/khach-san-vuot-dich"
-          children={<OvercomeCovid />}
-        ></Route>
+        <Route path="/chu-de/khach-san-vuot-dich" children={<OvercomeCovid />}></Route>
         <Route path="/voucher-du-lich" children={<GiftVoucher />}></Route>
 
         {/* Discount-Today */}
-        <Route
-          path="/khach-san-vung-tau/khach-san-mercure-vung-tau"
-          children={<VungTau />}
-        ></Route>
-        <Route
-          path="/khach-san-ninh-thuan/khu-nghi-duong-amanoi-villas-ninh-thuan"
-          children={<NinhThuan />}
-        ></Route>
-        <Route
-          path="/khach-san-phu-quoc/khu-nghi-duong-novotel-phu-quoc"
-          children={<NovotelPQ />}
-        ></Route>
-        <Route
-          path="/khach-san-vung-tau/khach-san-imperial-vung-tau"
-          children={<ImperialVT />}
-        ></Route>
-        <Route
-          path="/khach-san-phu-quoc/khu-nghi-duong-movenpick-waverly-phu-quoc"
-          children={<PhuQuoc />}
-        ></Route>
+        <Route path="/khach-san-vung-tau/khach-san-mercure-vung-tau" children={<VungTau />}></Route>
+        <Route path="/khach-san-ninh-thuan/khu-nghi-duong-amanoi-villas-ninh-thuan" children={<NinhThuan />}></Route>
+        <Route path="/khach-san-phu-quoc/khu-nghi-duong-novotel-phu-quoc" children={<NovotelPQ />}></Route>
+        <Route path="/khach-san-vung-tau/khach-san-imperial-vung-tau" children={<ImperialVT />}></Route>
+        <Route path="/khach-san-phu-quoc/khu-nghi-duong-movenpick-waverly-phu-quoc" children={<PhuQuoc />}></Route>
 
         {/* Destination-Tourism */}
         <Route path="/khach-san-phu-quoc" children={<PhuQuocHotels />}></Route>
@@ -104,67 +90,41 @@ const App = () => {
         <Route path="/khach-san-vung-tau" children={<VungTauHotels />}></Route>
         <Route path="/khach-san-da-nang" children={<DaNangHotels />}></Route>
         <Route path="/khach-san-da-lat" children={<DaLatHotels />}></Route>
-        <Route
-          path="/khach-san-phan-thiet"
-          children={<PhanThietHotels />}
-        ></Route>
+        <Route path="/khach-san-phan-thiet" children={<PhanThietHotels />}></Route>
         <Route path="/khach-san-sapa" children={<SapaHotels />}></Route>
-        <Route
-          path="/khach-san-maldives-asia"
-          children={<MaldivesHotels />}
-        ></Route>
+        <Route path="/khach-san-maldives-asia" children={<MaldivesHotels />}></Route>
         <Route path="/khach-san-bali" children={<BaliHotels />}></Route>
-        <Route
-          path="/khach-san-singapore"
-          children={<SingaporeHotels />}
-        ></Route>
+        <Route path="/khach-san-singapore" children={<SingaporeHotels />}></Route>
         <Route path="/khach-san-bangkok" children={<BangkokHotels />}></Route>
-        <Route
-          path="/khach-san-switzerland"
-          children={<SwitzerlandHotels />}
-        ></Route>
+        <Route path="/khach-san-switzerland" children={<SwitzerlandHotels />}></Route>
 
         {/* Tet Tan Suu */}
+        <Route path="/tour-mien-bac-5n4d-sai-gon-ha-noi-sapa-ha-long" children={<SGHNSPHL5N4D />}></Route>
+        <Route path="/tour-mien-trung-3n4d-kham-pha-quy-nhon-phu-yen-tau-lua-tet" children={<QNPY3N4D />}></Route>
         <Route
-          path="/tour-mien-bac-5n4d-sai-gon-ha-noi-sapa-ha-long"
-          children={<SGHNSPHL5N4D />}
+          path="/tour-mien-bac-4n3d-hcm-yen-bai-dien-bien-moc-chau-hoa-binh"
+          children={<HCMYBDBMCHB4N3D />}
         ></Route>
         <Route
-          path="/tour-mien-trung-3n4d-kham-pha-quy-nhon-phu-yen-tau-lua-tet"
-          children={<QNPY3N4D />}
+          path="/tour-cao-cap-da-nang-3n2d-hcm-bao-tang-cham-hoi-an-ba-na-tet"
+          children={<HCMBTCHABN3N2D />}
         ></Route>
+        <Route
+          path="/tour-cao-cap-phan-thiet-2n1d-danh-golf-cung-sealink-doi-cat-bay-tet"
+          children={<PTGolf />}
+        ></Route>
+        <Route path="/tour-mien-bac-5n4d-hcm-ha-giang-cao-bang-bac-kan-thai-nguyen" children={<HCMHGCBBKTN />}></Route>
         {/* <Route path="/:url" children={<TourInfo />}></Route> */}
 
         {/* Eating */}
         <Route path="/bua-toi" children={<DinnerTitle />}></Route>
-        <Route
-          path="/bua-trua-dam-da-vi-nam-standard"
-          children={<MealNo1 />}
-        ></Route>
-        <Route
-          path="/bua-trua-dam-da-vi-trung-standard"
-          children={<MealNo2 />}
-        ></Route>
-        <Route
-          path="/bua-trua-dam-da-vi-bac-standard"
-          children={<MealNo3 />}
-        ></Route>
-        <Route
-          path="/bua-trua-thanh-dam-vi-nam-standard"
-          children={<MealNo4 />}
-        ></Route>
-        <Route
-          path="/bua-trua-dac-sac-sai-gon-standard"
-          children={<MealNo5 />}
-        ></Route>
-        <Route
-          path="/bua-trua-thanh-dam-vi-nam-superior"
-          children={<MealNo6 />}
-        ></Route>
-        <Route
-          path="/bua-trua-dac-sac-sai-gon-deluxe"
-          children={<MealNo7 />}
-        ></Route>
+        <Route path="/bua-trua-dam-da-vi-nam-standard" children={<MealNo1 />}></Route>
+        <Route path="/bua-trua-dam-da-vi-trung-standard" children={<MealNo2 />}></Route>
+        <Route path="/bua-trua-dam-da-vi-bac-standard" children={<MealNo3 />}></Route>
+        <Route path="/bua-trua-thanh-dam-vi-nam-standard" children={<MealNo4 />}></Route>
+        <Route path="/bua-trua-dac-sac-sai-gon-standard" children={<MealNo5 />}></Route>
+        <Route path="/bua-trua-thanh-dam-vi-nam-superior" children={<MealNo6 />}></Route>
+        <Route path="/bua-trua-dac-sac-sai-gon-deluxe" children={<MealNo7 />}></Route>
         <Route path="/gio-hang" children={<MealCart />}></Route>
 
         <Route path="*">

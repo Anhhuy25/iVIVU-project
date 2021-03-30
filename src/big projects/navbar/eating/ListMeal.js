@@ -28,6 +28,7 @@ const listMeal = [
     taste: "south",
     cook: "warm",
     quantity: 1,
+    pricePerDay: 39000,
   },
   {
     id: 2,
