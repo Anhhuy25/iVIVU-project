@@ -18,7 +18,7 @@ export const reducer = (state, action) => {
       quantity: state.quantity + 1,
       price:
         state.price +
-        39000 * state.dayPerWeek +
+        59000 * state.dayPerWeek +
         2000 * state.quantityRice * state.dayPerWeek +
         2000 * state.quantitySpoonChopstick * state.dayPerWeek +
         10000 * state.quantityBlackCoffee * state.dayPerWeek +
@@ -32,7 +32,7 @@ export const reducer = (state, action) => {
       quantity: state.quantity - 1,
       price:
         state.price -
-        39000 * state.dayPerWeek -
+        59000 * state.dayPerWeek -
         2000 * state.quantityRice * state.dayPerWeek -
         2000 * state.quantitySpoonChopstick * state.dayPerWeek -
         10000 * state.quantityBlackCoffee * state.dayPerWeek -
@@ -49,7 +49,7 @@ export const reducer = (state, action) => {
           dayPerWeek: state.dayPerWeek + 1,
           price:
             state.price +
-            39000 * state.quantity +
+            59000 * state.quantity +
             2000 * state.quantityRice * state.quantity +
             2000 * state.quantitySpoonChopstick * state.quantity +
             10000 * state.quantityBlackCoffee * state.quantity +
@@ -62,7 +62,7 @@ export const reducer = (state, action) => {
           dayPerWeek: state.dayPerWeek + 1,
           price:
             state.price +
-            39000 * state.quantity +
+            59000 * state.quantity +
             2000 * state.quantityRice * state.quantity +
             2000 * state.quantitySpoonChopstick * state.quantity +
             10000 * state.quantityBlackCoffee * state.quantity +
@@ -75,7 +75,7 @@ export const reducer = (state, action) => {
           dayPerWeek: state.dayPerWeek + 1,
           price:
             state.price +
-            39000 * state.quantity +
+            59000 * state.quantity +
             2000 * state.quantityRice * state.quantity +
             2000 * state.quantitySpoonChopstick * state.quantity +
             10000 * state.quantityBlackCoffee * state.quantity +
@@ -88,7 +88,7 @@ export const reducer = (state, action) => {
           dayPerWeek: state.dayPerWeek + 1,
           price:
             state.price +
-            39000 * state.quantity +
+            59000 * state.quantity +
             2000 * state.quantityRice * state.quantity +
             2000 * state.quantitySpoonChopstick * state.quantity +
             10000 * state.quantityBlackCoffee * state.quantity +
@@ -101,7 +101,7 @@ export const reducer = (state, action) => {
           dayPerWeek: state.dayPerWeek + 1,
           price:
             state.price +
-            39000 * state.quantity +
+            59000 * state.quantity +
             2000 * state.quantityRice * state.quantity +
             2000 * state.quantitySpoonChopstick * state.quantity +
             10000 * state.quantityBlackCoffee * state.quantity +
@@ -150,7 +150,7 @@ export const reducer = (state, action) => {
           dayPerWeek: state.dayPerWeek - 1,
           price:
             state.price -
-            39000 * state.quantity -
+            59000 * state.quantity -
             2000 * state.quantityRice * state.quantity -
             2000 * state.quantitySpoonChopstick * state.quantity -
             10000 * state.quantityBlackCoffee * state.quantity -
@@ -163,7 +163,7 @@ export const reducer = (state, action) => {
           dayPerWeek: state.dayPerWeek - 1,
           price:
             state.price -
-            39000 * state.quantity -
+            59000 * state.quantity -
             2000 * state.quantityRice * state.quantity -
             2000 * state.quantitySpoonChopstick * state.quantity -
             10000 * state.quantityBlackCoffee * state.quantity -
@@ -176,7 +176,7 @@ export const reducer = (state, action) => {
           dayPerWeek: state.dayPerWeek - 1,
           price:
             state.price -
-            39000 * state.quantity -
+            59000 * state.quantity -
             2000 * state.quantityRice * state.quantity -
             2000 * state.quantitySpoonChopstick * state.quantity -
             10000 * state.quantityBlackCoffee * state.quantity -
@@ -189,7 +189,7 @@ export const reducer = (state, action) => {
           dayPerWeek: state.dayPerWeek - 1,
           price:
             state.price -
-            39000 * state.quantity -
+            59000 * state.quantity -
             2000 * state.quantityRice * state.quantity -
             2000 * state.quantitySpoonChopstick * state.quantity -
             10000 * state.quantityBlackCoffee * state.quantity -
@@ -202,7 +202,7 @@ export const reducer = (state, action) => {
           dayPerWeek: state.dayPerWeek - 1,
           price:
             state.price -
-            39000 * state.quantity -
+            59000 * state.quantity -
             2000 * state.quantityRice * state.quantity -
             2000 * state.quantitySpoonChopstick * state.quantity -
             10000 * state.quantityBlackCoffee * state.quantity -

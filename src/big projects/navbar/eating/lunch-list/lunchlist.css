@@ -441,6 +441,7 @@
 }
 
 .lunchlist-morerice,
+.lunchlist-box,
 .lunchlist-spoonchopstick,
 .lunchlist-blackcoffee,
 .lunchlist-lemontea,
@@ -453,6 +454,7 @@
 }
 
 .lunchlist-morerice div:nth-child(1),
+.lunchlist-box div:nth-child(1),
 .lunchlist-spoonchopstick div:nth-child(1),
 .lunchlist-blackcoffee div:nth-child(1),
 .lunchlist-lemontea div:nth-child(1),
@@ -462,6 +464,7 @@
 }
 
 .lunchlist-morerice div:nth-child(1) label,
+.lunchlist-box div:nth-child(1) label,
 .lunchlist-spoonchopstick div:nth-child(1) label,
 .lunchlist-blackcoffee div:nth-child(1) label,
 .lunchlist-lemontea div:nth-child(1) label,
@@ -471,6 +474,7 @@
 }
 
 .lunchlist-morerice div:nth-child(2) span:nth-child(1),
+.lunchlist-box div:nth-child(2) span:nth-child(1),
 .lunchlist-spoonchopstick div:nth-child(2) span:nth-child(1),
 .lunchlist-blackcoffee div:nth-child(2) span:nth-child(1),
 .lunchlist-lemontea div:nth-child(2) span:nth-child(1),

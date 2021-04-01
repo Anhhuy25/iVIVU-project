@@ -12,53 +12,41 @@ import FooterTop from "../../tours/FooterTop";
 import FooterBottom from "../FooterBottom";
 import img from "../../../img/Eating/lunch/dui ga nuong1____horizontal-730x456.png";
 
-// Default State
-const defaultState = {
-  price: 0,
-  dayPerWeek: 0,
-  quantity: 1,
-  isChecked2: false,
-  isChecked3: false,
-  isChecked4: false,
-  isChecked5: false,
-  isChecked6: false,
-  checkRice: false,
-  checkSpoonChopstick: false,
-  checkBlackCoffee: false,
-  checkLemonTea: false,
-  checkMilkCoffee: false,
-  quantityRice: 0,
-  quantitySpoonChopstick: 0,
-  quantityBlackCoffee: 0,
-  quantityLemonTea: 0,
-  quantityMilkCoffee: 0,
+// localStorage Default State
+const getLocalStorageDefaultState = () => {
+  let state = localStorage.getItem("state");
+  if (state) {
+    return JSON.parse(localStorage.getItem("state"));
+  } else {
+    return {
+      price: 0,
+      dayPerWeek: 0,
+      quantity: 1,
+      isChecked2: false,
+      isChecked3: false,
+      isChecked4: false,
+      isChecked5: false,
+      isChecked6: false,
+      checkRice: false,
+      checkSpoonChopstick: false,
+      checkBlackCoffee: false,
+      checkLemonTea: false,
+      checkMilkCoffee: false,
+      quantityRice: 0,
+      quantitySpoonChopstick: 0,
+      quantityBlackCoffee: 0,
+      quantityLemonTea: 0,
+      quantityMilkCoffee: 0,
+    };
+  }
 };
-
-// const getLocalStorageDefaultState = () => {
-//   let state = localStorage.getItem("state");
-//   if (state) {
-//     console.log(state);
-//     return JSON.parse(localStorage.getItem("state"));
-//   } else {
-//     return {
-//       price: 0,
-//       dayPerWeek: 0,
-//       quantity: 1,
-//       price2: 39000,
-//       isCheckedMon: false,
-//       isCheckedTues: false,
-//     };
-//   }
-// };
 
 const MealNo1 = () => {
   // state lien quan toi defaultState
-  const [state, dispatch] = useReducer(reducer, defaultState);
-  //const [state, dispatch] = useReducer(reducer, getLocalStorageDefaultState());
+  const [state, dispatch] = useReducer(reducer, getLocalStorageDefaultState());
   const [filterMeal, setFilterMeal] = useState(listMeal);
   const [showRequire, setShowRequire] = useState(false);
   const [showPickDay, setShowPickDay] = useState(false);
-  const [arr, setArr] = useState([]);
   const { listCart, setListCart } = useGlobalContext();
 
   useEffect(() => {
@@ -84,50 +72,21 @@ const MealNo1 = () => {
     localStorage.setItem("state", JSON.stringify(state));
   }, [state]);
 
-  const {
-    id,
-    mealName,
-    rating,
-    description,
-    chefImg,
-    chefName,
-    restaurantName,
-    price,
-    to,
-    // pricePerDay,
-    // quantity,
-  } = filterMeal;
+  const { id, mealName, rating, description, chefImg, chefName, restaurantName, price, to } = filterMeal;
 
-  const handleChange = (type, num) => {
-    const obj = {
-      price: num,
-      typeOfWeek: type,
-    };
-
+  const handleChange = (type) => {
     if (document.getElementById(type).checked) {
-      arr.push(obj);
-      setArr([...arr]);
       dispatch({ type: "SAVE_CHECKED", payload: type });
     } else {
-      setArr((oldArr) => {
-        return oldArr.filter((item) => item.typeOfWeek !== type);
-      });
       dispatch({ type: "UNSAVE_CHECKED", payload: type });
     }
   };
 
-  const totalPrice = arr.reduce((acc, curr) => {
-    return acc + curr.price;
-  }, 0);
-  console.log(state.price);
-  console.log(totalPrice);
-  console.log(arr);
-
   const handleClick = (type) => {
     if (document.getElementById(type).checked) {
-      dispatch({ type: "CLICK", payload: { type, totalPrice } });
+      dispatch({ type: "CLICK", payload: type });
     } else {
-      dispatch({ type: "UN_CLICK", payload: { type, totalPrice } });
+      dispatch({ type: "UN_CLICK", payload: type });
     }
   };
 
@@ -135,28 +94,28 @@ const MealNo1 = () => {
     if (state.quantity <= 1) {
       dispatch({ type: "EQUAL_1" });
     } else {
-      dispatch({ type: "DECREASE", payload: totalPrice });
+      dispatch({ type: "DECREASE" });
     }
   };
   const increaseMeal = () => {
     if (state.quantity >= 50) {
       dispatch({ type: "EQUAL_50" });
     } else {
-      dispatch({ type: "INCREASE", payload: totalPrice });
+      dispatch({ type: "INCREASE" });
     }
   };
 
   const addCart = (id) => {
-    const addedItem = listCart.find((x) => x.id === id);
-    if (addedItem) {
-      setListCart(listCart.map((y) => (y.id === id ? { ...addedItem, quantity: addedItem.quantity + 1 } : y)));
-    } else {
-      setListCart([...listCart, { ...filterMeal, quantity: 1 }]);
-    }
-  };
-
-  const handleSubmit = () => {
-    setShowPickDay(false);
+    setListCart([
+      ...listCart,
+      {
+        ...filterMeal,
+        id: id + new Date().getTime().toString(),
+        quantity: 1,
+        price: state.price,
+        dayPerWeek: state.dayPerWeek,
+      },
+    ]);
   };
 
   return (
@@ -280,8 +239,8 @@ const MealNo1 = () => {
                         <input
                           id='monday'
                           checked={state.isChecked2}
-                          onChange={() => handleChange("monday", 39000)}
-                          onClick={() => handleClick("monday", 39000)}
+                          onChange={() => handleChange("monday")}
+                          onClick={() => handleClick("monday")}
                           type='checkbox'
                         />
                         <label htmlFor='monday'>
@@ -293,8 +252,8 @@ const MealNo1 = () => {
                         <input
                           id='tuesday'
                           checked={state.isChecked3}
-                          onChange={() => handleChange("tuesday", 39000)}
-                          onClick={() => handleClick("tuesday", 39000)}
+                          onChange={() => handleChange("tuesday")}
+                          onClick={() => handleClick("tuesday")}
                           type='checkbox'
                         />
                         <label htmlFor='tuesday'>
@@ -306,8 +265,8 @@ const MealNo1 = () => {
                         <input
                           id='wednesday'
                           checked={state.isChecked4}
-                          onChange={() => handleChange("wednesday", 39000)}
-                          onClick={() => handleClick("wednesday", 39000)}
+                          onChange={() => handleChange("wednesday")}
+                          onClick={() => handleClick("wednesday")}
                           type='checkbox'
                         />
                         <label htmlFor='wednesday'>
@@ -319,8 +278,8 @@ const MealNo1 = () => {
                         <input
                           id='thursday'
                           checked={state.isChecked5}
-                          onChange={() => handleChange("thursday", 39000)}
-                          onClick={() => handleClick("thursday", 39000)}
+                          onChange={() => handleChange("thursday")}
+                          onClick={() => handleClick("thursday")}
                           type='checkbox'
                         />
                         <label htmlFor='thursday'>
@@ -332,8 +291,8 @@ const MealNo1 = () => {
                         <input
                           id='friday'
                           checked={state.isChecked6}
-                          onChange={() => handleChange("friday", 39000)}
-                          onClick={() => handleClick("friday", 39000)}
+                          onChange={() => handleChange("friday")}
+                          onClick={() => handleClick("friday")}
                           type='checkbox'
                         />
                         <label htmlFor='friday'>
@@ -350,7 +309,7 @@ const MealNo1 = () => {
                       </div>
                       <div className='lunchlist-pickdayformbtn'>
                         <button onClick={() => setShowPickDay(false)}>Huỷ</button>
-                        <button onClick={handleSubmit}>Xác nhận</button>
+                        <button onClick={() => setShowPickDay(false)}>Xác nhận</button>
                       </div>
                     </div>
                   </div>
@@ -546,8 +505,8 @@ const MealNo1 = () => {
                             id='morerice'
                             disabled={state.price === 0}
                             checked={state.checkRice}
-                            onChange={() => handleChange("morerice", 2000)}
-                            onClick={() => handleClick("morerice", 2000)}
+                            onChange={() => handleChange("morerice")}
+                            onClick={() => handleClick("morerice")}
                           />
                           <label htmlFor='morerice'>Cơm thêm</label>
                         </div>
@@ -563,8 +522,8 @@ const MealNo1 = () => {
                             id='spoonchopstick'
                             disabled={state.price === 0}
                             checked={state.checkSpoonChopstick}
-                            onChange={() => handleChange("spoonchopstick", 2000)}
-                            onClick={() => handleClick("spoonchopstick", 2000)}
+                            onChange={() => handleChange("spoonchopstick")}
+                            onClick={() => handleClick("spoonchopstick")}
                           />
                           <label htmlFor='spoonchopstick'>Muỗng đũa</label>
                         </div>
@@ -585,8 +544,8 @@ const MealNo1 = () => {
                         id='blackcoffee'
                         disabled={state.price === 0}
                         checked={state.checkBlackCoffee}
-                        onChange={() => handleChange("blackcoffee", 10000)}
-                        onClick={() => handleClick("blackcoffee", 10000)}
+                        onChange={() => handleChange("blackcoffee")}
+                        onClick={() => handleClick("blackcoffee")}
                       />
                       <label htmlFor='blackcoffee'>Cafe đen</label>
                     </div>
@@ -602,8 +561,8 @@ const MealNo1 = () => {
                         id='lemontea'
                         disabled={state.price === 0}
                         checked={state.checkLemonTea}
-                        onChange={() => handleChange("lemontea", 10000)}
-                        onClick={() => handleClick("lemontea", 10000)}
+                        onChange={() => handleChange("lemontea")}
+                        onClick={() => handleClick("lemontea")}
                       />
                       <label htmlFor='lemontea'>Trà chanh</label>
                     </div>
@@ -619,8 +578,8 @@ const MealNo1 = () => {
                         id='milkcoffee'
                         disabled={state.price === 0}
                         checked={state.checkMilkCoffee}
-                        onChange={() => handleChange("milkcoffee", 15000)}
-                        onClick={() => handleClick("milkcoffee", 15000)}
+                        onChange={() => handleChange("milkcoffee")}
+                        onClick={() => handleClick("milkcoffee")}
                       />
                       <label htmlFor='milkcoffee'>Cafe sữa</label>
                     </div>

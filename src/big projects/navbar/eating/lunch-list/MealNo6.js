@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-
+import React, { useState, useEffect, useReducer } from "react";
+import { reducer } from "./reducer299k";
 import { Link } from "react-router-dom";
 import { useGlobalContext } from "../../../context";
 import listMeal from "../ListMeal";
@@ -12,10 +12,39 @@ import FooterTop from "../../tours/FooterTop";
 import FooterBottom from "../FooterBottom";
 import img from "../../../img/Eating/lunch/xiu mai sot ca1____horizontal-730x456.png";
 
+// localStorage Default State
+const getLocalStorageDefaultState299 = () => {
+  let stateNo6 = localStorage.getItem("stateNo6");
+  if (stateNo6) {
+    return JSON.parse(localStorage.getItem("stateNo6"));
+  } else {
+    return {
+      price: 0,
+      dayPerWeek: 0,
+      quantity: 1,
+      isChecked2: false,
+      isChecked3: false,
+      isChecked4: false,
+      isChecked5: false,
+      isChecked6: false,
+      checkRice: false,
+      checkSpoonChopstick: false,
+      checkBlackCoffee: false,
+      checkLemonTea: false,
+      checkMilkCoffee: false,
+      quantityRice: 0,
+      quantitySpoonChopstick: 0,
+      quantityBlackCoffee: 0,
+      quantityLemonTea: 0,
+      quantityMilkCoffee: 0,
+    };
+  }
+};
+
 const MealNo6 = () => {
+  const [stateNo6, dispatch] = useReducer(reducer, getLocalStorageDefaultState299());
   const [filterMeal, setFilterMeal] = useState(listMeal);
   const [showRequire, setShowRequire] = useState(false);
-  const [mealQuantity, setMealQuantity] = useState(1);
   const [showPickDay, setShowPickDay] = useState(false);
   const { listCart, setListCart } = useGlobalContext();
 
@@ -38,32 +67,55 @@ const MealNo6 = () => {
       document.body.style.overflowY = "unset";
     }
   }, [showPickDay]);
+  useEffect(() => {
+    localStorage.setItem("stateNo6", JSON.stringify(stateNo6));
+  }, [stateNo6]);
+
+  const { id, mealName, rating, description, chefImg, chefName, restaurantName, price, to } = filterMeal;
+
+  const handleChange = (type) => {
+    if (document.getElementById(type).checked) {
+      dispatch({ type: "SAVE_CHECKED", payload: type });
+    } else {
+      dispatch({ type: "UNSAVE_CHECKED", payload: type });
+    }
+  };
+
+  const handleClick = (type) => {
+    if (document.getElementById(type).checked) {
+      dispatch({ type: "CLICK", payload: type });
+    } else {
+      dispatch({ type: "UN_CLICK", payload: type });
+    }
+  };
 
   const decreaseMeal = () => {
-    if (mealQuantity <= 1) {
-      setMealQuantity(1);
+    if (stateNo6.quantity <= 1) {
+      dispatch({ type: "EQUAL_1" });
     } else {
-      setMealQuantity(mealQuantity - 1);
+      dispatch({ type: "DECREASE" });
     }
   };
   const increaseMeal = () => {
-    if (mealQuantity >= 100) {
-      setMealQuantity(100);
+    if (stateNo6.quantity >= 50) {
+      dispatch({ type: "EQUAL_50" });
     } else {
-      setMealQuantity(mealQuantity + 1);
+      dispatch({ type: "INCREASE" });
     }
   };
 
   const addCart = (id) => {
-    const addedItem = listCart.find((x) => x.id === id);
-    if (addedItem) {
-      setListCart((y) => (y.id === id ? { ...addedItem, quantity: addedItem.quantity + 1 } : y));
-    } else {
-      setListCart([...listCart, { ...filterMeal, quantity: 1 }]);
-    }
+    setListCart([
+      ...listCart,
+      {
+        ...filterMeal,
+        id: id + new Date().getTime().toString(),
+        quantity: 1,
+        price: stateNo6.price,
+        dayPerWeek: stateNo6.dayPerWeek,
+      },
+    ]);
   };
-
-  const { id, mealName, rating, description, chefImg, chefName, restaurantName, price, to } = filterMeal;
 
   return (
     <>
@@ -183,35 +235,65 @@ const MealNo6 = () => {
                       <h3>Bỏ bớt ngày không phù hợp</h3>
                       <p>Thứ 2, 15.02 → Thứ 6, 19.02</p>
                       <div>
-                        <input id='monday' type='checkbox' />
+                        <input
+                          id='monday'
+                          type='checkbox'
+                          checked={stateNo6.isChecked2}
+                          onChange={() => handleChange("monday")}
+                          onClick={() => handleClick("monday")}
+                        />
                         <label htmlFor='monday'>
                           <p>Thứ 2 · Mực hấp mắm gừng</p>
                           <p>· Su su luộc chấm trứng · Canh rau dền nấu nấm rơm</p>
                         </label>
                       </div>
                       <div>
-                        <input id='tuesday' type='checkbox' />
+                        <input
+                          id='tuesday'
+                          type='checkbox'
+                          checked={stateNo6.isChecked3}
+                          onChange={() => handleChange("tuesday")}
+                          onClick={() => handleClick("tuesday")}
+                        />
                         <label htmlFor='tuesday'>
                           <p>Thứ 3 · Bò xào cần tỏi</p>
                           <p>· Rau muống xào tỏi · Canh đậu hủ giá hẹ</p>
                         </label>
                       </div>
                       <div>
-                        <input id='wednesday' type='checkbox' />
+                        <input
+                          id='wednesday'
+                          type='checkbox'
+                          checked={stateNo6.isChecked4}
+                          onChange={() => handleChange("wednesday")}
+                          onClick={() => handleClick("wednesday")}
+                        />
                         <label htmlFor='wednesday'>
                           <p>Thứ 4 · Cá chẽm nướng sả</p>
                           <p>· Đậu bắp xào tỏi · Canh chua tôm</p>
                         </label>
                       </div>
                       <div>
-                        <input id='thursday' type='checkbox' />
+                        <input
+                          id='thursday'
+                          type='checkbox'
+                          checked={stateNo6.isChecked5}
+                          onChange={() => handleChange("thursday")}
+                          onClick={() => handleClick("thursday")}
+                        />
                         <label htmlFor='thursday'>
                           <p>Thứ 5 · Bí ngòi hấp tôm thịt</p>
                           <p>· Thịt băm sốt nấm · Canh đậu hũ rong biển</p>
                         </label>
                       </div>
                       <div>
-                        <input id='friday' type='checkbox' />
+                        <input
+                          id='friday'
+                          type='checkbox'
+                          checked={stateNo6.isChecked6}
+                          onChange={() => handleChange("friday")}
+                          onClick={() => handleClick("friday")}
+                        />
                         <label htmlFor='friday'>
                           <p>Thứ 6 · Thịt viên nấm sốt cà chua</p>
                           <p>· Rau củ xào bò · Canh bắp cải nấu thịt</p>
@@ -220,13 +302,13 @@ const MealNo6 = () => {
                       <div className='lunchlist-pickdayformtotal'>
                         <p>Tổng cộng</p>
                         <p>
-                          <span>{price.toLocaleString()}</span>
-                          <span> đ/tuần</span>
+                          <span>{stateNo6.price.toLocaleString()}</span>
+                          <span> đ/ {stateNo6.dayPerWeek >= 5 ? "tuần" : `${stateNo6.dayPerWeek} ngày`}</span>
                         </p>
                       </div>
                       <div className='lunchlist-pickdayformbtn'>
                         <button onClick={() => setShowPickDay(false)}>Huỷ</button>
-                        <button>Xác nhận</button>
+                        <button onClick={() => setShowPickDay(false)}>Xác nhận</button>
                       </div>
                     </div>
                   </div>
@@ -405,15 +487,26 @@ const MealNo6 = () => {
                   </h4>
                   <div>
                     <div className='lunchlist-quantity'>
-                      <button onClick={decreaseMeal}>-</button>
-                      <span className='lunchlist-quantitypart'>{mealQuantity}</span>
-                      <button onClick={increaseMeal}>+</button>
+                      <button disabled={stateNo6.price === 0} onClick={decreaseMeal}>
+                        -
+                      </button>
+                      <span className='lunchlist-quantitypart'>{stateNo6.quantity}</span>
+                      <button disabled={stateNo6.price === 0} onClick={increaseMeal}>
+                        +
+                      </button>
                       <span className='lunchlist-part'>Phần</span>
                     </div>
                     <div className='lunchlist-tools'>
                       <div className='lunchlist-morerice'>
                         <div>
-                          <input type='checkbox' id='morerice' />
+                          <input
+                            type='checkbox'
+                            id='morerice'
+                            disabled={stateNo6.price === 0}
+                            checked={stateNo6.checkRice}
+                            onChange={() => handleChange("morerice")}
+                            onClick={() => handleClick("morerice")}
+                          />
                           <label htmlFor='morerice'>Cơm thêm</label>
                         </div>
                         <div>
@@ -423,7 +516,14 @@ const MealNo6 = () => {
                       </div>
                       <div className='lunchlist-spoonchopstick'>
                         <div>
-                          <input type='checkbox' id='spoonchopstick' />
+                          <input
+                            type='checkbox'
+                            id='spoonchopstick'
+                            disabled={stateNo6.price === 0}
+                            checked={stateNo6.checkSpoonChopstick}
+                            onChange={() => handleChange("spoonchopstick")}
+                            onClick={() => handleClick("spoonchopstick")}
+                          />
                           <label htmlFor='spoonchopstick'>Muỗng đũa</label>
                         </div>
                         <div>
@@ -438,7 +538,14 @@ const MealNo6 = () => {
                   <p>Nước uống dùng kèm</p>
                   <div className='lunchlist-blackcoffee'>
                     <div>
-                      <input type='checkbox' id='blackcoffee' />
+                      <input
+                        type='checkbox'
+                        id='blackcoffee'
+                        disabled={stateNo6.price === 0}
+                        checked={stateNo6.checkBlackCoffee}
+                        onChange={() => handleChange("blackcoffee")}
+                        onClick={() => handleClick("blackcoffee")}
+                      />
                       <label htmlFor='blackcoffee'>Cafe đen</label>
                     </div>
                     <div>
@@ -448,7 +555,14 @@ const MealNo6 = () => {
                   </div>
                   <div className='lunchlist-lemontea'>
                     <div>
-                      <input type='checkbox' id='lemontea' />
+                      <input
+                        type='checkbox'
+                        id='lemontea'
+                        disabled={stateNo6.price === 0}
+                        checked={stateNo6.checkLemonTea}
+                        onChange={() => handleChange("lemontea")}
+                        onClick={() => handleClick("lemontea")}
+                      />
                       <label htmlFor='lemontea'>Trà chanh</label>
                     </div>
                     <div>
@@ -458,7 +572,14 @@ const MealNo6 = () => {
                   </div>
                   <div className='lunchlist-milkcoffee'>
                     <div>
-                      <input type='checkbox' id='milkcoffee' />
+                      <input
+                        type='checkbox'
+                        id='milkcoffee'
+                        disabled={stateNo6.price === 0}
+                        checked={stateNo6.checkMilkCoffee}
+                        onChange={() => handleChange("milkcoffee")}
+                        onClick={() => handleClick("milkcoffee")}
+                      />
                       <label htmlFor='milkcoffee'>Cafe sữa</label>
                     </div>
                     <div>
@@ -471,15 +592,24 @@ const MealNo6 = () => {
                   <div className='lunchlist-totalprice'>
                     <span>Tổng cộng</span>
                     <p>
-                      {price !== undefined ? <span className='lunchlist-total'>{price.toLocaleString()}</span> : ""}
-                      <span> đ/tuần</span>
+                      <span className='lunchlist-total'>{stateNo6.price.toLocaleString()}</span>
+                      <span> đ/ {stateNo6.dayPerWeek >= 5 ? "tuần" : `${stateNo6.dayPerWeek} ngày`}</span>
                     </p>
                   </div>
                   <div className='lunchlist-btnaddorder'>
-                    <button className='lunchlist-btnadd' onClick={() => addCart(id)}>
+                    <button
+                      disabled={stateNo6.price === 0}
+                      className={`${stateNo6.price === 0 ? "btnadd-ban" : "lunchlist-btnadd"}`}
+                      onClick={() => addCart(id)}
+                    >
                       Thêm vào giỏ hàng
                     </button>
-                    <button className='lunchlist-btnorder'>Đặt ngay</button>
+                    <button
+                      disabled={stateNo6.price === 0}
+                      className={`${stateNo6.price === 0 ? "btnorder-ban" : "lunchlist-btnorder"}`}
+                    >
+                      Đặt ngay
+                    </button>
                   </div>
                 </div>
               </div>
