@@ -30,6 +30,7 @@ const Register = () => {
     setShowErrorMess,
   } = useGlobalContext();
 
+  // eslint-disable-next-line
   const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   const handleSubmit = () => {
     if (!name) {
