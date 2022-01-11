@@ -43,21 +43,24 @@ const SearchInfo = () => {
   };
 
   return (
-    <div className='search-info-background'>
-      <Link to='/khach-san-phu-quoc/khu-nghi-duong-movenpick-waverly-phu-quoc' target='_blank'></Link>
-      <div className='grid wide'>
+    <div className="search-info-background">
+      <Link to="" target="_blank"></Link>
+      <div className="grid wide">
         <h1>Trải nghiệm kỳ nghỉ tuyệt vời</h1>
         <h2>Combo khách sạn - vé máy bay - đưa đón sân bay giá tốt nhất </h2>
 
-        <div className='search-form'>
-          <div className='search-input'>
-            <i className='fas fa-map-marker-alt'></i>
-            <input type='text' name='' id='' placeholder='Bạn muốn đi đâu?' />
+        <div className="search-form">
+          <div className="search-input">
+            <i className="fas fa-map-marker-alt"></i>
+            <input type="text" name="" id="" placeholder="Bạn muốn đi đâu?" />
           </div>
 
-          <div className='search'>
-            <div className='search-quantitypeople' onClick={() => setShowPeople(!showPeople)}>
-              <i className='fas fa-user-plus'></i>
+          <div className="search">
+            <div
+              className="search-quantitypeople"
+              onClick={() => setShowPeople(!showPeople)}
+            >
+              <i className="fas fa-user-plus"></i>
               <div>
                 <p>
                   {adult} người lớn, {children} trẻ em
@@ -65,7 +68,10 @@ const SearchInfo = () => {
                 <p>{room} Phòng</p>
               </div>
             </div>
-            <div className='quantitypeople' style={{ display: `${showPeople ? "block" : "none"}` }}>
+            <div
+              className="quantitypeople"
+              style={{ display: `${showPeople ? "block" : "none"}` }}
+            >
               <People
                 decreaseRoom={decreaseRoom}
                 increaseRoom={increaseRoom}
@@ -79,7 +85,7 @@ const SearchInfo = () => {
               />
             </div>
 
-            <div className='search-btn'>
+            <div className="search-btn">
               <button>Tìm</button>
             </div>
           </div>

@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { listImages } from './data';
-import './discounttoday.css';
-
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { listImages } from "./data";
+import "./discounttoday.css";
 
 const DiscountToday = () => {
   const [index, setIndex] = React.useState(0);
@@ -17,8 +16,6 @@ const DiscountToday = () => {
     }
   }, [index]);
 
-
-
   useEffect(() => {
     let slider = setInterval(() => {
       setIndex(index + 1);
@@ -28,7 +25,6 @@ const DiscountToday = () => {
     };
   }, [index]);
 
-
   return (
     <div className="discount-today">
       <div className="grid wide">
@@ -36,19 +32,20 @@ const DiscountToday = () => {
           {/* Images Carousel */}
           <div className="col l-12 m-0 c-0">
             <h1 className="discount-today-title">Ưu đãi tốt nhất hôm nay</h1>
-            <p className="discount-today-description">Nhanh tay đặt ngay. Để mai sẽ lỡ</p>
+            <p className="discount-today-description">
+              Nhanh tay đặt ngay. Để mai sẽ lỡ
+            </p>
             <div className="discount-today-img-carousel">
               {listImages.map((img, imgIndex) => {
-
-                let position = 'nextSlide';
+                let position = "nextSlide";
                 if (imgIndex === index) {
-                  position = 'activeSlide';
+                  position = "activeSlide";
                 }
                 if (
                   imgIndex === index - 1 ||
                   (index === 0 && imgIndex === listImages.length - 1)
                 ) {
-                  position = 'lastSlide';
+                  position = "lastSlide";
                 }
 
                 return (
@@ -69,23 +66,22 @@ const DiscountToday = () => {
           {/* Images Pull Left-Right */}
           <div className="col l-0 m-12 c-0">
             <h1 className="discount-today-title">Ưu đãi tốt nhất hôm nay</h1>
-            <p className="discount-today-description">Nhanh tay đặt ngay. Để mai sẽ lỡ</p>
+            <p className="discount-today-description">
+              Nhanh tay đặt ngay. Để mai sẽ lỡ
+            </p>
 
             <nav className="discount-today-category">
               <ul className="discount-today-list">
                 <li className="phuquoc phuquoc-img">
-                  <Link to="/khach-san-phu-quoc/khu-nghi-duong-movenpick-waverly-phu-quoc" className="discount-today-link">
-                  </Link>
+                  <Link to="" className="discount-today-link"></Link>
                 </li>
 
                 <li className="vungtau vungtau-img">
-                  <Link to="/khach-san-vung-tau/khach-san-mercure-vung-tau" className="discount-today-link">
-                  </Link>
+                  <Link to="" className="discount-today-link"></Link>
                 </li>
 
                 <li className="ninhthuan ninhthuan-img">
-                  <Link to="/khach-san-ninh-thuan/khu-nghi-duong-amanoi-villas-ninh-thuan" className="discount-today-link">
-                  </Link>
+                  <Link to="" className="discount-today-link"></Link>
                 </li>
               </ul>
             </nav>
